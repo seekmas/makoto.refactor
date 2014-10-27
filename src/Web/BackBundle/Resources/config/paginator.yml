@@ -1,0 +1,8 @@
+services:
+    content_paginator:
+        class: Web\BackBundle\Paginator\PaginatorFactory
+        arguments: [@service_container , 'content_entity']
+
+    newsfeed_paginator:
+        class: Web\BackBundle\Paginator\PaginatorFactory
+        arguments: [@service_container , 'newsfeed_entity']

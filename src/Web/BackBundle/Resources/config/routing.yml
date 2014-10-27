@@ -1,0 +1,11 @@
+menu.home_page:
+    path: /
+    defaults: { _controller: WebBackBundle:Home:default }
+
+newsfeed:
+    resource: "@WebBackBundle/Resources/config/routing/newsfeed.yml"
+    prefix:   /
+
+content:
+    resource: "@WebBackBundle/Resources/config/routing/content.yml"
+    prefix:   /

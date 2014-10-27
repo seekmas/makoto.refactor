@@ -1,0 +1,13 @@
+imports:
+    - { resource: factory.yml }
+    - { resource: paginator.yml }
+
+services:
+    twig.extension.text:
+        class: Twig_Extensions_Extension_Text
+        tags:
+           - { name: twig.extension }
+
+    attachment.manager:
+        class: Web\BackBundle\Attachment\AttachmentManager
+        arguments: [@service_container,@attachment_entity]

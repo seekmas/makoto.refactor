@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Makoto</title>
+    <link rel="stylesheet" href="{{ asset('tpl/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('tpl/css/fonts/font-awesome/css/font-awesome.css') }}">
+    <link rel="stylesheet" href="{{ asset('tpl/vendor/owl-carousel/owl.carousel.css') }}" media="screen">
+    <link rel="stylesheet" href="{{ asset('tpl/vendor/owl-carousel/owl.theme.css') }}" media="screen">
+    <link rel="stylesheet" href="{{ asset('tpl/vendor/magnific-popup/magnific-popup.css') }}" media="screen">
+    <link rel="stylesheet" href="{{ asset('tpl/vendor/rs-plugin/css/settings.css') }}" media="screen">
+    <!-- Theme CSS-->
+    <link rel="stylesheet" href="{{ asset('tpl/css/theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('tpl/css/theme-elements.css') }}">
+    <link rel="stylesheet" href="{{ asset('tpl/css/animate.min.css') }}">
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href="{{ asset('tpl/css/skins/blue.css') }}">
+    <!-- Makoto CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/makoto.css') }}">
+    <!-- Head Libs -->
+    <script src="{{ asset('tpl/vendor/modernizr.js') }}"></script>
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="{{ asset('tpl/vendor/rs-plugin/css/settings-ie8.css') }}" media="screen">
+    <script src="{{ asset('html5.js') }}"></script>
+    <script src="{{ asset('tpl/vendor/respond.min.js') }}"></script>
+    <![endif]-->
+    <!--[if IE]>
+    <link rel="stylesheet" href="{{ asset('tpl/css/ie.css') }}">
+    <![endif]-->
+    <link rel="stylesheet" media="screen,projection" href="{{ asset('assets/back/css/ui.totop.css') }}" />
+    <link rel="apple-touch-icon" href="{{ asset('tpl/images/apple-touch-icon.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('tpl/images/apple-touch-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('tpl/images/apple-touch-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('tpl/images/apple-touch-icon-144x144.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+</head>
+<body>
+
+<!-- Header -->
+<header class="header header header-top-colored menu-colored">
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top-right">
+				<span class="register">
+						<a href="http://makotoglobal.com/admin/">Login</a>
+				</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-main">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <img alt="Stability" src="{{ asset('assets/images/logo.png') }}" />
+            </div>
+            <!-- Logo / End -->
+
+            <button type="button" class="navbar-toggle">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <!-- Navigation -->
+            <nav class="nav-main">
+                <ul data-breakpoint="992" class="flexnav">
+                    <li class="active"><a href="http://makotoglobal.com/">Makoto's DNA</a>
+                        <ul>
+                            <li><a id="roll1Btn" href="http://makotoglobal.com/#roll1">The Meaning of Makoto</a></li>
+                            <li><a id="roll2Btn" href="http://makotoglobal.com/#roll2">The Makoto Way</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="active"><a href="http://makotoglobal.com/m/makoto_global">MAKOTO GLOBAL</a>
+                        <ul>
+                            <li><a id="ktwBtn" href="http://makotoglobal.com/m/makoto_global#ktw">Kaizen Training Workshops</a></li>
+                            <li><a id="jleBtn" href="http://makotoglobal.com/m/makoto_global#jle">Japan Lean Experience (JLE)</a></li>
+                            <li><a id="kcaBtn" href="http://makotoglobal.com/m/makoto_global#kca">Kaizen Consulting Activities</a></li>
+                            <li><a href="http://makotoglobal.com/m/investments">Investments</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="active"><a href="http://makotoglobal.com/m/service">Services</a>
+                        <ul>
+                            <li><a id="jle2Btn" href="http://makotoglobal.com/m/service#jle2">Japan Lean Experience</a></li>
+                            <li><a id="conBtn" href="http://makotoglobal.com/m/service#con">Consulting</a></li>
+                            <li><a id="leaBtn" href="http://makotoglobal.com/m/service#lea">Learning</a></li>
+                            <li><a id="othBtn" href="http://makotoglobal.com/m/service#oth">Other Services</a></li>
+                        </ul>
+                    </li>
+
+                    <li >
+                        <a href="http://makotoglobal.com/catalogue">Blog</a>
+                    </li>
+
+                    <li >
+                        <a href="http://makotoglobal.com/m/contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Navigation / End -->
+        </div>
+    </div>
+</header>
+
+
+{% include "AppFrontBundle:Default:slide.html.twig" %}
+
+{% block body %}
+
+{% endblock %}
+
+<!-- Footer -->
+<footer class="footer" id="footer">
+    <div class="footer-widgets">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <!-- Widget :: Text Widget -->
+                    <div class="widget_text widget widget__footer">
+                        <h3 class="widget-title">About Us</h3>
+                        <div class="widget-content">
+                            <p>It’s been over 26 years since we started on the Lean journey. In that journey we have visited over 200 companies, organized over 200 trips to Japan to see some of the best lean companies in the world. We have also had the privilege of teaching Lean thinking around the world (25 countries) and learning from those experiences.</p>
+                            <p>Our greatest joy is seeing our customers surpass us in great ideas and taking their companies’ further in lean than we would have been able to. They are our life-long friends and partners.</p>
+
+                            <a href="http://makotoglobal.com/m/contact" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                    <!-- /Widget :: Text Widget -->
+                </div>
+                <div class="col-md-3">
+                    <!-- Widget :: Contacts Info -->
+                    <div class="contacts-widget widget widget__footer">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <div class="widget-content">
+                            <ul class="contacts-info-list">
+                                <li>
+                                    <i class="fa fa-map-marker"></i>
+                                    <div class="info-item">
+                                        Suite 3A Alphatown Kagurazaka2-9 Kagurazaka, Shinjuku-ku Tokyo 162-0825 Japan
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa fa-facebook"></i>
+                                    <div class="info-item">
+                                        <a href="https://www.facebook.com/pages/Makoto-Investments-Ltd/306220866204523" target="_blank">Makoto Investments Ltd</a>
+                                    </div>
+
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone"></i>
+                                    <div class="info-item">
+                                        Tel:+81 3-5579-8020<br>
+                                        Fax:+81 3-5579-8026
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope"></i>
+                                    <div class="info-item">
+                                        <a href="dduarte@makoto-investments.com">Consulting Services-DJ Duarte</a>
+                                        <a href="mailto:info@dan-fisher.com">President-Brad Schmidt</a><br>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /Widget :: Contacts Info -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    Copyright &copy; 2013-2014  <a href="http://makotoglobal.com/">Makoto</a> &nbsp;| &nbsp;All Rights Reserved.
+                </div>
+                <div class="col-sm-6 col-md-8">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer / End -->
+
+<script src="{{ asset('tpl/vendor/jquery-1.11.0.min.js') }}"></script>
+<script src="{{ asset('tpl/vendor/jquery-migrate-1.2.1.min.js') }}"></script>
+<script src="{{ asset('tpl/vendor/bootstrap.js') }}"></script>
+<script src="{{ asset('tpl/vendor/jquery.flexnav.min.js') }}"></script>
+<script src="{{ asset('tpl/vendor/jquery.hoverIntent.minified.js') }}"></script>
+<script src="{{ asset('tpl/vendor/jquery.flickrfeed.js') }}"></script>
+<script src="{{ asset('tpl/vendor/isotope/jquery.isotope.min.js') }}"></script>
+<script src="{{ asset('tpl/vendor/isotope/jquery.isotope.sloppy-masonry.min.js') }}"></script>
+<script src="{{ asset('tpl/vendor/isotope/jquery.imagesloaded.min.js') }}"></script>
+<script src="{{ asset('tpl/vendor/magnific-popup/jquery.magnific-popup.js') }}"></script>
+<script src="{{ asset('tpl/vendor/owl-carousel/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('tpl/vendor/jquery.fitvids.js') }}"></script>
+<script src="{{ asset('tpl/vendor/jquery.appear.js') }}"></script>
+<script src="{{ asset('tpl/js/custom.js') }}"></script>
+<!-- UItoTop plugin -->
+<script src="{{ asset('assets/back/js/easing.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/back/js/jquery.ui.totop.js') }}" type="text/javascript"></script>
+<!-- Starting the plugin -->
+<script src="{{ asset('assets/roll/scrolld.min.js') }}"></script>
+<!-- jQuery REVOLUTION Slider  -->
+<script src="{{ asset('tpl/vendor/rs-plugin/js/jquery.themepunch.plugins.min.js') }}"></script>
+<script src="{{ asset('tpl/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $().UItoTop({ easingType: 'easeOutQuart' });
+    });
+</script>
+<script type="text/javascript">
+    $("[id*='Btn']").stop(true).on('click', function (e)
+            {
+                var target = e.target.id.replace('Btn' , '');
+
+                if( $('#'+target).attr('id') == undefined )
+                {
+                    return ;
+                }
+
+                e.preventDefault();
+                $(this).scrolld();
+            }
+    )
+</script>
+
+<script>
+    $(function() {
+        $('.description').readmore({
+            speed: 75,
+            maxHeight: 122
+        });
+    });
+</script>
+<script src="/Readmore.js/readmore.js"></script>
+
+<script>
+    jQuery(document).ready(function() {
+        jQuery('.tp-banner').revolution({
+            dottedOverlay:"filled",
+            delay:6000,
+            startwidth:1140,
+            startheight:556,
+            hideThumbs:10,
+            fullWidth:"on",
+            forceFullWidth:"on",
+            hideCaptionAtLimit:480,
+            //navigationType: "none",
+            soloArrowLeftHOffset:20,
+            soloArrowRightHOffset:20,
+            navigationType:"bullet",
+            navigationArrows:"solo", // nexttobullets, solo (old name verticalcentered), none
+            navigationStyle:"round"  // round, square, navbar, round-old, square-old, navbar-old
+        });
+    });
+</script>
+
+</body>
+</html>

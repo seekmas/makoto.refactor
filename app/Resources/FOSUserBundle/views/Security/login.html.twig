@@ -1,0 +1,59 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+{% if error %}
+        <!-- Success Alert Content -->
+        <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h4><i class="fa fa-check-circle"></i> Error Occurred</h4>
+            {{ error.messageKey|trans(error.messageData, 'security') }}
+        </div>
+        <!-- END Success Alert Content -->
+{% endif %}
+
+<form class="form-horizontal" action="{{ path("fos_user_security_check") }}" method="post">
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+    <div class="form-group"><div class="col-xs-12">
+    <div class="input-group">
+        <span class="input-group-addon">
+        <i class="gi gi-envelope"></i>
+        </span>
+
+        <input class="form-control input-lg" type="text" placeholder="{{ 'security.login.username'|trans }}" id="username" name="_username" value="{{ last_username }}" required="required" />
+    </div>
+    </div></div>
+
+    <div class="form-group"><div class="col-xs-12">
+    <div class="input-group">
+        <span class="input-group-addon">
+        <i class="gi gi-asterisk"></i>
+        </span>
+
+        <input class="form-control input-lg" type="password" placeholder="{{ 'security.login.password'|trans }}" id="password" name="_password" required="required" />
+    </div>
+    </div></div>
+
+    <div class="form-group form-actions">
+        <div class="col-xs-4">
+            <label data-original-title="Remember Me?" class="switch switch-primary" data-toggle="tooltip" title="">
+                <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                <span></span>
+            </label>
+        </div>
+        <div class="col-xs-8 text-right">
+            <button name="_submit" type="submit" class="btn btn-sm btn-primary"><i class="fa fa-angle-right"></i> Login to Dashboard</button>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-12 text-center">
+            <a href="{{ url('fos_user_resetting_request') }}" id="link-reminder-login"><small>Forgot password?</small></a> -
+            <a href="{{ url('fos_user_registration_register') }}" id="link-register-login"><small>Create a new account</small></a>
+        </div>
+    </div>
+
+</form>
+{% endblock fos_user_content %}

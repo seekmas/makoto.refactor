@@ -1,0 +1,15 @@
+menu.create_newsfeed:
+    path:     /create_newsfeed
+    defaults: { _controller: WebBackBundle:Newsfeed:create }
+
+menu.list_newsfeed:
+    path:     /list_newsfeed
+    defaults: { _controller: WebBackBundle:Newsfeed:index }
+
+link.edit_newsfeed:
+    path:     /{id}/edit_newsfeed
+    defaults: { _controller: WebBackBundle:Newsfeed:edit }
+
+link.upload_newsfeed:
+    path:     /{id}/newsfeed_upload
+    defaults: { _controller: WebBackBundle:Newsfeed:upload }

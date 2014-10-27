@@ -1,0 +1,10 @@
+web_back:
+    resource: "@WebBackBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+app_front:
+    resource: "@AppFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

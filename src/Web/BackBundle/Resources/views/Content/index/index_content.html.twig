@@ -1,0 +1,47 @@
+
+<!-- Messages List Block -->
+<div class="block">
+<!-- Messages List Title -->
+<div class="block-title">
+    <div class="block-options pull-right">
+        <a data-original-title="Settings" href="javascript:void(0)" class="btn btn-alt btn-sm btn-default" data-toggle="tooltip" title=""><i class="fa fa-cog"></i></a>
+    </div>
+    <h2>Core of Contents <small><a href="{{ url('menu.create_content') }}">Create New Content</a></small></h2>
+</div>
+<!-- END Messages List Title -->
+
+<!-- Messages List Content -->
+<div class="table-responsive">
+<table class="table table-hover table-vcenter">
+<thead>
+<tr>
+
+
+    <td class="text-right" colspan="3">
+        <strong>1-30</strong> from <strong>5250</strong>
+        <div class="btn-group btn-group-sm">
+            <a href="javascript:void(0)" class="btn btn-sm btn-default"><i class="fa fa-angle-left"></i></a>
+            <a href="javascript:void(0)" class="btn btn-sm btn-default"><i class="fa fa-angle-right"></i></a>
+        </div>
+    </td>
+</tr>
+</thead>
+<tbody>
+<!-- Use the first row as a prototype for your column widths -->
+{% for content in content_paginator %}
+<tr>
+    <td>
+        <span class="label label-info">{{ content.catalog }}</span>
+        <a href="#"><strong> {{ content.subject }}</strong></a>
+        <span class="text-muted"></span>
+    </td>
+    <td></td>
+    <td class="text-right"><em>2 min ago</em></td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+<!-- END Messages List Content -->
+</div>
+<!-- END Messages List Block -->

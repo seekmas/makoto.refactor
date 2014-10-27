@@ -1,0 +1,75 @@
+<div class="row">
+
+    <div class="col-md-6">
+        <a href="{{ url('link.edit_newsfeed' , {'id':newsfeed.id}) }}" class="widget widget-hover-effect1">
+            <div class="widget-simple">
+                <div class="widget-icon pull-left themed-background animation-fadeIn">
+                    <i class="fa fa-edit"></i>
+                </div>
+                <h3 class="widget-content text-right animation-pullDown">
+                    Return to edit <strong>news</strong><br>
+                    <small>Click it to return</small>
+                </h3>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-md-6">
+        <a href="#" class="widget widget-hover-effect1">
+            <div class="widget-simple">
+                <div class="widget-icon pull-left themed-background-autumn animation-fadeIn">
+                    <i class="fa fa-eye"></i>
+                </div>
+                <h3 class="widget-content text-right animation-pullDown">
+                    See <strong>the</strong> news on front page<br>
+                    <small>Click it to watch</small>
+                </h3>
+            </div>
+        </a>
+    </div>
+
+</div>
+
+<div class="block">
+    <!-- Lightbox Gallery Title -->
+    <div class="block-title">
+        <h2><strong>Upload news photos to </strong> [ {{ newsfeed.subject }} ]</h2>
+    </div>
+    {{ form(form) }}
+</div>
+
+
+<div class="block">
+    <!-- Lightbox Gallery Title -->
+    <div class="block-title">
+        <h2><strong>Photos Gallery</strong> of  [ {{ newsfeed.subject }} ]</h2>
+    </div>
+    <!-- END Lightbox Gallery Title -->
+
+    <!-- Lightbox Gallery Content -->
+    <!--
+    Just create a div with the class .gallery and put the images any way you like in grid.
+    If you would like to enable the lightbox gallery, just add the attribute data-toggle="lightbox-image" to the div. If you do that
+    make sure that you put your images inside links with the class .gallery-link and the source of your large image as the value of each href attribute!
+    -->
+    <div class="gallery" data-toggle="lightbox-gallery">
+        <div class="row">
+            {% for attachment in newsfeed.attachment %}
+            <div class="col-sm-4">
+                <a href="{{ asset(attachment.path ~ '/' ~ attachment.file) }}" class="gallery-link" title="{{ attachment.file }}">
+                    <img src="{{ asset(attachment.path ~ '/' ~ attachment.file) }}" alt="{{ attachment.file }}">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- END Lightbox Gallery Content -->
+</div>
+
+
+
+
+
+
+
+

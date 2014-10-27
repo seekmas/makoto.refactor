@@ -1,0 +1,11 @@
+menu.create_content:
+    path:     /create_content
+    defaults: { _controller: WebBackBundle:Home:index }
+
+menu.create_catalog:
+    path:     /create_catalog
+    defaults: { _controller: WebBackBundle:Home:catalog }
+
+menu.admin_content:
+    path:     /list_content
+    defaults: { _controller: WebBackBundle:Content:index }

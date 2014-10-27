@@ -1,0 +1,21 @@
+<div class="row">
+
+    {% for key , route in allRoutes if 'menu.' in key %}
+    <div class="col-sm-6 col-lg-6">
+        <!-- Widget -->
+        <a href="{{ url(key) }}" class="widget widget-hover-effect1">
+            <div class="widget-simple">
+                <div class="widget-icon pull-left themed-background-autumn animation-fadeIn">
+                    <i class="fa fa-file-text"></i>
+                </div>
+                <h3 class="widget-content text-right animation-pullDown">
+                    <strong>{{ key }}</strong><br>
+                    <small></small>
+                </h3>
+            </div>
+        </a>
+        <!-- END Widget -->
+    </div>
+    {% endfor %}
+
+</div>

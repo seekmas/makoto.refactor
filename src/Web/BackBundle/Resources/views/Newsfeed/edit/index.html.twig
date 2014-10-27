@@ -1,0 +1,50 @@
+{% extends "WebBackBundle:Layout:layouts.html.twig" %}
+
+{% block body %}
+
+    <div class="row">
+
+    <div class="col-md-6">
+    <a href="{{ url('link.upload_newsfeed' , {'id':id}) }}" class="widget widget-hover-effect1">
+        <div class="widget-simple">
+            <div class="widget-icon pull-left themed-background animation-fadeIn">
+                <i class="fa fa-file-text"></i>
+            </div>
+            <h3 class="widget-content text-right animation-pullDown">
+                Upload <strong>photos</strong> for the news<br>
+                <small>Click it to upload</small>
+            </h3>
+        </div>
+    </a>
+    </div>
+
+    <div class="col-md-6">
+        <a href="#" class="widget widget-hover-effect1">
+            <div class="widget-simple">
+                <div class="widget-icon pull-left themed-background-autumn animation-fadeIn">
+                    <i class="fa fa-eye"></i>
+                </div>
+                <h3 class="widget-content text-right animation-pullDown">
+                    See <strong>the</strong> news on front page<br>
+                    <small>Click it to watch</small>
+                </h3>
+            </div>
+        </a>
+    </div>
+
+    </div>
+
+
+
+    <div class="block">
+        <!-- Navs Title -->
+        <div class="block-title">
+            <h2>Navigation Elements</h2>
+        </div>
+        <!-- END Navs Title -->
+
+        <!-- Navs Content -->
+        {% include "WebBackBundle:Newsfeed:edit/index_content.html.twig" %}
+        <!-- END Navs Content -->
+    </div>
+{% endblock %}
