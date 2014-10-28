@@ -1,0 +1,47 @@
+{% extends "WebBackBundle:Layout:layouts.html.twig" %}
+
+{% block body %}
+
+    <div class="row">
+        <!-- Inbox Menu -->
+        <div class="col-sm-4 col-lg-3">
+            <!-- Menu Block -->
+            <div class="block full">
+                <!-- Menu Content -->
+                <ul class="nav nav-pills nav-stacked">
+                    <li {% if content.catalogId == 0 %}class="active"{% endif %}>
+                        <a href="{{ url('menu.admin_content') }}">
+                            <i class="fa fa-angle-right fa-fw"></i> <strong>All</strong>
+                        </a>
+                    </li>
+
+                    {% for cat in catalog %}
+                        <li {% if content.catalogId == cat.id %}class="active"{% endif %}>
+                            <a href="{{ url('link.admin_content_by_id' , {'catalogId':cat.id}) }}">
+                                <span class="badge pull-right">{{ cat.content | length }}</span>
+                                <i class="fa fa-angle-right fa-fw"></i> <strong>{{ cat.name }}</strong>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <!-- END Menu Content -->
+            </div>
+            <!-- END Menu Block -->
+
+        </div>
+        <!-- END Inbox Menu -->
+
+        <!-- Messages List -->
+        <div class="col-sm-8 col-lg-9">
+
+            <div class="block full">
+                {% include "WebBackBundle:Content:edit/index_content.html.twig" %}
+            </div>
+
+        </div>
+        <!-- END Messages List -->
+    </div>
+
+
+
+{% endblock %}

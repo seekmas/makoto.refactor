@@ -9,3 +9,7 @@ newsfeed:
 content:
     resource: "@WebBackBundle/Resources/config/routing/content.yml"
     prefix:   /
+
+team:
+    resource: "@WebBackBundle/Resources/config/routing/team.yml"
+    prefix:   /

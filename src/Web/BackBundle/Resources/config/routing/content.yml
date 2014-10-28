@@ -9,3 +9,11 @@ menu.create_catalog:
 menu.admin_content:
     path:     /list_content
     defaults: { _controller: WebBackBundle:Content:index }
+
+link.admin_content_by_id:
+    path:     /{catalogId}/list_content
+    defaults: { _controller: WebBackBundle:Content:index }
+
+link.admin_edit_by_id:
+    path:     /{id}/edit_content
+    defaults: { _controller: WebBackBundle:Content:edit }

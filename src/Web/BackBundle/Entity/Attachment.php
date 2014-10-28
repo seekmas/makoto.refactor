@@ -75,6 +75,17 @@ class Attachment extends Entity
     private $newsfeedId;
 
     /**
+     * @ORM\OneToOne(targetEntity="Team" , inversedBy="attachment")
+     * @ORM\JoinColumn(name="team_id" , referencedColumnName="id")
+     */
+    private $team;
+
+    /**
+     * @ORM\Column(name="team_id" , type="integer" , nullable=true)
+     */
+    private $teamId;
+
+    /**
      * Get id
      *
      * @return integer
@@ -264,6 +275,47 @@ class Attachment extends Entity
     {
         $this->newsfeedId = $newsfeedId;
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTeam()
+    {
+        return $this->team;
+    }
+
+    /**
+     * @return Attachment
+     * @param mixed $team
+     */
+    public function setTeam($team)
+    {
+        $this->team = $team;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTeamId()
+    {
+        return $this->teamId;
+    }
+
+    /**
+     * @return Attachment
+     * @param mixed $teamId
+     */
+    public function setTeamId($teamId)
+    {
+        $this->teamId = $teamId;
+        return $this;
+    }
+
+    public function getFullPath()
+    {
+        return $this->path . '/' . $this->file;
     }
 
     public function __toString()

@@ -12,35 +12,25 @@
 
 <!-- Messages List Content -->
 <div class="table-responsive">
-<table class="table table-hover table-vcenter">
-<thead>
-<tr>
+    <table class="table table-hover table-vcenter">
 
+    <tbody>
+    <!-- Use the first row as a prototype for your column widths -->
+    {% for content in content_paginator %}
+    <tr>
+        <td>
+            <span class="label label-info">{{ content.catalog }}</span>
+            <a href="{{ url('link.admin_edit_by_id' , {'id':content.id}) }}"><strong> {{ content.subject }}</strong></a>
+            <span class="text-muted"></span>
+        </td>
+        <td>{{ content.vector }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
 
-    <td class="text-right" colspan="3">
-        <strong>1-30</strong> from <strong>5250</strong>
-        <div class="btn-group btn-group-sm">
-            <a href="javascript:void(0)" class="btn btn-sm btn-default"><i class="fa fa-angle-left"></i></a>
-            <a href="javascript:void(0)" class="btn btn-sm btn-default"><i class="fa fa-angle-right"></i></a>
-        </div>
-    </td>
-</tr>
-</thead>
-<tbody>
-<!-- Use the first row as a prototype for your column widths -->
-{% for content in content_paginator %}
-<tr>
-    <td>
-        <span class="label label-info">{{ content.catalog }}</span>
-        <a href="#"><strong> {{ content.subject }}</strong></a>
-        <span class="text-muted"></span>
-    </td>
-    <td></td>
-    <td class="text-right"><em>2 min ago</em></td>
-</tr>
-{% endfor %}
-</tbody>
-</table>
+    </table>
+
+    {{ knp_pagination_render(content_paginator) }}
 </div>
 <!-- END Messages List Content -->
 </div>

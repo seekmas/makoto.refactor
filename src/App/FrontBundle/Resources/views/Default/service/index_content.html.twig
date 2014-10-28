@@ -1,0 +1,282 @@
+<section class="page-content">
+    <div class="container">
+
+        <div class="row" id="jle2">
+
+            {% set block_1 = vector('japan-lean-experience-2') %}
+
+            <div class="title">
+                <a name="jle2"></a>
+                <h2 class="text-center">{{ block_1.subject }}</h2>
+            </div>
+            <div class="col-md-8">
+                <div class="icon-box squared icon-box-animated">
+                    <div class="icon">
+                        <i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="icon-box-body">
+                        <div class="title-accent">
+                            <h3><span>Japan</span> Lean Experience</h3>
+                        </div>
+
+                        {{ block_1.content | raw }}
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="/assets/images/jle.jpg">
+            </div>
+        </div>
+
+        <div class="row" id="jle">
+            <div class="col-md-12">
+                <div id="jleBtn" class="call-to-action animation fadeInDown animation-visible" data-animation="fadeInDown">
+                    {% set block_2 = vector('japan-lean-experience-1') %}
+                    <div class="title">
+                        <h2>
+                            {{ block_2.subject }}
+                        </h2>
+                    </div>
+
+                    {{ block_2.content | raw }}
+
+                    <div class="cta-btn">
+                        <img src="/assets/images/jle.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<hr class="lg">
+
+<section class="page-content">
+    <div class="container">
+
+        <div class="row" id="con">
+            <a name="con"></a>
+            <div class="title">
+                <h2 class="text-center">Consulting</h2>
+            </div>
+            <div class="col-md-6">
+                <div class="icon-box squared icon-box-animated">
+                    <div class="icon">
+                        <i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="icon-box-body">
+                        {% set block_3 = vector('consulting-focused-activities') %}
+                        <div class="title-accent">
+                            <h3><span>Consulting</span> {{ block_3.subject }}</h3>
+                        </div>
+                        <h2>{{ block_3.addonBlockOne }}</h2>
+
+                        <p><img src="/assets/images/activities.jpg"></p>
+
+                        {{ block_3.content | raw }}
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="icon-box squared icon-box-animated">
+                    <div class="icon">
+                        <i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="icon-box-body">
+                        {% set block_4 = vector('consulting-events') %}
+                        <div class="title-accent">
+                            <h3><span>Consulting</span> {{ block_4.subject }}</h3>
+                        </div>
+                        <h2>{{ block_4.addonBlockOne }}</h2>
+                        <p><img src="/assets/images/events.jpg"></p>
+
+                        {{ block_4.content | raw }}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="icon-box squared icon-box-animated">
+                    <div class="icon">
+                        <i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="icon-box-body">
+                        {% set block_5 = vector('consulting-projects') %}
+                        <div class="title-accent">
+                            <h3><span>Consulting</span> {{ block_5.subject }}</h3>
+                        </div>
+                        <h2>{{ block_5.addonBlockOne }}</h2>
+                        <p><img src="/assets/images/projects.png"></p>
+
+                        {{ block_5.content | raw }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="icon-box squared icon-box-animated">
+                    <div class="icon">
+                        <i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="icon-box-body">
+                        {% set block_6 = vector('consulting-transformations') %}
+                        <div class="title-accent">
+                            <h3><span>Consulting</span> {{ block_6.subject }}</h3>
+                        </div>
+                        <h2>{{ block_6.addonBlockOne }}</h2>
+                        <p><img src="/assets/images/transformations.jpg"></p>
+
+                        {{ block_6.content | raw }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="lg">
+
+<section class="page-content">
+    <div class="container">
+
+        <div class="row" id="lea">
+            <a name="lea"></a>
+            <div class="title">
+                <h2 class="text-center">Learning</h2>
+            </div>
+            <div class="col-md-8">
+                <div class="icon-box squared icon-box-animated">
+                    <div class="icon">
+                        <i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="icon-box-body">
+                        {% set block_7 = vector('training-workshops') %}
+                        <div class="title-accent">
+                            <h3><span>{{ block_7.subject }}</span> </h3>
+                        </div>
+                        <div class="list">
+                            <div class="list">
+                                {{ block_7.content| raw }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="/assets/images/learning.jpg" width="100%">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-content">
+    <div class="container">
+        <a name="oth"></a>
+        <div class="row" id="oth">
+            <div class="title">
+                <h2 class="text-center">Other Service</h2>
+            </div>
+            <div class="col-md-4">
+                <div class="icon-box squared icon-box-animated">
+                    <div class="icon">
+                        <i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="icon-box-body">
+                        {% set block_8 = vector('lean-deployment-programs-implementation') %}
+                        <div class="title-accent">
+                            <h3><span>{{ block_8.addonBlockOne }}</span> {{ block_8.subject }}</h3>
+                        </div>
+
+                        <p>
+                            <img src="/assets/images/global-lean.jpg" style="width:100%">
+                            {{ block_8.content | raw }}
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="icon-box squared icon-box-animated">
+                    <div class="icon">
+                        <i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="icon-box-body">
+                        {% set block_9 = vector('plant-training') %}
+                        <div class="title-accent">
+                            <h3><span>{{ block_9.addonBlockOne }}</span> {{ block_9.subject }}</h3>
+                        </div>
+
+                        <p>
+                            <img src="/assets/images/plant.jpg" style="width:100%">
+                            {{ block_9.content | raw }}
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="icon-box squared icon-box-animated">
+                    <div class="icon">
+                        <i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="icon-box-body">
+                        {% set block_10 = vector('line-kaizen') %}
+                        <div class="title-accent">
+                            <h3><span>{{ block_10.addonBlockOne }}</span> {{ block_10.subject }}</h3>
+                        </div>
+                        <p>
+                        <img src="/assets/images/line.jpg" width="100%">
+                        {{ block_10.content | raw }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="icon-box squared icon-box-animated">
+                    <div class="icon">
+                        <i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="icon-box-body">
+                        {% set block_11 = vector('cultural-adaptation-training-for-leaders-going-overseas') %}
+                        <div class="title-accent">
+                            <h3><span>{{ block_11.addonBlockOne }}</span>- {{ block_11.subject }}</h3>
+                        </div>
+                        <p>
+                        <img src="/assets/images/being.jpg" width="100%">
+                        {{ block_11.content | raw }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="icon-box squared icon-box-animated">
+                    <div class="icon">
+                        <i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="icon-box-body">
+                        {% set block_12 = vector('to-be-a-successful-lean-leader-in-japan') %}
+                        <div class="title-accent">
+                            <h3><span>{{ block_12.addonBlockOne }}</span> {{ block_12.subject }}</h3>
+                        </div>
+
+                        <p>
+                        <img src="/assets/images/successful.jpg" width="100%">
+                        {{ block_12.content | raw }}
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

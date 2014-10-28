@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Makoto</title>
+    <title>MakotoGlobal</title>
     <link rel="stylesheet" href="{{ asset('tpl/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('tpl/css/fonts/font-awesome/css/font-awesome.css') }}">
     <link rel="stylesheet" href="{{ asset('tpl/vendor/owl-carousel/owl.carousel.css') }}" media="screen">
@@ -43,7 +43,7 @@
         <div class="container">
             <div class="header-top-right">
 				<span class="register">
-						<a href="http://makotoglobal.com/admin/">Login</a>
+						<a href="{{ url('fos_user_security_login') }}">Login</a>
 				</span>
             </div>
         </div>
@@ -53,7 +53,7 @@
         <div class="container">
             <!-- Logo -->
             <div class="logo">
-                <img alt="Stability" src="{{ asset('assets/images/logo.png') }}" />
+                <a href="{{ url('app_front_homepage') }}"><img alt="Makoto Global Offical Website" src="{{ asset('assets/images/logo.png') }}" /></a>
             </div>
             <!-- Logo / End -->
 
@@ -64,37 +64,36 @@
             <!-- Navigation -->
             <nav class="nav-main">
                 <ul data-breakpoint="992" class="flexnav">
-                    <li class="active"><a href="http://makotoglobal.com/">Makoto's DNA</a>
+                    <li class="active"><a href="{{ url('app_front_homepage') }}">Makoto's DNA</a>
                         <ul>
-                            <li><a id="roll1Btn" href="http://makotoglobal.com/#roll1">The Meaning of Makoto</a></li>
-                            <li><a id="roll2Btn" href="http://makotoglobal.com/#roll2">The Makoto Way</a></li>
+                            <li><a id="roll1Btn" href="{{ url('app_front_homepage') }}#roll1">The Meaning of Makoto</a></li>
+                            <li><a id="roll2Btn" href="{{ url('app_front_homepage') }}#roll2">The Makoto Way</a></li>
                         </ul>
                     </li>
 
-                    <li class="active"><a href="http://makotoglobal.com/m/makoto_global">MAKOTO GLOBAL</a>
+                    <li class="active"><a href="{{ url('app_front_makotoglobal') }}">MAKOTO GLOBAL</a>
                         <ul>
-                            <li><a id="ktwBtn" href="http://makotoglobal.com/m/makoto_global#ktw">Kaizen Training Workshops</a></li>
-                            <li><a id="jleBtn" href="http://makotoglobal.com/m/makoto_global#jle">Japan Lean Experience (JLE)</a></li>
-                            <li><a id="kcaBtn" href="http://makotoglobal.com/m/makoto_global#kca">Kaizen Consulting Activities</a></li>
-                            <li><a href="http://makotoglobal.com/m/investments">Investments</a></li>
+                            <li><a id="ktwBtn" href="{{ url('app_front_makotoglobal') }}#ktw">Kaizen Training Workshops</a></li>
+                            <li><a id="kcaBtn" href="{{ url('app_front_makotoglobal') }}#kca">Kaizen Consulting Activities</a></li>
+                            <li><a href="{{ url('app_front_investments') }}">Investments</a></li>
                         </ul>
                     </li>
 
-                    <li class="active"><a href="http://makotoglobal.com/m/service">Services</a>
+                    <li class="active"><a href="{{ url('app_front_service') }}">Services</a>
                         <ul>
-                            <li><a id="jle2Btn" href="http://makotoglobal.com/m/service#jle2">Japan Lean Experience</a></li>
-                            <li><a id="conBtn" href="http://makotoglobal.com/m/service#con">Consulting</a></li>
-                            <li><a id="leaBtn" href="http://makotoglobal.com/m/service#lea">Learning</a></li>
-                            <li><a id="othBtn" href="http://makotoglobal.com/m/service#oth">Other Services</a></li>
+                            <li><a id="jle2Btn" href="{{ url('app_front_service') }}#jle2">Japan Lean Experience</a></li>
+                            <li><a id="conBtn" href="{{ url('app_front_service') }}#con">Consulting</a></li>
+                            <li><a id="leaBtn" href="{{ url('app_front_service') }}#lea">Learning</a></li>
+                            <li><a id="othBtn" href="{{ url('app_front_service') }}#oth">Other Services</a></li>
                         </ul>
                     </li>
 
                     <li >
-                        <a href="http://makotoglobal.com/catalogue">Blog</a>
+                        <a href="{{ url('app_news') }}">News</a>
                     </li>
 
                     <li >
-                        <a href="http://makotoglobal.com/m/contact">Contact</a>
+                        <a href="{{ url('app_front_contact') }}">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -103,8 +102,17 @@
     </div>
 </header>
 
-
-{% include "AppFrontBundle:Default:slide.html.twig" %}
+{% block heading %}
+    <section class="page-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>{% block heading_title %}{% endblock %}</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
 
 {% block body %}
 

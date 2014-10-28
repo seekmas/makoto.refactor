@@ -1,0 +1,68 @@
+<section class="page-content">
+<div class="container">
+
+<div class="row">
+<div class="content col-md-8">
+
+    {% for post in newsfeed %}
+    <!-- Post (Standard Format) -->
+    {% if post.attachment | length %}
+    <article class="entry entry__standard">
+        <div class="row">
+            <div class="col-md-5">
+                <figure class="alignnone entry-thumb">
+                    <a href="{{ url('app_news_post' , {'id':post.id}) }}"><img src="{{ asset(post.attachment[0].getFullPath) }}" alt=""></a>
+                </figure>
+            </div>
+            <div class="col-md-7">
+                <header class="entry-header">
+                    <h2><a href="{{ url('app_news_post' , {'id':post.id}) }}">{{ post.subject }}</a></h2>
+                    <div class="entry-meta">
+                        <span class="entry-date">{{ post.createdAt | date('d/m/Y') }}</span>
+                        <span class="entry-comments"><a href="#">0 Comments</a></span>
+                        <span class="entry-category">in <a href="#">{{ time_diff(post.createdAt) }}</a></span>
+                    </div>
+                </header>
+                <div class="excerpt">
+                    {{ post.content | truncate(280) | raw }}
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- Post (Standard Format) / End -->
+    {% else %}
+        <!-- Post (Standard Format) -->
+        <article class="entry entry__standard">
+            <header class="entry-header">
+                <h2><a href="{{ url('app_news_post' , {'id':post.id}) }}">{{ post.subject }}</a></h2>
+                <div class="entry-meta">
+                    <span class="entry-date">{{ post.createdAt | date('d/m/Y') }}</span>
+                    <span class="entry-comments"><a href="#">0 Comments</a></span>
+                    <span class="entry-category">in <a href="#">{{ time_diff(post.createdAt) }}</a></span>
+                </div>
+            </header>
+            <div class="excerpt">
+                {{ post.content | truncate(320) | raw }}
+            </div>
+        </article>
+        <!-- Post (Standard Format) / End -->
+    {% endif %}
+
+    {% endfor %}
+
+
+
+
+    <div class="text-center">
+        {{ knp_pagination_render(newsfeed) }}
+    </div>
+</div>
+
+<aside class="sidebar col-md-3 col-md-offset-1 col-bordered">
+
+
+</aside>
+</div>
+
+</div>
+</section>

@@ -21,6 +21,8 @@ class PaginatorFactory
      */
     private $entity_service;
 
+    private $query;
+
     /**
      * @param Container $container
      * @param string $entity_service
@@ -29,8 +31,36 @@ class PaginatorFactory
     {
         $this->container = $container;
         $this->entity_service = $entity_service;
+
+        $this->query = $this->container
+            ->get($this->entity_service)
+            ->createQueryBuilder('p')
+            ->select('p');
     }
 
+    public function orderBy($fieldName = 'id' , $asc = 'ASC')
+    {
+        $this->query
+             ->orderBy('p.'.$fieldName , $asc);
+        return $this;
+    }
+
+    public function where($where)
+    {
+        $flag = 0;
+        foreach ($where as $key => $value) {
+            if($flag)
+            {
+                $this->query->AndWhere('p.'.$key .'='. $value);
+            }else
+            {
+                $this->query->where('p.'.$key .'='. $value);
+            }
+            $flag = 1;
+        }
+
+        return $this;
+    }
 
     /**
      * @param int $pageNum
@@ -38,15 +68,11 @@ class PaginatorFactory
      */
     public function getPaginator($pageNum = 10)
     {
-        $query = $this->container
-            ->get($this->entity_service)
-            ->createQueryBuilder('p')
-            ->select('p')
-            ->getQuery();
 
+        $this->query->getQuery();
         $paginator = $this->container->get('knp_paginator');
         $pagination = $paginator->paginate(
-            $query,
+            $this->query,
             $this->container->get('request')->query->get('page', 1)/*page number*/,
             $pageNum
         );

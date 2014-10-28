@@ -1,0 +1,15 @@
+menu.create_team:
+    path:     /create_team
+    defaults: { _controller: WebBackBundle:Team:index }
+
+menu.list_team:
+    path:     /list_team
+    defaults: { _controller: WebBackBundle:Team:list }
+
+link.edit_team:
+    path:     /{id}/edit_team
+    defaults: { _controller: WebBackBundle:Team:index }
+
+link.upload_team:
+    path:     /{id}/upload_team
+    defaults: { _controller: WebBackBundle:Team:upload }

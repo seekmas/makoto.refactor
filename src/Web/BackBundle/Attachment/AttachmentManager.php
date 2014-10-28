@@ -117,9 +117,15 @@ class AttachmentManager implements AttachmentInterface
         ld($file);
     }
 
-    public function remove()
+    public function unlink($attachment)
     {
+        $filesystem = new Filesystem();
+        $file = $this->container->get('kernel')->getRootDir() . '/../web/'. $attachment->getFullPath();
 
+        if($filesystem->exists($file))
+        {
+            $filesystem->remove($file);
+        }
     }
 
     public function copy()

@@ -8,6 +8,11 @@ services:
         tags:
            - { name: twig.extension }
 
+    twig.extension.vector:
+        class: Web\BackBundle\Twig\BlockExtension
+        arguments: [@service_container]
+        tags:
+            - { name: twig.extension }
     attachment.manager:
         class: Web\BackBundle\Attachment\AttachmentManager
         arguments: [@service_container,@attachment_entity]

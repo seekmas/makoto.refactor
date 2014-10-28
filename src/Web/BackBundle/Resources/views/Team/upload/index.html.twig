@@ -1,0 +1,40 @@
+{% extends "WebBackBundle:Layout:layouts.html.twig" %}
+
+{% block body %}
+
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <div class="block">
+
+                <a href="{{ url('link.edit_team' , {'id':team.id}) }}" class="widget widget-hover-effect1">
+                    <div class="widget-simple">
+                        <div class="widget-icon pull-left themed-background animation-fadeIn">
+                            <i class="fa fa-file-text"></i>
+                        </div>
+                        <h3 class="widget-content text-right animation-pullDown">
+                            Continue to <strong>edit</strong> team profile<br>
+                            <small>Click it to upload</small>
+                        </h3>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="block full">
+
+        {% if team.attachment %}
+
+            <img class="" style="width: 250px;" src="{{ asset(team.attachment.getFullPath) }}">
+
+        {% endif %}
+
+        {% include "WebBackBundle:Team:upload/index_content.html.twig" %}
+    </div>
+
+{% endblock %}

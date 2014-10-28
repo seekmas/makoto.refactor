@@ -19,10 +19,11 @@ class ContentType extends AbstractType
             ->add('catalog')
             ->add('content' , 'textarea')
             ->add('vector' , 'text')
-            ->add('addonBlockOne')
-            ->add('addonBlockTwo')
-            ->add('addonBlockThree')
+            ->add('addonBlockOne' , 'text' , ['required' => false])
+            ->add('addonBlockTwo' , 'text' , ['required' => false])
+            ->add('addonBlockThree' , 'text' , ['required' => false])
         ;
+
         $builder->add('save' , 'submit');
     }
     

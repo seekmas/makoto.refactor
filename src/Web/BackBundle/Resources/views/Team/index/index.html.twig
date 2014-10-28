@@ -1,0 +1,36 @@
+{% extends "WebBackBundle:Layout:layouts.html.twig" %}
+
+{% block body %}
+
+
+    {% if team.id %}
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <div class="block">
+
+                <a href="{{ url('link.upload_team' , {'id':team.id}) }}" class="widget widget-hover-effect1">
+                    <div class="widget-simple">
+                        <div class="widget-icon pull-left themed-background animation-fadeIn">
+                            <i class="fa fa-file-image-o"></i>
+                        </div>
+                        <h3 class="widget-content text-right animation-pullDown">
+                            Upload <strong>photos</strong> for the member<br>
+                            <small>Click it to upload</small>
+                        </h3>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+    {% endif %}
+
+    <div class="block">
+        {% include "WebBackBundle:Team:index/index_content.html.twig" %}
+    </div>
+
+{% endblock %}

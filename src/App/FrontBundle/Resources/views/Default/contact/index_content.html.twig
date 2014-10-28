@@ -1,0 +1,261 @@
+<section class="page-content">
+<div class="container">
+<div class="row">
+    <div class="col-md-6">
+        <figure class="alignnone">
+            <img alt="" src="/assets/images/samples/img2.jpg">
+        </figure>
+    </div>
+    <div class="col-md-6">
+
+        {% set block_1 = vector('about-us') %}
+        <div class="title-accent">
+            <h3 id="timeline"><span>{{ block_1.subject }}</span></h3>
+        </div>
+
+        <span class="description scala">
+
+            {{ block_1.content | raw }}
+
+        </span>
+    </div>
+</div>
+
+
+
+<hr class="lg">
+
+<div class="title-accent text-center">
+    <h3 id="timeline">
+                    <span>
+                    Our
+                    </span>
+        Team
+    </h3>
+</div>
+
+<ul class="team-list row">
+    {% for member in teams %}
+    <li class="team-item col-md-3">
+        {% if member.attachment %}
+        <figure class="alignnone">
+            <img alt="" src="{{ member.attachment.getFullPath }}">
+        </figure>
+        {% endif %}
+        <header class="team-head">
+            <span class="team-head-info"></span>
+            <h4 class="team-name">{{ member.name }}</h4>
+            <ul class="team-social list-unstyled">
+                <li>
+                    <i class="fa fa-envelope-o"></i><a href="mailto:{{ member.email }}">{{ member.email }}</a>
+                </li>
+            </ul>
+        </header>
+                <span class="description">
+                    {{ member.profile | raw }}
+                </span>
+    </li>
+    {% endfor %}
+</ul>
+
+<hr class="lg">
+
+<div class="row">
+    <div class="title-accent" align="center">
+        <h3 id="timeline">Corporate History</h3>
+    </div>
+    <ul class="timeline">
+        <li>
+            {% set t_1 = vector('2013-1') %}
+            <div class="timeline-badge info">{{ t_1.addonBlockOne }}</div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <strong>{{ t_1.content | striptags | raw }}</strong>
+                </div>
+            </div>
+        </li>
+
+        <li>
+            {% set t_2 = vector('2013-2') %}
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <strong>{{ t_2.content | striptags |raw }}</strong>
+                </div>
+            </div>
+        </li>
+
+        <li>
+            {% set t_3 = vector('2013-3') %}
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <strong>{{ t_3.content | striptags | raw }}</strong>
+                </div>
+            </div>
+        </li>
+
+        <li class="timeline-inverted">
+            {% set t_4 = vector('2012') %}
+            <div class="timeline-badge info">{{ t_4.addonBlockOne }}</div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <strong>{{ t_4.content | striptags | raw }}</strong>
+                </div>
+            </div>
+        </li>
+
+        <li>
+            {% set t_5 = vector('2011') %}
+            <div class="timeline-badge info">{{ t_5.addonBlockOne }}</div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <strong>{{ t_5.content | striptags | raw }}</strong>
+                </div>
+            </div>
+        </li>
+
+        <li class="timeline-inverted">
+            {% set t_6 = vector('2010') %}
+            <div class="timeline-badge info">{{ t_6.addonBlockOne }}</div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <strong>{{ t_6.content | striptags | raw }}</strong>
+                </div>
+            </div>
+        </li>
+
+        <li class="timeline-inverted">
+            {% set t_7 = vector('2007-1') %}
+            <div class="timeline-badge info">{{ t_7.addonBlockOne }}</div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <strong>{{ t_7.content | striptags | raw }}</strong>
+                </div>
+            </div>
+        </li>
+
+        <li class="timeline-inverted">
+            {% set t_8 = vector('2007-2') %}
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <strong>{{ t_8.content | striptags | raw }}</strong>
+                </div>
+            </div>
+        </li>
+
+        <li>
+            {% set t_9 = vector('2006') %}
+            <div class="timeline-badge info">{{ t_9.addonBlockOne }}</div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <strong>{{ t_9.content | striptags | raw }}</strong>
+                </div>
+            </div>
+        </li>
+
+        <li class="timeline-inverted">
+            {% set t_10 = vector('2005') %}
+            <div class="timeline-badge info">{{ t_10.addonBlockOne }}</div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <strong>{{ t_10.content | striptags | raw }}</strong>
+                </div>
+            </div>
+        </li>
+
+        <li class="timeline-inverted">
+            {% set t_11 = vector('2003') %}
+            <div class="timeline-badge info">{{ t_11.addonBlockOne }}</div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <strong>{{ t_11.content | striptags | raw }}</strong>
+                </div>
+            </div>
+        </li>
+
+        <li class="timeline-inverted">
+            {% set t_12 = vector('1998') %}
+            <div class="timeline-badge warning">{{ t_12.addonBlockOne }}</div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <strong>{{ t_12.content | striptags | raw }}</strong>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+</div>
+<!-- time line end -->
+
+<hr class="lg">
+
+<div class="row">
+    <div class="title-accent" align="center">
+        <h3>Global Reach = Local Deployment</h3>
+    </div>
+
+
+    <div class="col-md-12" align="center">
+        <img src="/assets/images/global-map.png" width="100%" alt="">
+    </div>
+    <div class="col-md-2">
+        <div class="list">
+            <ul>
+                <li>Australia</li>
+                <li>Canada</li>
+                <li>China</li>
+                <li>Chzech Repubiic</li>
+                <li>Denmark</li>
+                <li>Egypt</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="list">
+            <ul>
+                <li>Ethiopia</li>
+                <li>France</li>
+                <li>Germany</li>
+                <li>India</li>
+                <li>Indonesia</li>
+                <li>Japan</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="list">
+            <ul>
+                <li>Kenya</li>
+                <li>Macau</li>
+                <li>Malaysia</li>
+                <li>Netherlands</li>
+                <li>Poland</li>
+                <li>Serbia</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="list">
+            <ul>
+                <li>Singapore</li>
+                <li>Slovakia</li>
+                <li>South Africa</li>
+                <li>Taiwan</li>
+                <li>Thailand</li>
+                <li>United Arab Emirates</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="list">
+            <ul>
+                <li>United Kingdom</li>
+                <li>United States</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+</div>
+</section>

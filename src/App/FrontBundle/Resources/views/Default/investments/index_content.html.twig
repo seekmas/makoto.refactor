@@ -1,0 +1,49 @@
+<div class="row" align="center">
+    <img src="/assets/images/investment.jpg" width="70%">
+</div>
+
+<section class="page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                {% set investments = vector('investments-business-development-support') %}
+                <h2>{{ investments.subject }}</h2>
+                <p>
+                    {{ investments.content | raw }}
+                </p>
+
+                <div class="spacer-sm"></div>
+                <div class="progress animation" data-animation="fadeInLeft" data-animation-delay="0">
+                    <div class="progress-bar" style="width: 100%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar">
+                        <span class="progress-label">
+                            SINCERITY
+                        </span>
+                        100%
+                    </div>
+                </div>
+                <div class="progress animation" data-animation="fadeInLeft" data-animation-delay="200">
+                    <div class="progress-bar" style="width: 100%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar">
+                        <span class="progress-label">
+                            TRUTH
+                        </span>
+                        100%
+                    </div>
+                </div>
+                <div class="progress animation" data-animation="fadeInLeft" data-animation-delay="200">
+                    <div class="progress-bar" style="width: 100%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar">
+                        <span class="progress-label">
+                            TRUST or BELIEF
+                        </span>
+                        100%
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <figure class="alignnone">
+                    <img src="/assets/images/investments.jpg" alt="">
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,160 @@
+{% extends "AppFrontBundle:Layout:layout.html.twig" %}
+
+{% block body %}
+    {% include "AppFrontBundle:Default:slide.html.twig" %}
+
+    <section class="page-content">
+        <div class="container">
+            <a name="roll1"></a>
+            <div class="row" id="roll1">
+
+                <div class="title-accent">
+                    <h3><span>What</span> does Makoto Mean?</h3>
+                </div>
+
+                <blockquote class="animation fadeInLeft animation-visible" data-animation="fadeInLeft">
+                    {% set block_1 = vector('what-does-makoto-mean-1') %}
+                    <div class="row">
+                        <div class="col-md-2" align="center">
+                            <img src="/assets/images/chen.png" alt="Stability">
+                        </div>
+                        <div class="scala col-md-10">
+                            {{ block_1.content | raw}}
+                        </div>
+                    </div>
+                </blockquote>
+                <blockquote class="animation fadeInLeft animation-visible" data-animation="fadeInLeft">
+                    {% set block_2 = vector('what-does-makoto-mean-2') %}
+                    <div class="row">
+                        <div class="col-md-2" align="center">
+                            <img src="/assets/images/zhen.png" alt="Stability">
+                        </div>
+                        <div class="scala col-md-10">
+                            {{ block_2.content | raw }}
+                        </div>
+                    </div>
+                </blockquote>
+                <blockquote class="animation fadeInLeft animation-visible" data-animation="fadeInLeft">
+                    {% set block_3 = vector('what-does-makoto-mean-3') %}
+                    <div class="row">
+                        <div class="col-md-2" align="center">
+                            <img src="/assets/images/xin.png" alt="Stability">
+                        </div>
+                        <div class="scala col-md-10">
+                            {{ block_3.content | raw }}
+                        </div>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="page-content">
+        <div class="container">
+            <a name="roll2"></a>
+            <div class="row" id="roll2">
+                <div class="col-md-6">
+                    <div class="icon-box circled">
+                        <div class="title-accent">
+                            <h3><span>The</span> Meaning of Makoto</h3>
+                        </div>
+                        <div class="tabs animation fadeInLeft animation-visible" data-animation="fadeInLeft" data-animation-delay="0">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a class="scala" href="#tab-1" data-toggle="tab">Makoto Way</a></li>
+                                <li><a class="scala"  href="#tab-2" data-toggle="tab">Humility</a></li>
+                                <li><a class="scala"  href="#tab-3" data-toggle="tab">Integrity</a></li>
+                                <li><a class="scala"  href="#tab-4" data-toggle="tab">Presence</a></li>
+                                <li><a class="scala"  href="#tab-5" data-toggle="tab">Having Fun </a></li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="tab-1">
+                                    <div class="row">
+                                        <div class="scala col-md-5">
+                                            {% set tab_1 = vector('the-meaning-of-makoto-1') %}
+                                            {{ tab_1.content | raw }}
+                                        </div>
+                                        <div class="col-md-7">
+                                            <img src="/assets/images/four.png" alt="Stability">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="tab-2">
+                                    <div class="row">
+                                        <div class="scala col-md-5">
+                                            {% set tab_2 = vector('the-meaning-of-makoto-2') %}
+                                            {{ tab_2.content | raw }}
+                                        </div>
+                                        <div class="col-md-7">
+                                            <img src="/assets/images/humility.png" alt="Stability">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="tab-3">
+                                    <div class="row">
+                                        <div class="scala col-md-5">
+                                            {% set tab_3 = vector('the-meaning-of-makoto-3') %}
+                                            {{ tab_3.content | raw }}
+                                        </div>
+                                        <div class="col-md-7">
+                                            <img src="/assets/images/integrity.png" alt="Stability">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="tab-4">
+                                    <div class="row">
+                                        <div class="scala col-md-5">
+                                            {% set tab_4 = vector('the-meaning-of-makoto-4') %}
+                                            {{ tab_4.content | raw }}
+                                        </div>
+                                        <div class="col-md-7">
+                                            <img src="/assets/images/presence.png" alt="Stability">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="tab-5">
+                                    <div class="row">
+                                        <div class="scala col-md-5">
+                                            {% set tab_5 = vector('the-meaning-of-makoto-5') %}
+                                            {{ tab_5.content | raw }}
+                                        </div>
+                                        <div class="col-md-7">
+                                            <img src="/assets/images/fun.png" alt="Stability">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <hr class="visible-sm visible-xs lg">
+                    <div class="title-accent">
+                        <h3><span>LATEST</span> NEWS</h3>
+                    </div>
+                    {% for post in newsfeed %}
+                    <div style="animation-delay: 200ms;" class="icon-box circled animation fadeInUp animation-visible" data-animation="fadeInUp" data-animation-delay="200">
+                        <div class="icon">
+                            <i class="fa fa-location-arrow"></i>
+                            <i class="fa fa-location-arrow bg-icon"></i>
+                        </div>
+                        <div class="icon-box-body">
+                            <a href="{{ url('app_news_post' , {'id':post.id}) }}"><h4>{{ post.subject }}</h4></a>
+                            <a class="scala" href="{{ url('app_news_post' , {'id':post.id}) }}">{{ post.content | striptags | truncate(200) | raw }}</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+{% endblock %}

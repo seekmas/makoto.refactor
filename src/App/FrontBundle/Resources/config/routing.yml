@@ -1,3 +1,27 @@
 app_front_homepage:
     path:     /
     defaults: { _controller: AppFrontBundle:Default:index }
+
+app_front_makotoglobal:
+    path:     /makoto_global
+    defaults: { _controller: AppFrontBundle:Default:global }
+
+app_front_investments:
+    path:     /makoto_investments
+    defaults: { _controller: AppFrontBundle:Default:investments }
+
+app_front_service:
+    path:     /makoto_service
+    defaults: { _controller: AppFrontBundle:Default:service }
+
+app_front_contact:
+    path:     /makoto_contact
+    defaults: { _controller: AppFrontBundle:Default:contact }
+
+app_news:
+    path: /news_list
+    defaults: { _controller: AppFrontBundle:News:index }
+
+app_news_post:
+    path: /{id}/post
+    defaults: { _controller: AppFrontBundle:News:post }
