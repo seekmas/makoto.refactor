@@ -37,7 +37,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/assets/css/makoto.css" />
         <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/global/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Web/BackBundle/Resources/config/routing/content.yml" />
@@ -88,6 +87,7 @@
         <option value="$PROJECT_DIR$/src/Web/BackBundle/Resources/views/Newsfeed/index/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Web/BackBundle/Resources/views/Content/index/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Web/BackBundle/Resources/views/Newsfeed/create/index.html.twig" />
+        <option value="$PROJECT_DIR$/LICENSE" />
       </list>
     </option>
   </component>
@@ -382,13 +382,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/global/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2967626" vertical-offset="0" max-vertical-offset="556">
-          <caret line="11" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/global/client_show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9481865" vertical-offset="2496" max-vertical-offset="3135">
@@ -759,6 +752,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12953368" vertical-offset="0" max-vertical-offset="579">
           <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5235602" vertical-offset="0" max-vertical-offset="573">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding />
         </state>
       </provider>
