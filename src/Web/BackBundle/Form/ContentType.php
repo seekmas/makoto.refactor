@@ -16,9 +16,9 @@ class ContentType extends AbstractType
     {
         $builder
             ->add('subject' , 'text')
-            ->add('catalog')
+            //->add('catalog')
             ->add('content' , 'textarea')
-            ->add('vector' , 'text')
+            //->add('vector' , 'text')
             ->add('addonBlockOne' , 'text' , ['required' => false])
             ->add('addonBlockTwo' , 'text' , ['required' => false])
             ->add('addonBlockThree' , 'text' , ['required' => false])

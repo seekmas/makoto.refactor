@@ -1,21 +1,82 @@
 <div class="row">
 
-    {% for key , route in allRoutes if 'menu.' in key %}
     <div class="col-sm-6 col-lg-6">
         <!-- Widget -->
-        <a href="{{ url(key) }}" class="widget widget-hover-effect1">
+        <a href="{{ url('menu.create_newsfeed') }}" class="widget widget-hover-effect1">
             <div class="widget-simple">
-                <div class="widget-icon pull-left themed-background-autumn animation-fadeIn">
-                    <i class="fa fa-file-text"></i>
+                <div class="widget-icon pull-left themed-background-spring animation-fadeIn">
+                    <i class="fa fa-pencil-square-o"></i>
                 </div>
                 <h3 class="widget-content text-right animation-pullDown">
-                    <strong>{{ key }}</strong><br>
+                    <strong>Write a news</strong><br>
                     <small></small>
                 </h3>
             </div>
         </a>
         <!-- END Widget -->
     </div>
-    {% endfor %}
 
+    <div class="col-sm-6 col-lg-6">
+        <!-- Widget -->
+        <a href="{{ url('menu.create_team') }}" class="widget widget-hover-effect1">
+            <div class="widget-simple">
+                <div class="widget-icon pull-left themed-background-amethyst animation-fadeIn">
+                    <i class="fa fa-user"></i>
+                </div>
+                <h3 class="widget-content text-right animation-pullDown">
+                    <strong>Add a team member</strong><br>
+                    <small></small>
+                </h3>
+            </div>
+        </a>
+        <!-- END Widget -->
+    </div>
+
+    <div class="col-sm-4 col-lg-4">
+        <!-- Widget -->
+        <a href="{{ url('menu.admin_content') }}" class="widget widget-hover-effect1">
+            <div class="widget-simple">
+                <div class="widget-icon pull-left themed-background animation-fadeIn">
+                    <i class="fa fa-pencil"></i>
+                </div>
+                <h3 class="widget-content text-right animation-pullDown">
+                    <strong>Edit WebSite Contents</strong><br>
+                    <small></small>
+                </h3>
+            </div>
+        </a>
+        <!-- END Widget -->
+    </div>
+
+    <div class="col-sm-4 col-lg-4">
+        <!-- Widget -->
+        <a href="{{ url('menu.list_newsfeed') }}" class="widget widget-hover-effect1">
+            <div class="widget-simple">
+                <div class="widget-icon pull-left themed-background-fire animation-fadeIn">
+                    <i class="fa fa-file-o"></i>
+                </div>
+                <h3 class="widget-content text-right animation-pullDown">
+                    <strong>Edit News</strong><br>
+                    <small></small>
+                </h3>
+            </div>
+        </a>
+        <!-- END Widget -->
+    </div>
+
+    <div class="col-sm-4 col-lg-4">
+        <!-- Widget -->
+        <a href="{{ url('menu.list_team') }}" class="widget widget-hover-effect1">
+            <div class="widget-simple">
+                <div class="widget-icon pull-left themed-background-spring animation-fadeIn">
+                    <i class="fa fa-users"></i>
+                </div>
+                <h3 class="widget-content text-right animation-pullDown">
+                    <strong>Edit Team Members</strong><br>
+                    <small></small>
+                </h3>
+            </div>
+        </a>
+        <!-- END Widget -->
+    </div>
 </div>

@@ -10,7 +10,7 @@ class ContentController extends Controller
     public function indexAction(Request $request , $catalogId = 0)
     {
         $paginator = $this->get('content_paginator')
-                                  ->orderBy('id' , 'desc');
+                          ->orderBy('id' , 'asc');
         if($catalogId > 0)
         {
             $paginator->where(array('catalogId' => $catalogId));

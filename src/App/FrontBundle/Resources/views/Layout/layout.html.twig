@@ -43,7 +43,11 @@
         <div class="container">
             <div class="header-top-right">
 				<span class="register">
-						<a href="{{ url('fos_user_security_login') }}">Login</a>
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <a href="{{ url('menu.home_page') }}">Administrator Passage</a>
+                        {% else %}
+						    <a href="{{ url('fos_user_security_login') }}">Login</a>
+                        {% endif %}
 				</span>
             </div>
         </div>

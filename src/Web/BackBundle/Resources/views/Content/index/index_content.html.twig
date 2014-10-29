@@ -6,7 +6,7 @@
     <div class="block-options pull-right">
         <a data-original-title="Settings" href="javascript:void(0)" class="btn btn-alt btn-sm btn-default" data-toggle="tooltip" title=""><i class="fa fa-cog"></i></a>
     </div>
-    <h2>Core of Contents <small><a href="{{ url('menu.create_content') }}">Create New Content</a></small></h2>
+    <h2>Core of Contents</h2>
 </div>
 <!-- END Messages List Title -->
 
@@ -23,7 +23,7 @@
             <a href="{{ url('link.admin_edit_by_id' , {'id':content.id}) }}"><strong> {{ content.subject }}</strong></a>
             <span class="text-muted"></span>
         </td>
-        <td>{{ content.vector }}</td>
+        <td></td>
     </tr>
     {% endfor %}
     </tbody>

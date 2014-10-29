@@ -7,8 +7,8 @@
 
     <title>Makoto Global Content Management</title>
 
-    <meta name="description" content="ProUI is a Responsive Bootstrap Admin Template created by pixelcave and published on Themeforest.">
-    <meta name="author" content="pixelcave">
+    <meta name="description" content="Makoto Investments">
+    <meta name="author" content="mot/seekmas@msn.cn">
     <meta name="robots" content="noindex, nofollow">
 
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
@@ -46,9 +46,32 @@
     <!-- END Fontawesome -->
 
     <script src="{{ asset('jquery-1.11.1.min.js') }}"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('redactor-js/css/style.css') }}" />
+    <!-- Redactor is here -->
+    <link rel="stylesheet" href="{{ asset('redactor-js/redactor/redactor.css') }}" />
+
     <!-- Modernizr (browser feature detection library) & Respond.js (Enable responsive CSS code on browsers that don't support it, eg IE8) -->
     <script src="{{ asset('backend/js/vendor/modernizr-2.7.1-respond-1.4.2.min.js') }}"></script>
 
+    <script src="{{ asset('redactor-js/redactor/redactor.min.js') }}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(
+                function()
+                {
+                    $('textarea').redactor(
+                            {
+                                'buttons'  : ['html', 'formatting', 'bold', 'italic', 'deleted',
+                                    'unorderedlist', 'orderedlist', 'outdent', 'indent',
+                                    'link', 'alignment', 'horizontalrule'] ,
+                                'minHeight': '300' ,
+                                'maxHeight': '300'
+                            }
+                    );
+                }
+        );
+    </script>
 </head>
 <!-- In the PHP version you can set the following options from inc/config file -->
 <!--
@@ -134,15 +157,15 @@
                 <div class="header-section">
                     <h1>
                         <i class="{% block icon %}fa fa-smile-o{% endblock %}"></i>
-                        {% block bigTitle %}Unknown Big Title{% endblock %}<br>
-                        <small>{% block bigDescription %}Some descriptions of current module{% endblock %}</small>
+                        {% block bigTitle %}{% endblock %}<br>
+                        <small>{% block bigDescription %}{% endblock %}</small>
                     </h1>
                 </div>
             </div>
 
             <ul class="breadcrumb breadcrumb-top">
-                <li>{% block topName %}Top Module{% endblock %}</li>
-                <li>{% block subName %}<a href="">Sub Module</a>{% endblock %}</li>
+                <li>{% block topName %}Home{% endblock %}</li>
+                <li>{% block subName %}<a href=""></a>{% endblock %}</li>
             </ul>
 
             {% for type, messages in app.session.flashbag.all() %}
@@ -248,7 +271,7 @@
 <script src="{{ asset('backend/js/plugins.js') }}"></script>
 <script src="{{ asset('backend/js/app.js') }}"></script>
 <script src="{{ asset('backend/js/pages/index.js') }}"></script>
-<script src="{{ asset('backend/js/ckeditor/ckeditor.js') }}"></script>
+
 <script>$(function(){ Index.init(); });</script>
 </body>
 </html>

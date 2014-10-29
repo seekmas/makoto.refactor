@@ -487,8 +487,7 @@ a.sidebar-title:focus {
     padding: 2px;
     margin-left: -78px;
     border-radius: 34px;
-    background: url('../img/template/ie8_opacity_light_75.png') repeat;
-    background: rgba(255, 255, 255, 0.75);
+
 }
 
 .sidebar-user-avatar img {

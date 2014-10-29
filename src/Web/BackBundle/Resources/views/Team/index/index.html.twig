@@ -1,7 +1,13 @@
 {% extends "WebBackBundle:Layout:layouts.html.twig" %}
 
-{% block body %}
 
+    {% block bigTitle %}{% if team.id %}Edit{% else %}Create{% endif %} Team Members{% endblock %}
+    {% block bigDescription %}{% if team.id %}Edit{% else %}Create{% endif %} the member of team{% endblock %}
+    {% block subName %}<a href="">{% if team.id %}Edit{% else %}Create{% endif %} Team Members</a>{% endblock %}
+    {% block icon %}fa fa-user{% endblock %}
+
+
+{% block body %}
 
     {% if team.id %}
     <div class="row">
