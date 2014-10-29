@@ -43,11 +43,9 @@
         <option value="$PROJECT_DIR$/src/Web/BackBundle/Paginator/PaginatorFactory.php" />
         <option value="$PROJECT_DIR$/src/Web/BackBundle/Resources/views/Content/edit/index_content.html.twig" />
         <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/global/client_show.html.twig" />
-        <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/global/index_content.html.twig" />
         <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/investments/index.html.twig" />
         <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/investments/index_content.html.twig" />
         <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/service/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/service/index_content.html.twig" />
         <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/contact/index.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
@@ -66,7 +64,6 @@
         <option value="$PROJECT_DIR$/src/Web/BackBundle/Entity/Team.php" />
         <option value="$PROJECT_DIR$/src/Web/BackBundle/Controller/TeamController.php" />
         <option value="$PROJECT_DIR$/src/App/FrontBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/contact/index_content.html.twig" />
         <option value="$PROJECT_DIR$/src/Web/BackBundle/Resources/views/Form/form_div_layouts.html.twig" />
         <option value="$PROJECT_DIR$/src/Web/BackBundle/Controller/ContentController.php" />
         <option value="$PROJECT_DIR$/src/Web/BackBundle/Form/ContentType.php" />
@@ -88,6 +85,9 @@
         <option value="$PROJECT_DIR$/src/Web/BackBundle/Resources/views/Newsfeed/create/index.html.twig" />
         <option value="$PROJECT_DIR$/LICENSE" />
         <option value="$PROJECT_DIR$/src/Web/BackBundle/Resources/views/Content/edit/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/global/index_content.html.twig" />
+        <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/service/index_content.html.twig" />
+        <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/contact/index_content.html.twig" />
       </list>
     </option>
   </component>
@@ -185,11 +185,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Web" />
+              <option name="myItemId" value="App" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BackBundle" />
+              <option name="myItemId" value="FrontBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -207,11 +207,75 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Web" />
+              <option name="myItemId" value="App" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BackBundle" />
+              <option name="myItemId" value="FrontBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="makoto.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="makoto.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FrontBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="makoto.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="makoto.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FrontBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -334,20 +398,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/contact/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2849741" vertical-offset="0" max-vertical-offset="579">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/global/index_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0416665" vertical-offset="2564" max-vertical-offset="8595">
-          <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.78835976" vertical-offset="963" max-vertical-offset="1530">
@@ -492,13 +542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.119170986" vertical-offset="861" max-vertical-offset="1440">
           <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/contact/index_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6217617" vertical-offset="450" max-vertical-offset="3990">
-          <caret line="54" column="43" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -716,6 +759,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.051813472" vertical-offset="0" max-vertical-offset="855">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/global/index_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58480567" vertical-offset="5579" max-vertical-offset="8595">
+          <caret line="394" column="29" selection-start-line="394" selection-start-column="29" selection-end-line="394" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/service/index_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.34452298" vertical-offset="2415" max-vertical-offset="4305">
+          <caret line="148" column="29" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/contact/index_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24870466" vertical-offset="786" max-vertical-offset="3990">
+          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
           <folding />
         </state>
       </provider>
