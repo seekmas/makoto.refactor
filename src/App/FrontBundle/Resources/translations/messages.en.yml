@@ -3,12 +3,29 @@ meta:
     keywords: Makoto , Lean , Consult , Management , Japan Lean Experience
     description: Makoto Global Offical Website
 
+image:
+    logo: assets/images/logo.png
+    dna: assets/images/dna.png
+
 heading:
     makoto_global: Makoto Global
     service: Services
     latest_news: LATEST NEWS
     contact: CONTACT
     investments: Investments
+
+slider:
+    learing_happens_by_doing: <strong><em>Learning&nbsp;&nbsp;<span style="color:#57b5ff;">Happens <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;by Doing</span></em></strong>
+    transformations: <strong><em>Transformations&nbsp;&nbsp;<span  style="color:#57b5ff;">Require <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reflections</span></em></strong>
+    leadership: <strong><em>Leadership&nbsp;&nbsp;<span  style="color:#57b5ff;">Actions <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that Impact</span></em></strong>
+    seeing: <strong><em>Seeing&nbsp;&nbsp;<span  style="color:#57b5ff;">is Believing </span></em></strong>
+    behaviors: <em><strong>Behaviors&nbsp;&nbsp;<span  style="color:#57b5ff;">Matter when<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;applying Tools</span></strong></em>
+    we_believe_in: We believe in
+    in_dna: The "Makoto Way" its in our DNA!
+    over_26_years: OVER 26 YEARS OF EXPERIENCE IN HELPING OTHERS CHANGE
+    welcome_to: Welcome to
+    makoto: Makoto
+    global: Global
 
 front:
     the_meaning_of_makoto: The Meaning of Makoto

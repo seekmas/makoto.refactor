@@ -3,12 +3,29 @@ meta:
     keywords: 擀霸,精益,日本精益之旅,管理,培训,内训
     description: 擀霸企业管理咨询(上海)有限公司
 
+image:
+    logo: assets/images/logo_gemba.png
+    dna: assets/images/dna_gemba.png
+
 heading:
     makoto_global: 擀霸中国
     service: 产品/服务
     latest_news: 新闻
     contact: 联系我们
     investments: 投资
+
+slider:
+    learing_happens_by_doing: <strong><span style="color:#57b5ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;寓教于乐</span><br/>学而思之</strong>
+    transformations: <strong><span  style="color:#57b5ff;">三思而行<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>再思可矣</em></strong>
+    leadership: <strong><span  style="color:#57b5ff;">身先士卒 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>以身作则</strong>
+    seeing: <strong><span  style="color:#57b5ff;">百闻</span>不如一见</strong>
+    behaviors: <strong><span  style="color:#57b5ff;">握管怀铅<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>事在人为</strong>
+    we_believe_in: 我们拥有的信念
+    in_dna: 擀霸的企业文化深植于我们的DNA中
+    over_26_years: 有超过26年的经验在帮助企业转变的培训中
+    welcome_to: 欢迎莅临擀霸中国
+    makoto: 擀霸中国
+    global: 企业管理
 
 front:
     the_meaning_of_makoto: 企业文化

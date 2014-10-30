@@ -60,7 +60,12 @@
         <div class="container">
             <!-- Logo -->
             <div class="logo">
-                <a href="{{ url('app_front_homepage') }}"><img alt="Makoto Global Offical Website" src="{{ asset('assets/images/logo.png') }}" /></a>
+
+
+                <a href="{{ url('app_front_homepage') }}">
+                    <img alt="Makoto Global Offical Website" src="{{ asset("image.logo" | trans | raw) }}" />
+                </a>
+
             </div>
             <!-- Logo / End -->
 
