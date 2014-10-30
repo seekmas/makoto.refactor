@@ -1,1 +1,101 @@
+meta:
+    title: 擀霸企业管理咨询(上海)有限公司
+    keywords: 擀霸,精益,日本精益之旅,管理,培训,内训
+    description: 擀霸企业管理咨询(上海)有限公司
+
+heading:
+    makoto_global: 擀霸中国
+    service: 产品/服务
+    latest_news: 新闻
+    contact: 联系我们
+    investments: 投资
+
 front:
+    the_meaning_of_makoto: 企业文化
+    the_makoto_way: 服务价值
+    makoto_dna: 擀霸企业
+    makoto_global: 擀霸业务
+    kaizen_training_workshops: 内训课
+    kaizen_consulting_activities: 咨询活动
+    investments: 投资
+    services: 产品/服务
+    japan_lean_experience: 日本精益之旅
+    consulting: 咨询
+    learning: 学习
+    other_services: 其他服务
+    news: 新闻
+    contact: 联系我们
+    login: 登陆
+    admin: 后台管理
+
+title:
+    what_does_makoto_mean: <span>擀霸</span> 的企业文化
+    the_meaning_of_makoto: <span>擀霸</span>的服务价值
+    latest_news: <span>擀霸</span> 的新闻资讯
+    our_team: <span>擀霸</span> 全球团队
+    corporate_history: 擀霸合作历史
+    global_reach: <span>擀霸</span>全球影响力: 部署分布的地区
+
+tab:
+    makoto_way: 服务价值
+    humility: 谦虚谨慎
+    integrity: 诚信待人
+    presence: 领袖风度
+    having_fun: 趣味盎然
+
+bottom:
+    about_us: 关于我们
+    contact_us: 联系方式( 业务咨询 )
+    facebook: <a href="https://www.facebook.com/pages/GembaChina%E6%93%80%E9%9C%B8%E4%B8%AD%E5%9B%BD/454939231312026" target="_blank">擀霸企业管理咨询(上海)有限公司</a>
+    addresss: 上海市 黄浦区人民路885号22楼2206室
+    tel: 办公室电话 : +86 62482365
+    fax: 办公室传真 : +81 62482365
+    email_dj: <a href="mailto:mwang@makotoglobal.com">Michael.Wang</a><br/>
+    email_brad: <a href="mailto:constant.pu@makotoglobal.com">Constance.Pu</a><br>
+    about_us_content: <p>擀霸企业管理咨询(上海)有限公司多年来和专业团队一直在旅途中,<br/>擀霸企业管理咨询(上海)有限公司是一家专业为企业提供全球精益部署规划和实施、<br/>运营操作及服务咨询以及精益标杆之旅的专业企业管理咨询公司。<br/>擀霸公司在上海、美国、日本等地都设有分支机构，拥有来自世界各地资深的精益专家，<br/>他们拥有15年以上的精益咨询及实践经验，为全球企业精益部署及改善提供专业的规划及方案。<br/>同时，擀霸独有的资源将为企业提供精益标杆之旅，帮助企业参观日本精益标准工厂，进行精益实践交流和学习。<br/>擀霸公司将不断秉承诚实、真诚以及新人的理念，不断为企业提供更专业更有效的精益指导，<br/>帮助企业真正实现卓越运营管理及组织战略管理。</p>
+    read_more: 了解更多
+
+countries:
+    Australia: 澳大利亚
+    Canada: 加拿大
+    China: 中国上海
+    Czech_Republic: 捷克共和国
+    Denmark: 丹麦
+    Egypt: 埃及
+    Ethiopia: 埃塞俄比亚
+    France: 法国
+    Germany: 德国
+    India: 印度
+    Indonesia: 印度尼西亚
+    Japan: 日本
+    Kenya: 肯尼亚
+    Macau: 中国澳门
+    Malaysia: 马来西亚
+    Netherlands: 荷兰
+    Poland: 波兰
+    Serbia: 塞尔维亚
+    Singapore: 新加坡
+    Slovakia: 斯洛伐克
+    South_Africa: 南非
+    Taiwan: 中国台湾
+    Thailand: 泰国
+    United_Arab_Emirates: 阿拉伯联合酋长国
+    United_Kingdom: 英国
+    United_States: 美国
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

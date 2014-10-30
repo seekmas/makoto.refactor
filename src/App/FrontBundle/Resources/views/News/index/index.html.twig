@@ -1,6 +1,8 @@
 {% extends "AppFrontBundle:Layout:layout.html.twig" %}
 
-{% block heading_title %}LATEST NEWS{% endblock %}
+{% block heading_title %}
+    {{ 'heading.latest_news' | trans | raw }}
+{% endblock %}
 
 {% block body %}
 

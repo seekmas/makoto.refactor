@@ -2,7 +2,9 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>MakotoGlobal</title>
+    <title>{{ 'meta.title' | trans | raw }}</title>
+    <meta name="Keywords" content="{{ 'meta.keywords' | trans | raw }}">
+    <meta name="Description" content="{{ 'meta.description' | trans | raw }}">
     <link rel="stylesheet" href="{{ asset('tpl/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('tpl/css/fonts/font-awesome/css/font-awesome.css') }}">
     <link rel="stylesheet" href="{{ asset('tpl/vendor/owl-carousel/owl.carousel.css') }}" media="screen">
@@ -39,14 +41,15 @@
 
 <!-- Header -->
 <header class="header header header-top-colored menu-colored">
+
     <div class="header-top">
         <div class="container">
             <div class="header-top-right">
 				<span class="register">
                         {% if is_granted('ROLE_ADMIN') %}
-                            <a href="{{ url('menu.home_page') }}">Administrator Passage</a>
+                            <a href="{{ url('menu.home_page') }}">{{ 'front.admin' | trans | raw }}</a>
                         {% else %}
-						    <a href="{{ url('fos_user_security_login') }}">Login</a>
+						    <a href="{{ url('fos_user_security_login') }}">{{ 'front.login' | trans | raw }}</a>
                         {% endif %}
 				</span>
             </div>
@@ -130,7 +133,7 @@
                 <div class="col-md-9">
                     <!-- Widget :: Text Widget -->
                     <div class="widget_text widget widget__footer">
-                        <h3 class="widget-title">About Us</h3>
+                        <h3 class="widget-title">{{ 'bottom.about_us' | trans | raw }}</h3>
                         <div class="widget-content">
                             {{ 'bottom.about_us_content' | trans | raw }}
                             <a href="{{ url('app_front_contact') }}" class="btn btn-primary">{{ 'bottom.read_more' | trans | raw }}</a>
@@ -141,7 +144,7 @@
                 <div class="col-md-3">
                     <!-- Widget :: Contacts Info -->
                     <div class="contacts-widget widget widget__footer">
-                        <h3 class="widget-title">Contact Us</h3>
+                        <h3 class="widget-title">{{ 'bottom.contact_us' | trans | raw }}</h3>
                         <div class="widget-content">
                             <ul class="contacts-info-list">
                                 <li>
