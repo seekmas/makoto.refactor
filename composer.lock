@@ -1986,12 +1986,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/JMSTranslationBundle.git",
-                "reference": "aa1cc4797997a30d4fdc55eb1f6042965b4b823f"
+                "reference": "8eff56746b73762dfe06414faf0fb609bfe51754"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/JMSTranslationBundle/zipball/aa1cc4797997a30d4fdc55eb1f6042965b4b823f",
-                "reference": "aa1cc4797997a30d4fdc55eb1f6042965b4b823f",
+                "url": "https://api.github.com/repos/schmittjoh/JMSTranslationBundle/zipball/8eff56746b73762dfe06414faf0fb609bfe51754",
+                "reference": "8eff56746b73762dfe06414faf0fb609bfe51754",
                 "shasum": ""
             },
             "require": {
@@ -2049,7 +2049,7 @@
                 "ui",
                 "webinterface"
             ],
-            "time": "2014-09-09 15:47:55"
+            "time": "2014-10-29 13:23:47"
         },
         {
             "name": "knplabs/knp-components",
@@ -2751,12 +2751,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/liip/LiipImagineBundle.git",
-                "reference": "fe51d50896434d4c1393a5de1504cc174b9049bd"
+                "reference": "c8b6eca46635a0d99260e5d459ae73876c930c2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/fe51d50896434d4c1393a5de1504cc174b9049bd",
-                "reference": "fe51d50896434d4c1393a5de1504cc174b9049bd",
+                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/c8b6eca46635a0d99260e5d459ae73876c930c2f",
+                "reference": "c8b6eca46635a0d99260e5d459ae73876c930c2f",
                 "shasum": ""
             },
             "require": {
@@ -2816,7 +2816,7 @@
                 "image",
                 "imagine"
             ],
-            "time": "2014-10-22 06:27:33"
+            "time": "2014-10-29 18:56:25"
         },
         {
             "name": "liip/theme-bundle",

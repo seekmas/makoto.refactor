@@ -68,36 +68,36 @@
             <!-- Navigation -->
             <nav class="nav-main">
                 <ul data-breakpoint="992" class="flexnav">
-                    <li class="active"><a href="{{ url('app_front_homepage') }}">Makoto's DNA</a>
+                    <li class="active"><a href="{{ url('app_front_homepage') }}">{{ 'front.makoto_dna' | trans | raw }}</a>
                         <ul>
-                            <li><a id="roll1Btn" href="{{ url('app_front_homepage') }}#roll1">The Meaning of Makoto</a></li>
-                            <li><a id="roll2Btn" href="{{ url('app_front_homepage') }}#roll2">The Makoto Way</a></li>
+                            <li><a id="roll1Btn" href="{{ url('app_front_homepage') }}#roll1">{{ 'front.the_meaning_of_makoto' | trans | raw }}</a></li>
+                            <li><a id="roll2Btn" href="{{ url('app_front_homepage') }}#roll2">{{ 'front.the_makoto_way' | trans | raw }}</a></li>
                         </ul>
                     </li>
 
-                    <li class="active"><a href="{{ url('app_front_makotoglobal') }}">MAKOTO GLOBAL</a>
+                    <li class="active"><a href="{{ url('app_front_makotoglobal') }}">{{ 'front.makoto_global' | trans | raw }}</a>
                         <ul>
-                            <li><a id="ktwBtn" href="{{ url('app_front_makotoglobal') }}#ktw">Kaizen Training Workshops</a></li>
-                            <li><a id="kcaBtn" href="{{ url('app_front_makotoglobal') }}#kca">Kaizen Consulting Activities</a></li>
-                            <li><a href="{{ url('app_front_investments') }}">Investments</a></li>
+                            <li><a id="ktwBtn" href="{{ url('app_front_makotoglobal') }}#ktw">{{ 'front.kaizen_training_workshops' | trans | raw }}</a></li>
+                            <li><a id="kcaBtn" href="{{ url('app_front_makotoglobal') }}#kca">{{ 'front.kaizen_consulting_activities' | trans | raw }}</a></li>
+                            <li><a href="{{ url('app_front_investments') }}">{{ 'front.investments' | trans | raw }}</a></li>
                         </ul>
                     </li>
 
-                    <li class="active"><a href="{{ url('app_front_service') }}">Services</a>
+                    <li class="active"><a href="{{ url('app_front_service') }}">{{ 'front.services' | trans | raw }}</a>
                         <ul>
-                            <li><a id="jle2Btn" href="{{ url('app_front_service') }}#jle2">Japan Lean Experience</a></li>
-                            <li><a id="conBtn" href="{{ url('app_front_service') }}#con">Consulting</a></li>
-                            <li><a id="leaBtn" href="{{ url('app_front_service') }}#lea">Learning</a></li>
-                            <li><a id="othBtn" href="{{ url('app_front_service') }}#oth">Other Services</a></li>
+                            <li><a id="jle2Btn" href="{{ url('app_front_service') }}#jle2">{{ 'front.japan_lean_experience' | trans | raw }}</a></li>
+                            <li><a id="conBtn" href="{{ url('app_front_service') }}#con">{{ 'front.consulting' | trans | raw }}</a></li>
+                            <li><a id="leaBtn" href="{{ url('app_front_service') }}#lea">{{ 'front.learning' | trans | raw }}</a></li>
+                            <li><a id="othBtn" href="{{ url('app_front_service') }}#oth">{{ 'front.other_services' | trans | raw }}</a></li>
                         </ul>
                     </li>
 
                     <li >
-                        <a href="{{ url('app_news') }}">News</a>
+                        <a href="{{ url('app_news') }}">{{ 'front.news' | trans | raw }}</a>
                     </li>
 
                     <li >
-                        <a href="{{ url('app_front_contact') }}">Contact</a>
+                        <a href="{{ url('app_front_contact') }}">{{ 'front.contact' | trans | raw }}</a>
                     </li>
                 </ul>
             </nav>
@@ -132,10 +132,8 @@
                     <div class="widget_text widget widget__footer">
                         <h3 class="widget-title">About Us</h3>
                         <div class="widget-content">
-                            <p>It’s been over 26 years since we started on the Lean journey. In that journey we have visited over 200 companies, organized over 200 trips to Japan to see some of the best lean companies in the world. We have also had the privilege of teaching Lean thinking around the world (25 countries) and learning from those experiences.</p>
-                            <p>Our greatest joy is seeing our customers surpass us in great ideas and taking their companies’ further in lean than we would have been able to. They are our life-long friends and partners.</p>
-
-                            <a href="http://makotoglobal.com/m/contact" class="btn btn-primary">Read More</a>
+                            {{ 'bottom.about_us_content' | trans | raw }}
+                            <a href="{{ url('app_front_contact') }}" class="btn btn-primary">{{ 'bottom.read_more' | trans | raw }}</a>
                         </div>
                     </div>
                     <!-- /Widget :: Text Widget -->
@@ -149,28 +147,28 @@
                                 <li>
                                     <i class="fa fa-map-marker"></i>
                                     <div class="info-item">
-                                        Suite 3A Alphatown Kagurazaka2-9 Kagurazaka, Shinjuku-ku Tokyo 162-0825 Japan
+                                        {{ 'bottom.addresss' | trans | raw }}
                                     </div>
                                 </li>
                                 <li>
                                     <i class="fa fa-facebook"></i>
                                     <div class="info-item">
-                                        <a href="https://www.facebook.com/pages/Makoto-Investments-Ltd/306220866204523" target="_blank">Makoto Investments Ltd</a>
+                                        {{ 'bottom.facebook' | trans | raw }}
                                     </div>
 
                                 </li>
                                 <li>
                                     <i class="fa fa-phone"></i>
                                     <div class="info-item">
-                                        Tel:+81 3-5579-8020<br>
-                                        Fax:+81 3-5579-8026
+                                        {{ 'bottom.tel' | trans | raw }}<br>
+                                        {{ 'bottom.fax' | trans | raw }}
                                     </div>
                                 </li>
                                 <li>
                                     <i class="fa fa-envelope"></i>
                                     <div class="info-item">
-                                        <a href="dduarte@makoto-investments.com">Consulting Services-DJ Duarte</a>
-                                        <a href="mailto:info@dan-fisher.com">President-Brad Schmidt</a><br>
+                                        {{ 'bottom.email_dj' | trans | raw }}
+                                        {{ 'bottom.email_brad' | trans | raw }}
                                     </div>
                                 </li>
                             </ul>
