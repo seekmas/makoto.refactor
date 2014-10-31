@@ -1,0 +1,55 @@
+{% extends "WebBackBundle:Layout:layouts.html.twig" %}
+
+{% block bigTitle %}Change Background Pictures{% endblock %}
+{% block bigDescription %}Edit Content of WebSite ( Whole Pages except for news ){% endblock %}
+{% block subName %}<a href="">Edit News</a>{% endblock %}
+{% block icon %}fa fa-pencil{% endblock %}
+
+{% block body %}
+
+
+    <div class="row">
+        <!-- Inbox Menu -->
+        <div class="col-sm-4 col-lg-4">
+
+            <div class="block">
+            {% include "WebBackBundle:Upload:background/index_content.html.twig" %}
+            </div>
+
+        </div>
+        <!-- END Messages List -->
+
+        <div class="col-sm-8 col-lg-8">
+
+
+            <div class="block">
+                <div class="row">
+                {% for background in bg %}
+
+                    <div class="col-sm-6 col-lg-6">
+
+                        <a href="{{ asset(background.filePath) }}" data-toggle="lightbox-image">
+                            <img style="width: 100% ; height: 120px;" src="{{ asset(background.filePath) }}" alt="image">
+                        </a>
+                        {% if background.active == false %}
+
+                            <a href="{{ url('active_background_upload' , {'id':background.id}) }}">Active</a>
+
+                        {% else %}
+
+                            <span class="label label-info">Current Background</span>
+
+                        {% endif %}
+
+                    </div>
+
+                {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+{% endblock %}

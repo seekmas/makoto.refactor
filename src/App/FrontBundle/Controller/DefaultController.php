@@ -9,6 +9,9 @@ class DefaultController extends Controller
     public function indexAction()
     {
 
+
+        $background = $this->get('background_entity')->findOneBy(['active' => true]);
+
         $newsfeed = $this->get('newsfeed_paginator')
                          ->orderBy('createdAt' , 'desc')
                          ->getPaginator(6);
@@ -16,6 +19,7 @@ class DefaultController extends Controller
         return $this->render('AppFrontBundle:Default:index/index.html.twig' ,
             [
                 'newsfeed' => $newsfeed ,
+                'background' => $background ,
             ]
         );
     }

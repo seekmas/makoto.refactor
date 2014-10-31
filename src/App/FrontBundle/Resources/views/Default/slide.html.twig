@@ -4,9 +4,16 @@
 <ul>
 <!-- SLIDE #1  -->
 <li data-transition="random" data-slotamount="7" data-masterspeed="1000" data-delay="8000" >
-<!-- MAIN IMAGE -->
-<img src="/assets/images/samples/slide-bg.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
 
+<!-- MAIN IMAGE -->
+{% if background %}
+    <img src="{{ asset(background.filePath) }}" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+
+{% else %}
+
+    <img src="/assets/images/samples/slide-bg.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+
+{% endif %}
 <!-- LAYERS -->
 
 <!-- LAYER NR. 1 -->
@@ -239,8 +246,16 @@
 
 <!-- SLIDE #2  -->
 <li data-transition="random" data-slotamount="7" data-masterspeed="1000" data-delay="6000" >
+
+    {% if background %}
+        <img src="{{ asset(background.filePath) }}" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+
+    {% else %}
+
+        <img src="/assets/images/samples/slide-bg.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+
+    {% endif %}
     <!-- MAIN IMAGE -->
-    <img src="/assets/images/samples/slide-bg.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
 
     <!-- LAYERS -->
 
@@ -318,8 +333,14 @@
 <!-- SLIDE #3  -->
 <li data-transition="random" data-slotamount="7" data-masterspeed="1000" data-delay="6000" >
     <!-- MAIN IMAGE -->
-    <img src="/assets/images/samples/slide-bg.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+    {% if background %}
+        <img src="{{ asset(background.filePath) }}" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
 
+    {% else %}
+
+        <img src="/assets/images/samples/slide-bg.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+
+    {% endif %}
     <!-- LAYERS -->
 
     <!-- LAYER NR. 1 -->
@@ -366,8 +387,14 @@
 <!-- SLIDE #3  -->
 <li data-transition="random" data-slotamount="7" data-masterspeed="1000" data-delay="6000" >
     <!-- MAIN IMAGE -->
-    <img src="/assets/images/samples/slide-bg.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+    {% if background %}
+        <img src="{{ asset(background.filePath) }}" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
 
+    {% else %}
+
+        <img src="/assets/images/samples/slide-bg.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+
+    {% endif %}
     <!-- LAYERS -->
 
     <!-- LAYER NR. 1 -->

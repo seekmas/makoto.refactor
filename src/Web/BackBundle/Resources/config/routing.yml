@@ -17,3 +17,11 @@ team:
 rest_upload:
     path: /rest_upload
     defaults: { _controller: WebBackBundle:Upload:image }
+
+background_upload:
+    path: /background_upload
+    defaults: { _controller: WebBackBundle:Upload:background }
+
+active_background_upload:
+    path: /{id}/active_background_upload
+    defaults: { _controller: WebBackBundle:Upload:active }

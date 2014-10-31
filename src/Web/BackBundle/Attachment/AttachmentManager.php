@@ -89,6 +89,8 @@ class AttachmentManager implements AttachmentInterface
         $this->attachment->setPath($this->dir);
         $this->attachment->setCreatedAt(new \Datetime());
         $this->attachment->setMd5(md5_file($this->save_dir.'/'.$file->getClientOriginalName()));
+
+        return $this->attachment->getFullPath();
     }
 
     /**

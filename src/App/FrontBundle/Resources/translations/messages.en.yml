@@ -28,6 +28,7 @@ slider:
     global: Global
 
 front:
+    admin: Administrator Management
     the_meaning_of_makoto: The Meaning of Makoto
     the_makoto_way: The Makoto Way
     makoto_dna: Makoto's DNA
