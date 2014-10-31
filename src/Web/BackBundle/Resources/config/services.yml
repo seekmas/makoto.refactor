@@ -16,3 +16,7 @@ services:
     attachment.manager:
         class: Web\BackBundle\Attachment\AttachmentManager
         arguments: [@service_container,@attachment_entity]
+
+    rest_attachment.manager:
+        class: Web\BackBundle\Attachment\RestAttachmentManager
+        arguments: [ @kernel , @security.context , @request_stack , @doctrine , @attachment_entity]

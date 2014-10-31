@@ -13,3 +13,7 @@ content:
 team:
     resource: "@WebBackBundle/Resources/config/routing/team.yml"
     prefix:   /
+
+rest_upload:
+    path: /rest_upload
+    defaults: { _controller: WebBackBundle:Upload:image }

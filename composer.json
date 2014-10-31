@@ -19,7 +19,7 @@
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
         "nelmio/api-doc-bundle": "@stable",
-        "friendsofsymfony/rest-bundle": "1.3.*",
+        "friendsofsymfony/rest-bundle": "~1.4",
         "jms/serializer-bundle": "~0.13",
         "jms/translation-bundle": "1.1.*@dev",
         "jms/security-extra-bundle": "1.5.*@dev",
@@ -46,7 +46,8 @@
         "liip/imagine-bundle": "1.0.*@dev",
         "snc/redis-bundle": "1.1.x-dev",
         "predis/predis": "0.8.x-dev",
-        "mmoreram/http-headers-bundle": "dev-master"
+        "mmoreram/http-headers-bundle": "dev-master",
+        "jms/serializer": "~0.16"
 
     },
     "require-dev": {
