@@ -98,6 +98,25 @@ class NewsfeedController extends Controller
         );
     }
 
+    public function unlinkAction($id)
+    {
+        $attachment = $this->get('attachment_entity')->find($id);
+
+        $newsfeed = $attachment->getNewsfeed();
+
+        $this->get('attachment.manager')->unlink($attachment);
+
+        $em = $this->getDoctrine()->getManager();
+
+        $em->remove($attachment);
+
+        $em->flush();
+
+        $this->flash('success' , 'You delete a cover picture ! ');
+
+        return $this->redirect('link.upload_newsfeed' , ['id'=>$newsfeed->getId()]);
+    }
+
     public function removeAction(Request $request , $id)
     {
         $em = $this->getDoctrine()->getManager();

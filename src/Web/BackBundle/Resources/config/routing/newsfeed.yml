@@ -14,6 +14,10 @@ link.upload_newsfeed:
     path:     /{id}/newsfeed_upload
     defaults: { _controller: WebBackBundle:Newsfeed:upload }
 
+link.unlink_attachment:
+    path:     /{id}/unlink_attachment
+    defaults: { _controller: WebBackBundle:Newsfeed:unlink }
+
 link.remove_newsfeed:
     path:     /{id}/newsfeed_remove
     defaults: { _controller: WebBackBundle:Newsfeed:remove }

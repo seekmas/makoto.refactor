@@ -55,10 +55,13 @@
     <div class="gallery" data-toggle="lightbox-gallery">
         <div class="row">
             {% for attachment in newsfeed.attachment %}
-            <div class="col-sm-4">
+            <div class="col-md-2">
                 <a href="{{ asset(attachment.path ~ '/' ~ attachment.file) }}" class="gallery-link" title="{{ attachment.file }}">
-                    <img src="{{ asset(attachment.path ~ '/' ~ attachment.file) }}" alt="{{ attachment.file }}">
+                    <img style="width: 100%" src="{{ asset(attachment.path ~ '/' ~ attachment.file) }}" alt="{{ attachment.file }}">
                 </a>
+
+                <a href="{{ url('link.unlink_attachment' , {'id':attachment.id}) }}">Delete</a>
+
             </div>
             {% endfor %}
         </div>
