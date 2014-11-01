@@ -15,7 +15,7 @@ class Builder extends ContainerAware
              ->createManagement()
         ;
 
-        $this->menu->addChild('BackGround' , ['route' => 'background_upload' , 'attributes' => ['icon'=>'fa fa-picture-o']]);
+        $this->menu->addChild('BackGround' , ['label' => 'Upload Background','route' => 'background_upload' , 'attributes' => ['icon'=>'fa fa-picture-o']]);
 
 
         return $this->menu;

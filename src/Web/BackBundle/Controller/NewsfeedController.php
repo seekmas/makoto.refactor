@@ -98,8 +98,26 @@ class NewsfeedController extends Controller
         );
     }
 
-    public function removeAction()
+    public function removeAction(Request $request , $id)
     {
+        $em = $this->getDoctrine()->getManager();
 
+        $news = $this->get('newsfeed_entity')->find($id);
+
+        foreach($news->getAttachment() as $attachment)
+        {
+            $em->remove($attachment);
+            $em->flush();
+        }
+
+        $news->setAttachment(NULL);
+
+        $em->remove($news);
+
+        $em->flush();
+
+        $this->flash('success' , 'You remove a news ! ');
+
+        return $this->redirect('menu.list_newsfeed');
     }
 }

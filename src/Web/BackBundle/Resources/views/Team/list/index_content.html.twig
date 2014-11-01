@@ -21,6 +21,7 @@
                 </td>
                 <td></td>
                 <td class="text-right">{{ member.email }}</td>
+                <td><a href="{{ url('link.remove_team' , {'id':member.id}) }}">Remove</a></td>
             </tr>
             {% endfor %}
             </tbody>

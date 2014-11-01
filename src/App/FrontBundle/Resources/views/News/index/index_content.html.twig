@@ -11,7 +11,9 @@
         <div class="row">
             <div class="col-md-5">
                 <figure class="alignnone entry-thumb">
-                    <a href="{{ url('app_news_post' , {'id':post.id}) }}"><img src="{{ asset(post.attachment[0].getFullPath) }}" alt=""></a>
+                    <a href="{{ url('app_news_post' , {'id':post.id}) }}">
+                        <img src="{{ asset(post.attachment[0].getFullPath) | imagine_filter('my_thumb_out') }}" alt="">
+                    </a>
                 </figure>
             </div>
             <div class="col-md-7">
@@ -24,7 +26,7 @@
                     </div>
                 </header>
                 <div class="excerpt">
-                    {{ post.content | striptags | truncate(280) | raw }}
+                    {{ post.content | striptags | truncate(280) }}
                 </div>
             </div>
         </div>

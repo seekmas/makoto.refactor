@@ -87,5 +87,30 @@ class TeamController extends Controller
         );
     }
 
+    public function removeAction($id , $ensure = 0)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+
+        $member = $this->get('team_entity')->find($id);
+
+        if($ensure)
+        {
+            if($member->getAttachment())
+            {
+                $em->remove($member->getAttachment());
+                $em->flush();
+            }
+
+            $em->remove($member);
+            $em->flush();
+
+            $this->flash('success' , 'You delete a member');
+
+            return $this->redirect('menu.list_team');
+        }
+
+        return $this->render('WebBackBundle:Team:remove/index.html.twig' , ['member' => $member]);
+    }
 
 }

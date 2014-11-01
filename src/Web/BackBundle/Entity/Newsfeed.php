@@ -150,7 +150,6 @@ class Newsfeed
         return $this;
     }
 
-
     public function __toString()
     {
         return $this->getSubject();

@@ -1,0 +1,6 @@
+<h2>Are you sure ? Delete {{ member.name }}'s Profile</h2>
+
+
+<a class="btn btn-danger" href="{{ url('link.remove_team' , {'id':member.id , 'ensure':1}) }}">Yes , delete</a>
+
+<a class="btn btn-success" href="{{ url('menu.list_team') }}">Cancel</a>

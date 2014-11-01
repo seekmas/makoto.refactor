@@ -25,3 +25,4 @@ app_news:
 app_news_post:
     path: /{id}/post
     defaults: { _controller: AppFrontBundle:News:post }
+

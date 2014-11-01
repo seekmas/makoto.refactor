@@ -144,3 +144,28 @@ snc_redis:
     swiftmailer:
         client: default
         key: swiftmailer
+
+
+liip_imagine:
+    resolvers:
+        default:
+            web_path:
+              web_root: %kernel.root_dir%/../web
+              cache_prefix: media/cache
+    loaders:
+        default:
+            filesystem:
+                data_root: %kernel.root_dir%/../web/
+
+    driver:               gd
+    cache:                default
+    data_loader:          default
+    default_image:        null
+    controller:
+        filter_action:         liip_imagine.controller:filterAction
+        filter_runtime_action: liip_imagine.controller:filterRuntimeAction
+    filter_sets:
+        my_thumb_out:
+            filters:
+                thumbnail: { size: [600, 300], mode: outbound } # Transforms 50x40 to 32x32, while cropping the width
+

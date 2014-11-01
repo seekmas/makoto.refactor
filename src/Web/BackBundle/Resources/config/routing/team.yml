@@ -13,3 +13,7 @@ link.edit_team:
 link.upload_team:
     path:     /{id}/upload_team
     defaults: { _controller: WebBackBundle:Team:upload }
+
+link.remove_team:
+    path:     /{id}/remove_team/{ensure}
+    defaults: { _controller: WebBackBundle:Team:remove , 'ensure' : '1' }

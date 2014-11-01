@@ -1,0 +1,16 @@
+{% extends "WebBackBundle:Layout:layouts.html.twig" %}
+
+
+    {% block bigTitle %}Remove Team Members{% endblock %}
+    {% block bigDescription %}Remove the member of team{% endblock %}
+    {% block subName %}<a href="">Remove Team Members</a>{% endblock %}
+    {% block icon %}fa fa-user{% endblock %}
+
+
+{% block body %}
+
+    <div class="block">
+        {% include "WebBackBundle:Team:remove/index_content.html.twig" %}
+    </div>
+
+{% endblock %}

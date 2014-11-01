@@ -13,3 +13,7 @@ link.edit_newsfeed:
 link.upload_newsfeed:
     path:     /{id}/newsfeed_upload
     defaults: { _controller: WebBackBundle:Newsfeed:upload }
+
+link.remove_newsfeed:
+    path:     /{id}/newsfeed_remove
+    defaults: { _controller: WebBackBundle:Newsfeed:remove }

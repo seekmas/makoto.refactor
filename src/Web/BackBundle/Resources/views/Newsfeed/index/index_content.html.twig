@@ -24,6 +24,7 @@
                 </td>
                 <td></td>
                 <td class="text-right">published in <em>{{ time_diff(newsfeed.createdAt) }}</em></td>
+                <td><a href="{{ url('link.remove_newsfeed' , {'id':newsfeed.id}) }}">Remove</a></td>
             </tr>
             {% endfor %}
             </tbody>

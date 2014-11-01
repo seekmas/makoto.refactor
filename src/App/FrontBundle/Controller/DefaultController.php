@@ -9,7 +9,6 @@ class DefaultController extends Controller
     public function indexAction()
     {
 
-
         $background = $this->get('background_entity')->findOneBy(['active' => true]);
 
         $newsfeed = $this->get('newsfeed_paginator')
