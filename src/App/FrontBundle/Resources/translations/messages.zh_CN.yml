@@ -13,7 +13,7 @@ heading:
     latest_news: 新闻
     contact: 联系我们
     investments: 投资
-
+    lesson: 课程
 slider:
     learing_happens_by_doing: <strong><span style="color:#57b5ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;寓教于乐</span><br/>学而思之</strong>
     transformations: <strong><span  style="color:#57b5ff;">三思而行<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>再思可矣</em></strong>
@@ -43,6 +43,7 @@ front:
     news: 新闻
     contact: 联系我们
     login: 登陆
+    lesson: 课程
     admin: 后台管理
 
 title:
