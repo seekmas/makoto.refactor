@@ -18,6 +18,10 @@ lesson:
     resource: "@WebBackBundle/Resources/config/routing/lesson.yml"
     prefix:   /lesson
 
+history:
+    resource: "@WebBackBundle/Resources/config/routing/history.yml"
+    prefix:   /history
+
 rest_upload:
     path: /rest_upload
     defaults: { _controller: WebBackBundle:Upload:image }

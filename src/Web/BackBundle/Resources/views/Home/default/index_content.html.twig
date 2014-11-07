@@ -1,6 +1,6 @@
 <div class="row">
 
-    <div class="col-sm-6 col-lg-6">
+    <div class="col-sm-4 col-lg-4">
         <!-- Widget -->
         <a href="{{ url('menu.create_newsfeed') }}" class="widget widget-hover-effect1">
             <div class="widget-simple">
@@ -16,7 +16,7 @@
         <!-- END Widget -->
     </div>
 
-    <div class="col-sm-6 col-lg-6">
+    <div class="col-sm-4 col-lg-4">
         <!-- Widget -->
         <a href="{{ url('menu.create_team') }}" class="widget widget-hover-effect1">
             <div class="widget-simple">
@@ -25,6 +25,22 @@
                 </div>
                 <h3 class="widget-content text-right animation-pullDown">
                     <strong>Add a team member</strong><br>
+                    <small></small>
+                </h3>
+            </div>
+        </a>
+        <!-- END Widget -->
+    </div>
+
+    <div class="col-sm-4 col-lg-4">
+        <!-- Widget -->
+        <a href="{{ url('menu.lesson_index') }}" class="widget widget-hover-effect1">
+            <div class="widget-simple">
+                <div class="widget-icon pull-left themed-background animation-fadeIn">
+                    <i class="fa fa-book"></i>
+                </div>
+                <h3 class="widget-content text-right animation-pullDown">
+                    <strong>Add new lesson</strong><br>
                     <small></small>
                 </h3>
             </div>
@@ -98,13 +114,29 @@
 
     <div class="col-sm-4 col-lg-4">
         <!-- Widget -->
-        <a href="{{ url('lesson_index') }}" class="widget widget-hover-effect1">
+        <a href="{{ url('menu.lesson_list') }}" class="widget widget-hover-effect1">
             <div class="widget-simple">
-                <div class="widget-icon pull-left themed-background-spring animation-fadeIn">
-                    <i class="fa fa-picture-o"></i>
+                <div class="widget-icon pull-left themed-background-amethyst animation-fadeIn">
+                    <i class="fa fa-file-text"></i>
                 </div>
                 <h3 class="widget-content text-right animation-pullDown">
-                    <strong>Upload Lesson's File</strong><br>
+                    <strong>Manage Lesson's Materials</strong><br>
+                    <small></small>
+                </h3>
+            </div>
+        </a>
+        <!-- END Widget -->
+    </div>
+
+    <div class="col-sm-4 col-lg-4">
+        <!-- Widget -->
+        <a href="{{ url('menu.history_list') }}" class="widget widget-hover-effect1">
+            <div class="widget-simple">
+                <div class="widget-icon pull-left themed-background animation-fadeIn">
+                    <i class="fa fa-clock-o"></i>
+                </div>
+                <h3 class="widget-content text-right animation-pullDown">
+                    <strong>Manage History's Line</strong><br>
                     <small></small>
                 </h3>
             </div>

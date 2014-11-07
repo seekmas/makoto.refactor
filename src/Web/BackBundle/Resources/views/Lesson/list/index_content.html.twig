@@ -1,9 +1,11 @@
 <div class="list-group">
     {% for lesson in paginator %}
-    <a href="{{ url('lesson_upload' , {'id':lesson.id}) }}" class="list-group-item">
-        <span class="badge">22</span>
-        <h4 class="list-group-item-heading">{{ lesson.subject }}</h4>
+    <a href="{{ url('link.lesson_upload' , {'id':lesson.id}) }}" class="list-group-item">
+        <span class="badge">{{ lesson.attachment | length }}</span>
+        <h4 class="list-group-item-heading">{{ lesson.id }} . {{ lesson.subject }}</h4>
         <p class="list-group-item-text">{{ lesson.description | striptags }}</p>
     </a>
     {% endfor %}
 </div>
+
+{{ knp_pagination_render(paginator) }}

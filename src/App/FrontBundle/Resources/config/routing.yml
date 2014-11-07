@@ -26,3 +26,6 @@ app_news_post:
     path: /{id}/post
     defaults: { _controller: AppFrontBundle:News:post }
 
+app_lesson_materials:
+    path: /lesson_materials
+    defaults: { _controller: AppFrontBundle:Lesson:index }

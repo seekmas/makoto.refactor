@@ -1,0 +1,38 @@
+{% extends "WebBackBundle:Layout:layouts.html.twig" %}
+
+{% block bigTitle %}Manage History Line{% endblock %}
+{% block bigDescription %}Manage History Line{% endblock %}
+{% block subName %}<a href="">Manage History Line</a>{% endblock %}
+{% block icon %}fa fa-clock{% endblock %}
+
+{% block body %}
+
+
+    <div class="row">
+
+        <div class="col-md-12">
+            <p><a class="btn btn-danger" href="{{ url('menu.history_index') }}">Add a new item to history line</a></p>
+        </div>
+        <!-- Messages List -->
+        <div class="col-sm-12 col-lg-12">
+
+
+
+
+            <div class="block">
+
+                <div class="block-title">
+                    <h2>Manage all events on history line</h2>
+                </div>
+
+
+                {% include "WebBackBundle:History:list/index_content.html.twig" %}
+            </div>
+
+        </div>
+        <!-- END Messages List -->
+    </div>
+
+
+
+{% endblock %}

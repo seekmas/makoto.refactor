@@ -1,19 +1,19 @@
-lesson_index:
+menu.lesson_index:
     path: /
     defaults: { _controller: WebBackBundle:Lesson:index }
 
-lessson_edit:
+link.lessson_edit:
     path: /{id}/edit
     defaults: { _controller: WebBackBundle:Lesson:index }
 
-lesson_list:
+menu.lesson_list:
     path: /list
     defaults: { _controller: WebBackBundle:Lesson:list }
 
-lesson_upload:
+link.lesson_upload:
     path: /{id}/upload
     defaults: { _controller: WebBackBundle:Lesson:upload }
 
-lesson_attachment_delete:
+link.lesson_attachment_delete:
     path: /{attachmentId}/delete
     defaults: { _controller: WebBackBundle:Lesson:deleteAttachment }

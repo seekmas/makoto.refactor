@@ -1,9 +1,9 @@
 {% extends "WebBackBundle:Layout:layouts.html.twig" %}
 
-{% block bigTitle %}Manage Lesson{% endblock %}
-{% block bigDescription %}Manage Lesson{% endblock %}
-{% block subName %}<a href="">Manage Lesson</a>{% endblock %}
-{% block icon %}fa fa-pencil{% endblock %}
+{% block bigTitle %}Manage History Line{% endblock %}
+{% block bigDescription %}Manage History Line{% endblock %}
+{% block subName %}<a href="">Manage History Line</a>{% endblock %}
+{% block icon %}fa fa-clock{% endblock %}
 
 {% block body %}
 
@@ -16,10 +16,10 @@
             <div class="block">
 
                 <div class="block-title">
-                    <h2>Add new lesson</h2>
+                    <h2>Add new event on history line</h2>
                 </div>
 
-            {% include "WebBackBundle:Lesson:index/index_content.html.twig" %}
+                {% include "WebBackBundle:History:index/index_content.html.twig" %}
             </div>
 
         </div>

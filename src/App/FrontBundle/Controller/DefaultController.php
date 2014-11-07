@@ -48,6 +48,19 @@ class DefaultController extends Controller
     {
 
         $teams = $this->get('team_entity')->findAll();
-        return $this->render('AppFrontBundle:Default:contact/index.html.twig' , ['teams' => $teams]);
+
+        $history = $this->get('history_entity')
+            ->createQueryBuilder('h')
+            ->select('h')
+            ->orderBy('h.year' , 'desc')
+            ->getQuery()
+            ->getResult();
+
+        return $this->render('AppFrontBundle:Default:contact/index.html.twig' ,
+            [
+                'teams' => $teams ,
+                'history' => $history ,
+            ]
+        );
     }
 }

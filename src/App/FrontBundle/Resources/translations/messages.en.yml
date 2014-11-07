@@ -43,6 +43,7 @@ front:
     other_services: Other Services
     news: News
     contact: Contact
+    lesson: Lessons
     login: Login
 
 title:
@@ -99,3 +100,5 @@ countries:
     United_Arab_Emirates: United Arab Emirates
     United_Kingdom: United Kingdom
     United_States: United States
+lesson:
+    materials_download: View / Download Courses' Materials

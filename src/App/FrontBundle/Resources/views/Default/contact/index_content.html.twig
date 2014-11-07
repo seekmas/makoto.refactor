@@ -61,125 +61,31 @@
     <div class="title-accent" align="center">
         <h3 id="timeline">{{ 'title.corporate_history' | trans | raw }}</h3>
     </div>
+
     <ul class="timeline">
-        <li>
-            {% set t_1 = vector('2013-1') %}
-            <div class="timeline-badge info">{{ t_1.addonBlockOne }}</div>
+
+        {% for h in history %}
+        <li {% if h.putRight %}class="timeline-inverted"{% endif %}>
+            <div class="timeline-badge info">
+                {{ h.year }}
+
+
+
+            </div>
             <div class="timeline-panel">
                 <div class="timeline-heading">
-                    <strong>{{ t_1.content | striptags | raw }}</strong>
+                    {% if h.eventAt %}
+                        {{ h.eventAt | date('m-d') }}
+                    {% endif %}
+
+                    {{ h.event | drop_p | drop_br | raw }}
                 </div>
             </div>
-        </li>
 
-        <li>
-            {% set t_2 = vector('2013-2') %}
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <strong>{{ t_2.content | striptags |raw }}</strong>
-                </div>
-            </div>
         </li>
-
-        <li>
-            {% set t_3 = vector('2013-3') %}
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <strong>{{ t_3.content | striptags | raw }}</strong>
-                </div>
-            </div>
-        </li>
-
-        <li class="timeline-inverted">
-            {% set t_4 = vector('2012') %}
-            <div class="timeline-badge info">{{ t_4.addonBlockOne }}</div>
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <strong>{{ t_4.content | striptags | raw }}</strong>
-                </div>
-            </div>
-        </li>
-
-        <li>
-            {% set t_5 = vector('2011') %}
-            <div class="timeline-badge info">{{ t_5.addonBlockOne }}</div>
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <strong>{{ t_5.content | striptags | raw }}</strong>
-                </div>
-            </div>
-        </li>
-
-        <li class="timeline-inverted">
-            {% set t_6 = vector('2010') %}
-            <div class="timeline-badge info">{{ t_6.addonBlockOne }}</div>
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <strong>{{ t_6.content | striptags | raw }}</strong>
-                </div>
-            </div>
-        </li>
-
-        <li class="timeline-inverted">
-            {% set t_7 = vector('2007-1') %}
-            <div class="timeline-badge info">{{ t_7.addonBlockOne }}</div>
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <strong>{{ t_7.content | striptags | raw }}</strong>
-                </div>
-            </div>
-        </li>
-
-        <li class="timeline-inverted">
-            {% set t_8 = vector('2007-2') %}
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <strong>{{ t_8.content | striptags | raw }}</strong>
-                </div>
-            </div>
-        </li>
-
-        <li>
-            {% set t_9 = vector('2006') %}
-            <div class="timeline-badge info">{{ t_9.addonBlockOne }}</div>
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <strong>{{ t_9.content | striptags | raw }}</strong>
-                </div>
-            </div>
-        </li>
-
-        <li class="timeline-inverted">
-            {% set t_10 = vector('2005') %}
-            <div class="timeline-badge info">{{ t_10.addonBlockOne }}</div>
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <strong>{{ t_10.content | striptags | raw }}</strong>
-                </div>
-            </div>
-        </li>
-
-        <li class="timeline-inverted">
-            {% set t_11 = vector('2003') %}
-            <div class="timeline-badge info">{{ t_11.addonBlockOne }}</div>
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <strong>{{ t_11.content | striptags | raw }}</strong>
-                </div>
-            </div>
-        </li>
-
-        <li class="timeline-inverted">
-            {% set t_12 = vector('1998') %}
-            <div class="timeline-badge warning">{{ t_12.addonBlockOne }}</div>
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <strong>{{ t_12.content | striptags | raw }}</strong>
-                </div>
-            </div>
-        </li>
-
+        {% endfor %}
     </ul>
+
 </div>
 <!-- time line end -->
 

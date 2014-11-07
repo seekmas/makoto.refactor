@@ -1,0 +1,46 @@
+
+
+<div class="timeline block-content-full">
+
+<ul class="timeline-list timeline-hover">
+
+    {% for h in history %}
+    <li class="active">
+        <div class="timeline-icon"><i class="fa fa-file-text"></i></div>
+        <div class="timeline-time">
+
+            <span class="label label-danger">{{ h.year }}</span>
+
+            <br/>
+
+            {% if h.eventAt %}
+                {{ h.eventAt | date('m-d') }}
+            {% endif %}
+        </div>
+        <div class="timeline-content">
+            <p class="push-bit">
+
+                <div class="row">
+                <div class="col-md-10">
+                {% if h.putRight %}
+                    <span class="label label-info">Right side</span>
+                {% else %}
+                    <span class="label label-success">Left side</span>
+                {% endif %}
+                <a href="{{ url('link.history_edit' , {'id':h.id}) }}">
+                    <strong>{{ h.event | raw }}</strong>
+                </a>
+                </div>
+
+                <div class="col-md-2">
+                    <a class="btn btn-primary btn-sm" href="{{ url('link.history_delete' , {'id':h.id}) }}">Delete</a>
+                </div>
+
+            </p>
+
+        </div>
+    </li>
+    {% endfor %}
+
+</ul>
+</div>

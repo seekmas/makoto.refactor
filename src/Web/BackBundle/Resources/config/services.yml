@@ -8,6 +8,11 @@ services:
         tags:
            - { name: twig.extension }
 
+    twig.extension.html:
+        class: Web\BackBundle\Twig\HtmlExtension
+        tags:
+           - { name: twig.extension }
+
     twig.extension.vector:
         class: Web\BackBundle\Twig\BlockExtension
         arguments: [@service_container]

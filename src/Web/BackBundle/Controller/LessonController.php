@@ -31,13 +31,16 @@ class LessonController extends Controller
         $form = $this->getForm($lesson , new LessonType() , $request);
         if($form->isValid())
         {
-            $lesson->setCreatedAt(new \Datetime());
+            if(!$lesson->getId())
+            {
+                $lesson->setCreatedAt(new \Datetime());
+            }
 
             $em->persist($lesson);
             $em->flush();
             $this->flash('success' , 'New lesson is updated ! ');
 
-            return $this->redirect('lesson_upload' , ['id' => $lesson->getId()]);
+            return $this->redirect('link.lesson_upload' , ['id' => $lesson->getId()]);
         }
 
         return $this->render('WebBackBundle:Lesson:index/index.html.twig' , ['form' => $form->createView()]);
@@ -45,7 +48,7 @@ class LessonController extends Controller
 
     public function listAction(Request $request)
     {
-        $paginator = $this->get('lesson_paginator')->getPaginator();
+        $paginator = $this->get('lesson_paginator')->orderBy('id' , 'desc')->getPaginator();
 
         return $this->render('WebBackBundle:Lesson:list/index.html.twig' ,
             [
@@ -78,7 +81,7 @@ class LessonController extends Controller
             $em->flush();
 
             $this->flash('success' , 'An attachment is uploaded ! ');
-            return $this->redirect('lesson_upload'  , ['id' => $id]);
+            return $this->redirect('link.lesson_upload'  , ['id' => $id]);
         }
 
         return $this->render('WebBackBundle:Lesson:upload/index.html.twig' ,
@@ -101,13 +104,13 @@ class LessonController extends Controller
         if($lesson == NULL)
         {
             $this->flash('danger' , 'Attachment is not found');
-            return $this->redirect('lesson_list');
+            return $this->redirect('menu.lesson_list');
         }
 
         $attachment_manager = $this->get('attachment.manager');
         $attachment_manager->unlink($attachment);
         $this->flash('success' , 'An attachment is deleted ! ');
-        return $this->redirect('lesson_upload' , ['id' => $lesson->getId()]);
+        return $this->redirect('link.lesson_upload' , ['id' => $lesson->getId()]);
 
     }
 

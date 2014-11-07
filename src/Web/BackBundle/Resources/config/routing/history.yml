@@ -1,0 +1,15 @@
+menu.history_index:
+    path: /
+    defaults: { _controller: WebBackBundle:History:index }
+
+link.history_edit:
+    path: /{id}/edit
+    defaults: { _controller: WebBackBundle:History:index }
+
+menu.history_list:
+    path: /list
+    defaults: { _controller: WebBackBundle:History:list }
+
+link.history_delete:
+    path: /{id}/delete
+    defaults: { _controller: WebBackBundle:History:delete }
