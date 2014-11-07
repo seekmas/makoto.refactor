@@ -19,7 +19,7 @@ class AppKernel extends Kernel
             new App\FrontBundle\AppFrontBundle(),
             new Web\BackBundle\WebBackBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
-            new Snc\RedisBundle\SncRedisBundle(),
+            //new Snc\RedisBundle\SncRedisBundle(),
             //new FOS\RestBundle\FOSRestBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
@@ -27,6 +27,7 @@ class AppKernel extends Kernel
             new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
             new Knp\Bundle\TimeBundle\KnpTimeBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
+            new Genemu\Bundle\FormBundle\GenemuFormBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

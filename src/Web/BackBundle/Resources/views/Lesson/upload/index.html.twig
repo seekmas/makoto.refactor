@@ -1,0 +1,47 @@
+{% extends "WebBackBundle:Layout:layouts.html.twig" %}
+
+{% block bigTitle %}Manage Lesson{% endblock %}
+{% block bigDescription %}Manage Lesson{% endblock %}
+{% block subName %}<a href="">Manage Lesson</a>{% endblock %}
+{% block icon %}fa fa-pencil{% endblock %}
+
+{% block body %}
+
+
+    <div class="block block-alt-noborder">
+        <!-- FAQ Content -->
+        <div class="row">
+            <div class="col-md-6 col-lg-4 col-lg-offset-1">
+                <div class="block-section">
+                    <h3 class="sub-header text-center"><strong>{{ lesson.subject }}</strong></h3>
+                    <p class="clearfix"><i class="fa fa-plus fa-5x text-success pull-left animation-pulse"></i>{{ lesson.description | striptags }}</p>
+                    <p>
+                        <a href="{{ url('lessson_edit' , {'id':lesson.id}) }}" class="btn btn-lg btn-success btn-block">Edit</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-lg-offset-1">
+
+                <h3 class="sub-header"><strong>Upload Materials</strong></h3>
+
+                {% include "WebBackBundle:Lesson:upload/index_content.html.twig" %}
+
+
+                <table class="table">
+                    {% for attachment in lesson.attachment %}
+                    <tr>
+                        <td>{{ attachment.file }}</td>
+                        <td><a href="{{ url('lesson_attachment_delete' , {'attachmentId': attachment.id}) }}">Delete</a></td>
+                    </tr>
+                    {% endfor %}
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+{% endblock %}

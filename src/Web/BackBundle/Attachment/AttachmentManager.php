@@ -128,6 +128,10 @@ class AttachmentManager implements AttachmentInterface
         {
             $filesystem->remove($file);
         }
+
+        $em = $this->container->get('doctrine')->getManager();
+        $em->remove($attachment);
+        $em->flush();
     }
 
     public function copy()

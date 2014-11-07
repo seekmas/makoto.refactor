@@ -95,55 +95,55 @@ knp_paginator:
         pagination: KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig     # sliding pagination controls template
         sortable: KnpPaginatorBundle:Pagination:sortable_link.html.twig # sort link template
 
-snc_redis:
-    clients:
-        default:
-            type: predis
-            alias: default
-            dsn: redis://localhost
-            logging: %kernel.debug%
-        cache:
-            type: predis
-            alias: cache
-            dsn: redis://localhost/1
-            logging: true
-        cluster:
-            type: predis
-            alias: cluster
-            dsn:
-                - redis://127.0.0.1/1
-                - redis://127.0.0.2/2
-                - redis://pw@/var/run/redis/redis-1.sock/10
-                - redis://pw@127.0.0.1:6379/10
-            options:
-                profile: 2.4
-                connection_timeout: 10
-                connection_persistent: true
-                read_write_timeout: 30
-                iterable_multibulk: false
-                throw_errors: true
-                cluster: Snc\RedisBundle\Client\Predis\Connection\PredisCluster
-                replication: false
-    session:
-        client: default
-        prefix: foo
-        use_as_default: true
-    doctrine:
-        metadata_cache:
-            client: cache
-            entity_manager: default
-            document_manager: default
-        result_cache:
-            client: cache
-            entity_manager: [default, read]
-            document_manager: [default, slave1, slave2]
-            namespace: "dcrc:"
-        query_cache:
-            client: cache
-            entity_manager: default
-    swiftmailer:
-        client: default
-        key: swiftmailer
+#snc_redis:
+#    clients:
+#        default:
+#            type: predis
+#            alias: default
+#            dsn: redis://localhost
+#            logging: %kernel.debug%
+#        cache:
+#            type: predis
+#            alias: cache
+#            dsn: redis://localhost/1
+#            logging: true
+#        cluster:
+#            type: predis
+#            alias: cluster
+#            dsn:
+#                - redis://127.0.0.1/1
+#                - redis://127.0.0.2/2
+#                - redis://pw@/var/run/redis/redis-1.sock/10
+#                - redis://pw@127.0.0.1:6379/10
+#            options:
+#                profile: 2.4
+#                connection_timeout: 10
+#                connection_persistent: true
+#                read_write_timeout: 30
+#                iterable_multibulk: false
+#                throw_errors: true
+#                cluster: Snc\RedisBundle\Client\Predis\Connection\PredisCluster
+#                replication: false
+#    session:
+#        client: default
+#        prefix: foo
+#        use_as_default: true
+#    doctrine:
+#        metadata_cache:
+#            client: cache
+#            entity_manager: default
+#            document_manager: default
+#        result_cache:
+#            client: cache
+#            entity_manager: [default, read]
+#            document_manager: [default, slave1, slave2]
+#            namespace: "dcrc:"
+#        query_cache:
+#            client: cache
+#            entity_manager: default
+#    swiftmailer:
+#        client: default
+#        key: swiftmailer
 
 
 liip_imagine:

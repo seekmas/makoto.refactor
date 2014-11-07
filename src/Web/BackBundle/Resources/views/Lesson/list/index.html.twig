@@ -1,0 +1,26 @@
+{% extends "WebBackBundle:Layout:layouts.html.twig" %}
+
+{% block bigTitle %}Manage Lesson{% endblock %}
+{% block bigDescription %}Manage Lesson{% endblock %}
+{% block subName %}<a href="">Manage Lesson</a>{% endblock %}
+{% block icon %}fa fa-pencil{% endblock %}
+
+{% block body %}
+
+
+    <div class="row">
+
+        <!-- Messages List -->
+        <div class="col-sm-12 col-lg-12">
+
+            <div class="block">
+            {% include "WebBackBundle:Lesson:list/index_content.html.twig" %}
+            </div>
+
+        </div>
+        <!-- END Messages List -->
+    </div>
+
+
+
+{% endblock %}

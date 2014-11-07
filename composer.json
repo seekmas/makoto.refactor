@@ -47,7 +47,9 @@
         "snc/redis-bundle": "1.1.x-dev",
         "predis/predis": "0.8.x-dev",
         "mmoreram/http-headers-bundle": "dev-master",
-        "jms/serializer": "~0.16"
+        "jms/serializer": "~0.16",
+        "genemu/form-bundle": "2.2.*",
+        "cboden/ratchet": "0.3.*"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

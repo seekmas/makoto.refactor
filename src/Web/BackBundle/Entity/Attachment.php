@@ -86,6 +86,17 @@ class Attachment extends Entity
     private $teamId;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Lesson" , inversedBy="attachment")
+     * @ORM\JoinColumn(name="lesson_id" , referencedColumnName="id")
+     */
+    private $lesson;
+
+    /**
+     * @ORM\Column(name="lesson_id" , type="integer" , nullable=true)
+     */
+    private $lessonId;
+
+    /**
      * Get id
      *
      * @return integer
@@ -316,6 +327,42 @@ class Attachment extends Entity
     public function getFullPath()
     {
         return $this->path . '/' . $this->file;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLesson()
+    {
+        return $this->lesson;
+    }
+
+    /**
+     * @return Attachment
+     * @param mixed $lesson
+     */
+    public function setLesson($lesson)
+    {
+        $this->lesson = $lesson;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLessonId()
+    {
+        return $this->lessonId;
+    }
+
+    /**
+     * @return Attachment
+     * @param mixed $lessonId
+     */
+    public function setLessonId($lessonId)
+    {
+        $this->lessonId = $lessonId;
+        return $this;
     }
 
     public function __toString()
