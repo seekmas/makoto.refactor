@@ -76,6 +76,11 @@ class Newsfeed
     private $createdAt;
 
     /**
+     * @ORM\Column(name="category" , type="string" , length=4 , nullable=true)
+     */
+    private $category;
+
+    /**
      * @ORM\OneToMany(targetEntity="Attachment" , mappedBy="newsfeed")
      */
     private $attachment;
@@ -287,6 +292,24 @@ class Newsfeed
     public function setDescription($description)
     {
         $this->description = $description;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @return Newsfeed
+     * @param mixed $category
+     */
+    public function setCategory($category)
+    {
+        $this->category = $category;
         return $this;
     }
 

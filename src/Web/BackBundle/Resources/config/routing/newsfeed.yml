@@ -25,3 +25,7 @@ link.remove_newsfeed:
 link.news_set_status:
     path: /{id}/newsfeed_status
     defaults: { _controller: WebBackBundle:Newsfeed:status }
+
+menu.synchronize:
+    path: /synchronize
+    defaults: { _controller: WebBackBundle:Newsfeed:synchronize }

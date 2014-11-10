@@ -35,6 +35,7 @@ class NewsfeedController extends Controller
             }else
             {
                 $newsfeed->setCreatedAt(new \Datetime());
+                $newsfeed->setCategory($newsfeed->getCreatedAt()->format('Y'));
             }
 
 
@@ -169,5 +170,22 @@ class NewsfeedController extends Controller
         $em->flush();
 
         return $this->redirect_to($referer);
+    }
+
+    public function synchronizeAction()
+    {
+        $em = $this->getManager();
+        $news = $this->get('newsfeed_entity')->findAll();
+
+        foreach ($news as $n) {
+            if($n->getCategory() == NULL)
+            {
+
+                $n->setCategory($n->getCreatedAt()->format('Y'));
+                $em->persist($n);
+                $em->flush();
+            }
+        }
+        return $this->redirect('menu.list_newsfeed');
     }
 }
