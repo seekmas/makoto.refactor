@@ -15,6 +15,23 @@ class Controller extends BaseController
         return parent::redirect(parent::generateUrl($path , $params));
     }
 
+    public function redirect_to($url)
+    {
+        return parent::redirect($url);
+    }
+
+    public function getReferer(Request $request)
+    {
+
+        if($request->headers->get('referer'))
+        {
+            return $request->headers->get('referer');
+        }else
+        {
+            return $request->headers->get('host');
+        }
+    }
+
     /**
      * @param string @type
      * @param string @message

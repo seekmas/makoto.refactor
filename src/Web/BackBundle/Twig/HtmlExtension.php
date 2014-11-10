@@ -11,7 +11,7 @@ class HtmlExtension extends \Twig_Extension
             new \Twig_SimpleFilter('currency', [$this, 'currency']),
             new \Twig_SimpleFilter('drop_p', [$this, 'drop_p']),
             new \Twig_SimpleFilter('drop_br', [$this, 'drop_br']),
-
+            new \Twig_SimpleFilter('drop_blank', [$this, 'drop_blank']),
         );
     }
 
@@ -62,6 +62,13 @@ class HtmlExtension extends \Twig_Extension
     {
         $str = preg_replace('/\<br\>/' , '' , $str);
         $str = preg_replace('/\<br\/\>/' , '' , $str);
+        return $str;
+    }
+
+    public function drop_blank($str)
+    {
+        $str = preg_replace('/&nbsp;/' , '' , $str);
+
         return $str;
     }
 

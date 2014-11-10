@@ -148,4 +148,26 @@ class NewsfeedController extends Controller
 
         return $this->redirect('menu.list_newsfeed');
     }
+
+    public function statusAction(Request $request , $id)
+    {
+        $em = $this->getManager();
+        $news = $news = $this->get('newsfeed_entity')->find($id);
+
+        $referer = $this->getReferer($request);
+
+
+        if($news->getPublish())
+        {
+            $news->setPublish(false);
+        }else
+        {
+            $news->setPublish(true);
+        }
+
+        $em->persist($news);
+        $em->flush();
+
+        return $this->redirect_to($referer);
+    }
 }

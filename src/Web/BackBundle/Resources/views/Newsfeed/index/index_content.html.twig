@@ -27,9 +27,9 @@
             <tr>
                 <td>
                     {% if newsfeed.publish %}
-                    <span class="label label-info">Active</span>
+                    <a href="{{ url('link.news_set_status',{'id':newsfeed.id}) }}"><span class="label label-info">Active</span></a>
                     {% else %}
-                    <span class="label label-default">Hidden</span>
+                    <a href="{{ url('link.news_set_status',{'id':newsfeed.id}) }}"><span class="label label-default">Hidden</span></a>
                     {% endif %}
                     <a href="{{ url('link.edit_newsfeed' , {'id':newsfeed.id}) }}"><strong>{{ newsfeed.subject }}</strong></a>
                     <span class="text-muted"></span>

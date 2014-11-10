@@ -29,7 +29,7 @@
                     </div>
                 </header>
                 <div class="excerpt">
-                    {{ post.content | striptags | truncate(300) | raw }}
+                    {{ post.content | drop_blank | striptags | truncate(150) | raw }}
                 </div>
             </div>
         </div>

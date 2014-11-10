@@ -21,3 +21,7 @@ link.unlink_attachment:
 link.remove_newsfeed:
     path:     /{id}/newsfeed_remove
     defaults: { _controller: WebBackBundle:Newsfeed:remove }
+
+link.news_set_status:
+    path: /{id}/newsfeed_status
+    defaults: { _controller: WebBackBundle:Newsfeed:status }
