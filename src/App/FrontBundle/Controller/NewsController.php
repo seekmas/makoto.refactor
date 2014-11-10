@@ -11,7 +11,7 @@ class NewsController extends Controller
         $newsfeed = $this->get('newsfeed_paginator')
             ->where(['publish' => true])
             ->orderBy('createdAt' , 'desc')
-            ->getPaginator(20);
+            ->getPaginator(10);
 
         return $this->render('AppFrontBundle:News:index/index.html.twig' ,
             [
