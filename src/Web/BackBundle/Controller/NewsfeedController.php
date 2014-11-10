@@ -3,10 +3,12 @@
 namespace Web\BackBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Web\BackBundle\Entity\Attachment;
 use Web\BackBundle\Entity\Newsfeed;
 use Web\BackBundle\Form\AttachmentType;
 use Web\BackBundle\Form\NewsfeedType;
+use Goutte\Client;
 
 class NewsfeedController extends Controller
 {
@@ -189,5 +191,18 @@ class NewsfeedController extends Controller
             }
         }
         return $this->redirect('menu.list_newsfeed');
+    }
+
+    public function goutteAction()
+    {
+        $client = new Client();
+        $crawler = $client->request('GET', 'http://cn.kaizen.com/news-center/2013.html');
+        $client->getClient()->setDefaultOption('config/curl/'.CURLOPT_TIMEOUT, 6000);
+
+        $crawler->filter('#content > ul > li > a')->each(function ($node) {
+            print '<p>'.$node->text().'</p>';
+        });
+
+        return new Response();
     }
 }

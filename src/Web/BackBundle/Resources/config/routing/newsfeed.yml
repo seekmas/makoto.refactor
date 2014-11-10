@@ -29,3 +29,7 @@ link.news_set_status:
 menu.synchronize:
     path: /synchronize
     defaults: { _controller: WebBackBundle:Newsfeed:synchronize }
+
+menu.goutte:
+    path: /goutte
+    defaults: { _controller: WebBackBundle:Newsfeed:goutte }

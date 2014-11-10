@@ -49,7 +49,8 @@
         "mmoreram/http-headers-bundle": "dev-master",
         "jms/serializer": "~0.16",
         "genemu/form-bundle": "2.2.*",
-        "cboden/ratchet": "0.3.*"
+        "cboden/ratchet": "0.3.*",
+        "fabpot/goutte": "~2.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
