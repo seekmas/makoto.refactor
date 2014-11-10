@@ -23,7 +23,7 @@ class NewsController extends Controller
     public function yearAction($year)
     {
         $newsfeed = $this->get('newsfeed_paginator')
-            ->where(['publish' => true])
+            ->where(['publish' => true , 'category' => $year])
             ->orderBy('createdAt' , 'desc')
             ->getPaginator(10);
 

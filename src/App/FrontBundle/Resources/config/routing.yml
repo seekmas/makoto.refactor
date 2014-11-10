@@ -22,6 +22,10 @@ app_news:
     path: /news_list
     defaults: { _controller: AppFrontBundle:News:index }
 
+app_news_by_year:
+    path: /{year}/filter_news
+    defaults: { _controller: AppFrontBundle:News:year }
+
 app_news_post:
     path: /{id}/post
     defaults: { _controller: AppFrontBundle:News:post }
