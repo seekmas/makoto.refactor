@@ -2,7 +2,7 @@
 <div class="container">
 
 <div class="row">
-<div class="content col-md-8">
+<div class="content col-md-10">
 
     {% for post in newsfeed %}
     <!-- Post (Standard Format) -->
@@ -21,12 +21,15 @@
                     <h2><a href="{{ url('app_news_post' , {'id':post.id}) }}">{{ post.subject }}</a></h2>
                     <div class="entry-meta">
                         <span class="entry-date">{{ post.createdAt | date('d/m/Y') }}</span>
-                        <span class="entry-comments"><a href="#">0 Comments</a></span>
+                        {% if is_granted('ROLE_ADMIN') %}
+                        <span class="entry-comments"><a href="{{ url('link.edit_newsfeed' , {'id':post.id}) }}">Edit</a></span>
+                        {% endif %}
                         <span class="entry-category">in <a href="#">{{ time_diff(post.createdAt) }}</a></span>
+
                     </div>
                 </header>
                 <div class="excerpt">
-                    {{ post.content | striptags | truncate(280) }}
+                    {{ post.content | striptags | truncate(300) | raw }}
                 </div>
             </div>
         </div>
@@ -39,12 +42,14 @@
                 <h2><a href="{{ url('app_news_post' , {'id':post.id}) }}">{{ post.subject }}</a></h2>
                 <div class="entry-meta">
                     <span class="entry-date">{{ post.createdAt | date('d/m/Y') }}</span>
-                    <span class="entry-comments"><a href="#">0 Comments</a></span>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <span class="entry-comments"><a href="{{ url('link.edit_newsfeed' , {'id':post.id}) }}">Edit</a></span>
+                    {% endif %}
                     <span class="entry-category">in <a href="#">{{ time_diff(post.createdAt) }}</a></span>
                 </div>
             </header>
             <div class="excerpt">
-                {{ post.content | truncate(320) | raw }}
+                {{ post.content | striptags | truncate(300) | raw }}
             </div>
         </article>
         <!-- Post (Standard Format) / End -->
@@ -60,7 +65,7 @@
     </div>
 </div>
 
-<aside class="sidebar col-md-3 col-md-offset-1 col-bordered">
+<aside class="sidebar col-md-2 col-md-offset-2 col-bordered">
 
 
 </aside>

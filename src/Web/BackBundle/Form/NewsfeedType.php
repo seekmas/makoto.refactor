@@ -17,6 +17,11 @@ class NewsfeedType extends AbstractType
         $builder
             ->add('subject')
             ->add('content')
+            ->add('keywords','textarea' , ['label' => 'SEO keywords( Optional )' , 'required' => false])
+            ->add('description','textarea' , ['label' => 'SEO Description( Optional )' , 'required' => false])
+            ->add('meta','textarea',['label' => 'SEO Meta( Optional )' , 'required'=>false])
+            ->add('title' , 'textarea' , ['label'=>'SEO Page Title( Optional )'  , 'required' => false])
+            ->add('publish')
         ;
 
         $builder->add('save' , 'submit');

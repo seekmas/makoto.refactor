@@ -1,6 +1,10 @@
 {% extends "AppFrontBundle:Layout:layout.html.twig" %}
 
-{% block heading_title %}LATEST NEWS{% endblock %}
+{% block heading_title %}{{ newsfeed.subject | striptags }}{% endblock %}
+
+{% block keyword %}{% if newsfeed.keywords %}{{ newsfeed.keywords | striptags }}{% else %}{{ parent() }}{% endif %}{% endblock %}
+
+{% block description %}{% if newsfeed.description %}{{ newsfeed.description | striptags }}{% else %}{{ parent() }}{% endif %}{% endblock %}
 
 {% block body %}
 

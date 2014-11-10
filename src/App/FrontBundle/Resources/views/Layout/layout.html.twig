@@ -2,9 +2,9 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>{{ 'meta.title' | trans | raw }}</title>
-    <meta name="Keywords" content="{{ 'meta.keywords' | trans | raw }}">
-    <meta name="Description" content="{{ 'meta.description' | trans | raw }}">
+    <title>{% block title %}{{ 'meta.title' | trans | raw }}{% endblock %}</title>
+    <meta name="Keywords" content="{% block keyword %}{{ 'meta.keywords' | trans | raw }}{% endblock %}">
+    <meta name="Description" content="{% block description %}{{ 'meta.description' | trans | raw }}{% endblock %}">
     <link rel="stylesheet" href="{{ asset('tpl/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('tpl/css/fonts/font-awesome/css/font-awesome.css') }}">
     <link rel="stylesheet" href="{{ asset('tpl/vendor/owl-carousel/owl.carousel.css') }}" media="screen">

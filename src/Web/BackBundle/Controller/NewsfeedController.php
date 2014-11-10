@@ -12,7 +12,9 @@ class NewsfeedController extends Controller
 {
     public function indexAction(Request $request)
     {
-        $newsfeed_paginator = $this->get('newsfeed_paginator')->getPaginator();
+        $newsfeed_paginator = $this->get('newsfeed_paginator')
+                                   ->orderBy('id' , 'desc')
+                                   ->getPaginator(30);
 
         return $this->render('WebBackBundle:Newsfeed:index/index.html.twig' ,
             [
@@ -27,7 +29,14 @@ class NewsfeedController extends Controller
         $form = $this->getForm($newsfeed , new NewsfeedType() , $request);
         if($form->isValid())
         {
-            $newsfeed->setCreatedAt(new \Datetime());
+            if($newsfeed->getId())
+            {
+                $newsfeed->setUpdatedAt(new \Datetime());
+            }else
+            {
+                $newsfeed->setCreatedAt(new \Datetime());
+            }
+
 
             $em = $this->getManager();
             $em->persist($newsfeed);

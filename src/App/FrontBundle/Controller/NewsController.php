@@ -9,8 +9,9 @@ class NewsController extends Controller
     public function indexAction()
     {
         $newsfeed = $this->get('newsfeed_paginator')
+            ->where(['publish' => true])
             ->orderBy('createdAt' , 'desc')
-            ->getPaginator(6);
+            ->getPaginator(20);
 
         return $this->render('AppFrontBundle:News:index/index.html.twig' ,
             [

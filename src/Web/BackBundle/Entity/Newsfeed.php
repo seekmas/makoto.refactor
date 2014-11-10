@@ -37,6 +37,38 @@ class Newsfeed
     private $content;
 
     /**
+     * @ORM\Column(name="keywords" , type="string" , length=255 , nullable=true)
+     */
+    private $keywords;
+
+    /**
+     * @ORM\Column(name="meta" , type="string" , length=255 , nullable=true)
+     */
+    private $meta;
+
+    /**
+     * @ORM\Column(name="description" , type="string" , length=255 , nullable=true)
+     */
+    private $description;
+
+    /**
+     * @ORM\Column(name="title" , type="string" , length=255 , nullable=true)
+     */
+    private $title;
+
+    /**
+     * @ORM\Column(name="publish" , type="boolean" , nullable=true)
+     */
+    private $publish;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="updated_at", type="datetime" , nullable=true)
+     */
+    private $updatedAt;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="created_at", type="datetime")
@@ -110,6 +142,24 @@ class Newsfeed
     }
 
     /**
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * @return Newsfeed
+     * @param \DateTime $updatedAt
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+        return $this;
+    }
+
+    /**
      * Set createdAt
      *
      * @param \DateTime $createdAt
@@ -147,6 +197,96 @@ class Newsfeed
     public function setAttachment($attachment)
     {
         $this->attachment[] = $attachment;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * @return Newsfeed
+     * @param mixed $title
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPublish()
+    {
+        return $this->publish;
+    }
+
+    /**
+     * @return Newsfeed
+     * @param mixed $publish
+     */
+    public function setPublish($publish)
+    {
+        $this->publish = $publish;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMeta()
+    {
+        return $this->meta;
+    }
+
+    /**
+     * @return Newsfeed
+     * @param mixed $meta
+     */
+    public function setMeta($meta)
+    {
+        $this->meta = $meta;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getKeywords()
+    {
+        return $this->keywords;
+    }
+
+    /**
+     * @return Newsfeed
+     * @param mixed $keywords
+     */
+    public function setKeywords($keywords)
+    {
+        $this->keywords = $keywords;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @return Newsfeed
+     * @param mixed $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
         return $this;
     }
 
