@@ -12,6 +12,7 @@ class DefaultController extends Controller
         $background = $this->get('background_entity')->findOneBy(['active' => true]);
 
         $newsfeed = $this->get('newsfeed_paginator')
+                         ->where(['publish' => true])
                          ->orderBy('createdAt' , 'desc')
                          ->getPaginator(6);
 
@@ -52,6 +53,7 @@ class DefaultController extends Controller
         $history = $this->get('history_entity')
             ->createQueryBuilder('h')
             ->select('h')
+
             ->orderBy('h.year' , 'desc')
             ->getQuery()
             ->getResult();
