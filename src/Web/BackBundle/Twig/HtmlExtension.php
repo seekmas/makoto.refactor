@@ -12,6 +12,8 @@ class HtmlExtension extends \Twig_Extension
             new \Twig_SimpleFilter('drop_p', [$this, 'drop_p']),
             new \Twig_SimpleFilter('drop_br', [$this, 'drop_br']),
             new \Twig_SimpleFilter('drop_blank', [$this, 'drop_blank']),
+            new \Twig_SimpleFilter('keywords', [$this, 'keywords']),
+
         );
     }
 
@@ -70,6 +72,21 @@ class HtmlExtension extends \Twig_Extension
         $str = preg_replace('/&nbsp;/' , '' , $str);
 
         return $str;
+    }
+
+    public function keywords($keywords)
+    {
+        $list = [
+            '杨凯' => '高级顾问' ,
+            '全球改善' => '____' ,
+        ];
+
+        foreach($list as $key => $value)
+        {
+            $keywords = preg_replace('/'.$key.'/u' , $value , $keywords);
+        }
+
+        return $keywords;
     }
 
     public function getName()
