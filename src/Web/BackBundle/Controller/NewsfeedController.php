@@ -195,14 +195,56 @@ class NewsfeedController extends Controller
 
     public function goutteAction()
     {
+        echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
+
         $client = new Client();
-        $crawler = $client->request('GET', 'http://cn.kaizen.com/news-center/2013.html');
+        $crawler = $client->request('GET', 'http://cn.kaizen.com/news-center/2012.html');
         $client->getClient()->setDefaultOption('config/curl/'.CURLOPT_TIMEOUT, 6000);
 
-        $crawler->filter('#content > ul > li > a')->each(function ($node) {
-            print '<p>'.$node->text().'</p>';
+        $crawler->filter('#content > div > ul > li > a')->each(function ($node) {
+            $url = $node->attr('href');
+            if(!preg_match('/^http/' , $url))
+            {
+                $url = 'http://cn.kaizen.com/'.$url;
+            }
+            $this->craw($url,'2012');
         });
 
         return new Response();
+    }
+
+    private function craw($url , $year)
+    {
+
+        $newsfeed_entity = $this->get('newsfeed_entity');
+
+        $news = new Newsfeed();
+        $client = new Client();
+        $crawler = $client->request('GET', $url);
+        $client->getClient()->setDefaultOption('config/curl/'.CURLOPT_TIMEOUT, 6000);
+        $crawler->filter('h1.csc-firstHeader')->each(function ($node) use ($news , $newsfeed_entity,$crawler,$year) {
+
+
+            if($newsfeed_entity->findOneBySubject($node->text()))
+            {
+                return ;
+            }
+
+            $news->setSubject($node->text());
+            $crawler->filter('div.csc-textpic')->each(function ($node) use ($news) {
+                $news->setContent($node->html());
+            });
+
+            $news->setCategory($year);
+            $news->setCreatedAt(new \Datetime($year.'-1-1'));
+            $news->setPublish(false);
+
+            $em = $this->getManager();
+            $em->persist($news);
+
+            $em->flush();
+        });
+
+
     }
 }
