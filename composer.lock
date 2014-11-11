@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a747a45bd56fa5f7db8c07c3b483bc7a",
+    "hash": "54c55067db4937fa9811b3c0a597eef5",
     "packages": [
         {
             "name": "cboden/ratchet",
@@ -661,6 +661,46 @@
                 "orm"
             ],
             "time": "2014-10-06 13:22:50"
+        },
+        {
+            "name": "electrolinux/phpquery",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/electrolinux/phpquery.git",
+                "reference": "aa09e7af2e8d9a965102cf50d9b657aca96fd013"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/electrolinux/phpquery/zipball/aa09e7af2e8d9a965102cf50d9b657aca96fd013",
+                "reference": "aa09e7af2e8d9a965102cf50d9b657aca96fd013",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "phpQuery/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tobiasz Cudnik",
+                    "email": "tobiasz.cudnik@gmail.com",
+                    "homepage": "https://github.com/TobiaszCudnik",
+                    "role": "Developer"
+                },
+                {
+                    "name": "didier Belot",
+                    "role": "Packager"
+                }
+            ],
+            "description": "phpQuery is a server-side, chainable, CSS3 selector driven Document Object Model (DOM) API based on jQuery JavaScript Library",
+            "homepage": "http://code.google.com/p/phpquery/",
+            "time": "2014-08-08 09:03:54"
         },
         {
             "name": "evenement/evenement",
@@ -4404,17 +4444,17 @@
         },
         {
             "name": "sensio/framework-extra-bundle",
-            "version": "v3.0.2",
+            "version": "v3.0.3",
             "target-dir": "Sensio/Bundle/FrameworkExtraBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "9b22aaee517e80aad3238ea0328458b6f964066f"
+                "reference": "b829a8097a41ccbd7d35683b1750043b23d682f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/9b22aaee517e80aad3238ea0328458b6f964066f",
-                "reference": "9b22aaee517e80aad3238ea0328458b6f964066f",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/b829a8097a41ccbd7d35683b1750043b23d682f5",
+                "reference": "b829a8097a41ccbd7d35683b1750043b23d682f5",
                 "shasum": ""
             },
             "require": {
@@ -4455,7 +4495,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2014-09-02 07:11:30"
+            "time": "2014-11-10 14:50:31"
         },
         {
             "name": "sensiolabs/security-checker",
@@ -5183,7 +5223,8 @@
         "liip/imagine-bundle": 20,
         "snc/redis-bundle": 20,
         "predis/predis": 20,
-        "mmoreram/http-headers-bundle": 20
+        "mmoreram/http-headers-bundle": 20,
+        "electrolinux/phpquery": 20
     },
     "prefer-stable": false,
     "platform": {

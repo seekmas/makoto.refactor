@@ -2,6 +2,7 @@
 
 namespace Web\BackBundle\Controller;
 
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Web\BackBundle\Entity\Attachment;
@@ -195,56 +196,46 @@ class NewsfeedController extends Controller
 
     public function goutteAction()
     {
-        echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
 
-        $client = new Client();
-        $crawler = $client->request('GET', 'http://cn.kaizen.com/news-center/2012.html');
-        $client->getClient()->setDefaultOption('config/curl/'.CURLOPT_TIMEOUT, 6000);
+        $em = $this->getManager();
+        $entity = $this->get('newsfeed_entity');
+        $year = 2013;
 
-        $crawler->filter('#content > div > ul > li > a')->each(function ($node) {
-            $url = $node->attr('href');
-            if(!preg_match('/^http/' , $url))
+        $url = 'http://cn.kaizen.com/news-center/'.$year.'.html';
+
+        \phpQuery::newDocumentFileHTML($url);
+
+        $titleElement = pq('div#content > div > ul > li > a');
+
+        foreach ($titleElement as $element) {
+
+            \phpQuery::newDocumentFileHTML($element->getAttribute('href'));
+
+            $title = pq('h1.csc-firstHeader');
+            $title = $title->text();
+
+            if($entity->findOneBySubject($title) )
             {
-                $url = 'http://cn.kaizen.com/'.$url;
+                continue;
+            }else
+            {
+                $content = pq('div.csc-textpic');
+
+                $news = new Newsfeed();
+                $news->setCreatedAt(new \Datetime($year.'-1-1'));
+                $news->setSubject($title);
+                $news->setContent($content);
+                $news->setPublish(false);
+                $news->setCategory($year);
+                $em->persist($news);
+                $em->flush();
             }
-            $this->craw($url,'2012');
-        });
+
+
+        }
+
 
         return new Response();
     }
 
-    private function craw($url , $year)
-    {
-
-        $newsfeed_entity = $this->get('newsfeed_entity');
-
-        $news = new Newsfeed();
-        $client = new Client();
-        $crawler = $client->request('GET', $url);
-        $client->getClient()->setDefaultOption('config/curl/'.CURLOPT_TIMEOUT, 6000);
-        $crawler->filter('h1.csc-firstHeader')->each(function ($node) use ($news , $newsfeed_entity,$crawler,$year) {
-
-
-            if($newsfeed_entity->findOneBySubject($node->text()))
-            {
-                return ;
-            }
-
-            $news->setSubject($node->text());
-            $crawler->filter('div.csc-textpic')->each(function ($node) use ($news) {
-                $news->setContent($node->html());
-            });
-
-            $news->setCategory($year);
-            $news->setCreatedAt(new \Datetime($year.'-1-1'));
-            $news->setPublish(false);
-
-            $em = $this->getManager();
-            $em->persist($news);
-
-            $em->flush();
-        });
-
-
-    }
 }
