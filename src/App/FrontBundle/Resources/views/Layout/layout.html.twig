@@ -23,6 +23,7 @@
     <script src="{{ asset('tpl/vendor/modernizr.js') }}"></script>
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="{{ asset('tpl/vendor/rs-plugin/css/settings-ie8.css') }}" media="screen">
+    <script src="{{ asset('jquery-1.11.1.min.js') }}"></script>
     <script src="{{ asset('html5.js') }}"></script>
     <script src="{{ asset('tpl/vendor/respond.min.js') }}"></script>
     <![endif]-->
@@ -44,6 +45,18 @@
 
     <div class="header-top">
         <div class="container">
+
+            <div class="header-top-left">
+
+                <ul >
+
+                    <li><a href="http://weibo.com/kicg"><i class="fa fa-weibo"></i> 擀霸精益咨询</a></li>
+
+                    <li><a href="{{ url('app_front_homepage') }}#weixin"><i class="fa fa-weixin"></i> 擀霸中国</a></li>
+
+                </ul>
+
+            </div>
             <div class="header-top-right">
 				<span class="register">
                         {% if is_granted('ROLE_ADMIN') %}
@@ -60,7 +73,6 @@
         <div class="container">
             <!-- Logo -->
             <div class="logo">
-
 
                 <a href="{{ url('app_front_homepage') }}">
                     <img alt="Makoto Global Offical Website" src="{{ asset("image.logo" | trans | raw) }}" />
@@ -87,8 +99,10 @@
                         <ul>
                             <li><a id="ktwBtn" href="{{ url('app_front_makotoglobal') }}#ktw">{{ 'front.kaizen_training_workshops' | trans | raw }}</a></li>
                             <li><a id="kcaBtn" href="{{ url('app_front_makotoglobal') }}#kca">{{ 'front.kaizen_consulting_activities' | trans | raw }}</a></li>
-                            <li><a href="{{ url('app_front_investments') }}">{{ 'front.investments' | trans | raw }}</a></li>
 
+                            {% if locale() == 'en' %}
+                            <li><a href="{{ url('app_front_investments') }}">{{ 'front.investments' | trans | raw }}</a></li>
+                            {% endif %}
                         </ul>
                     </li>
 
@@ -189,13 +203,7 @@
                                         {{ 'bottom.addresss' | trans | raw }}
                                     </div>
                                 </li>
-                                <li>
-                                    <i class="fa fa-facebook"></i>
-                                    <div class="info-item">
-                                        {{ 'bottom.facebook' | trans | raw }}
-                                    </div>
 
-                                </li>
                                 <li>
                                     <i class="fa fa-phone"></i>
                                     <div class="info-item">
@@ -210,14 +218,37 @@
                                         {{ 'bottom.email_brad' | trans | raw }}
                                     </div>
                                 </li>
+
                                 {% if locale() == 'zh_CN' %}
                                 <li>
-                                    <i class="fa fa-weixin"></i>
+                                    <i class="fa fa-weibo"></i>
                                     <div class="info-item">
+                                        <a href="http://weibo.com/kicg">擀霸中国微博</a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a name="weixin"></a>
+                                    <i id="weixin" class="fa fa-weixin"></i>
+                                    <div class="info-item">
+                                        <a id="pop">擀霸中国微信公众号</a>
                                         <img class="img-thumbnail" src="{{ asset('qrcode.jpg') }}" style="width: 80%;"/>
                                     </div>
                                 </li>
+
                                 {% endif %}
+
+                                <li>
+                                    <i class="fa fa-facebook"></i>
+                                    <div class="info-item">
+                                        {{ 'bottom.facebook' | trans | raw }}
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <i class="fa fa-twitter"></i>
+                                    <a href="https://twitter.com/GembaChina">@GembaChina</a>
+                                </li>
 
                             </ul>
                         </div>

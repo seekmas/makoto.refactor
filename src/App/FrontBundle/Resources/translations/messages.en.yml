@@ -111,6 +111,7 @@ service:
     other_service: Other Service
 
 global:
+    president: President
     training_workshops: Training Workshops
     experience_in: Experience in many fields…
     main_business_sectors: Main Business Sectors
@@ -124,6 +125,15 @@ global:
     health_care: Health Care
     service: Service
     finance: Finance
+
+    training1: Consulting <br/>Focused Activities
+    training2: Consulting <br/>Events
+    training3: Consulting<br/>  Projects
+    training4: Consulting<br/> Transformations
+    days: Days
+    learn_more: learn more
+
+    area_of_focus_on_this_tour: Area of focus on this tour!
     p1: See LEAN up close!
     p2: Share your LEAN experience.
     p3: See LEAN up close!
@@ -136,6 +146,7 @@ global:
     p9: Certification in TWI -Training Within Industries
     p10: Becoming a successful Lean Leader (Gemba Core & E2E)
 
+    a_typical: A Typical "customized" JLE Tour!
     d1: Day 1 Sunday
     d2: Day 2 Monday
     d3: Day 3 Tuesday
@@ -143,3 +154,41 @@ global:
     d5: Day 5 Thursday
     d6: Day 6 Friday
     d7: Day 7 Saturday
+    am: AM
+    lunch: Lunch
+    pm: PM
+
+    t1: Transfer to Yamaguchi
+    t2: Bus
+    t3: Transfer to Osaka
+    t4: Visit Kyoto
+    t5: Transfer to Kyushu
+    t6: Tour Car Seat Company
+    t7: Tour Plastic Parts Factory
+    t8: Tour Metal Tools Company
+    t9: Bus
+    t10: Shinkansen (Bullet Train)
+    t11: Tour Toyota
+    t12: Tour Construction Company
+    t13: Tour Sheet Metal Machining Company
+    t14: Orientation
+    t15: Discussion Lean Principles
+    t16: Transfer to Hiroshima
+    t17: Bus & Discussion
+    t18: Bus
+    t19: Bus
+    t20: To Airport
+    t21: Dinner
+    t22: Shinkansen
+    t23: Discussion
+    t24: Discussion / Application Exercise
+    t25: Wrap-Up
+    t26: Dinner
+    t27: Dinner
+    t28: Dinner
+    t29: Dinner
+    t30: Bus / Dinner
+    t31: Transportation
+    t32: Discussiont
+    t33: Relaxation
+    t34: Company Tours

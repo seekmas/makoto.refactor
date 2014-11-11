@@ -138,7 +138,7 @@
                         {{ block_3.subject | raw }}
                     </h6>
                     <span class="bq-author-info">
-                        President
+                        {{ 'global.president' | trans | raw }}
                     </span>
                 </div>
             </div>
@@ -186,7 +186,7 @@
                 <!-- Table (Bordered) -->
 
                 <div class="title text-center">
-                    <h2>A Typical "customized" JLE Tour!</h2>
+                    <h2>{{ 'global.a_typical' | trans | raw }}</h2>
                 </div>
 
                 <div class="table-responsive">
@@ -194,41 +194,41 @@
                         <thead>
                         <tr>
                             <th></th>
-                            <th>Day 1 Sunday</th>
-                            <th>Day 2 Monday</th>
-                            <th>Day 3 Tuesday</th>
-                            <th>Day 4 Wednesday</th>
-                            <th>Day 5 Thursday</th>
-                            <th>Day 6 Friday</th>
-                            <th>Day 7 Saturday</th>
+                            <th>{{ 'global.d1' | trans | raw }}</th>
+                            <th>{{ 'global.d2' | trans | raw }}</th>
+                            <th>{{ 'global.d3' | trans | raw }}</th>
+                            <th>{{ 'global.d4' | trans | raw }}</th>
+                            <th>{{ 'global.d5' | trans | raw }}</th>
+                            <th>{{ 'global.d6' | trans | raw }}</th>
+                            <th>{{ 'global.d7' | trans | raw }}</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <td rowspan="3">AM</td>
+                            <td rowspan="3">{{ 'global.am' | trans | raw }}</td>
                             <td rowspan="2"></td>
                             <td></td>
-                            <td class="active">Transfer to Yamaguchi</td>
-                            <td class="active">Bus</td>
-                            <td class="active">Transfer to Osaka</td>
+                            <td class="active">{{ 'global.t1' | trans | raw }}</td>
+                            <td class="active">{{ 'global.t2' | trans | raw }}</td>
+                            <td class="active">{{ 'global.t3' | trans | raw }}</td>
                             <td></td>
-                            <td rowspan="3" class="success">Visit Kyoto</td>
+                            <td rowspan="3" class="success">{{ 'global.t4' | trans | raw }}</td>
                         </tr>
                         <tr>
-                            <td class="active">Transfer to Kyushu</td>
-                            <td rowspan="2" class="warning">Tour Car Seat Company</td>
-                            <td class="warning">Tour Plastic Parts Factory</td>
-                            <td rowspan="2" class="warning">Tour Metal Tools Company</td>
-                            <td class="active">Bus</td>
+                            <td class="active">{{ 'global.t5' | trans | raw }}</td>
+                            <td rowspan="2" class="warning">{{ 'global.t6' | trans | raw }}</td>
+                            <td class="warning">{{ 'global.t7' | trans | raw }}</td>
+                            <td rowspan="2" class="warning">{{ 'global.t8' | trans | raw }}</td>
+                            <td class="active">{{ 'global.t9' | trans | raw }}</td>
                         </tr>
                         <tr>
-                            <td class="active">Shinkansen (Bullet Train)</td>
-                            <td class="warning">Tour Toyota</td>
-                            <td class="warning">Tour Construction Company</td>
-                            <td class="warning">Tour Sheet Metal Machining Company</td>
+                            <td class="active">{{ 'global.t10' | trans | raw }}</td>
+                            <td class="warning">{{ 'global.t11' | trans | raw }}</td>
+                            <td class="warning">{{ 'global.t12' | trans | raw }}</td>
+                            <td class="warning">{{ 'global.t13' | trans | raw }}</td>
                         </tr>
                         <tr>
-                            <td>Lunch</td>
+                            <td>{{ 'global.lunch' | trans | raw }}</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -238,36 +238,36 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td rowspan="3">PM</td>
-                            <td class="danger">Orientation</td>
-                            <td class="danger">Discussion Lean Principles</td>
-                            <td class="active">Transfer to Hiroshima</td>
-                            <td rowspan="2" class="danger">Bus & Discussion</td>
-                            <td class="active">Bus</td>
-                            <td class="active">Bus</td>
-                            <td rowspan="2" class="active">To Airport</td>
+                            <td rowspan="3">{{ 'global.pm' | trans | raw }}</td>
+                            <td class="danger">{{ 'global.t14' | trans | raw }}</td>
+                            <td class="danger">{{ 'global.t15' | trans | raw }}</td>
+                            <td class="active">{{ 'global.t16' | trans | raw }}</td>
+                            <td rowspan="2" class="danger">{{ 'global.t17' | trans | raw }}</td>
+                            <td class="active">{{ 'global.t18' | trans | raw }}</td>
+                            <td class="active">{{ 'global.t19' | trans | raw }}</td>
+                            <td rowspan="2" class="active">{{ 'global.t20' | trans | raw }}</td>
                         </tr>
                         <tr>
-                            <td rowspan="2" class="success">Dinner</td>
-                            <td class="active">Shinkansen</td>
-                            <td class="danger">Discussion</td>
-                            <td class="danger">Discussion / Application Exercise</td>
-                            <td class="danger">Wrap-Up</td>
+                            <td rowspan="2" class="success">{{ 'global.t21' | trans | raw }}</td>
+                            <td class="active">{{ 'global.t22' | trans | raw }}</td>
+                            <td class="danger">{{ 'global.t23' | trans | raw }}</td>
+                            <td class="danger">{{ 'global.t24' | trans | raw }}</td>
+                            <td class="danger">{{ 'global.t25' | trans | raw }}</td>
                         </tr>
                         <tr>
 
-                            <td class="success">Dinner</td>
-                            <td class="success">Dinner</td>
-                            <td class="success">Dinner</td>
-                            <td class="success">Dinner</td>
-                            <td class="success">Bus / Dinner</td>
+                            <td class="success">{{ 'global.t26' | trans | raw }}</td>
+                            <td class="success">{{ 'global.t27' | trans | raw }}</td>
+                            <td class="success">{{ 'global.t28' | trans | raw }}</td>
+                            <td class="success">{{ 'global.t29' | trans | raw }}</td>
+                            <td class="success">{{ 'global.t30' | trans | raw }}</td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td colspan="2" class="warning">Company Tours</td>
-                            <td colspan="2" class="active">Transportation</td>
-                            <td colspan="2" class="danger">Discussion</td>
-                            <td colspan="2" class="success">Relaxation</td>
+                            <td colspan="2" class="warning">{{ 'global.t34' | trans | raw }}</td>
+                            <td colspan="2" class="active">{{ 'global.t31' | trans | raw }}</td>
+                            <td colspan="2" class="danger">{{ 'global.t32' | trans | raw }}</td>
+                            <td colspan="2" class="success">{{ 'global.t33' | trans | raw }}</td>
                         </tr>
                         </tbody>
                     </table>
@@ -283,7 +283,7 @@
 
             <div class="col-md-6">
                 <div class="title">
-                    <h2>Area of focus on this tour!</h2>
+                    <h2>{{ 'global.area_of_focus_on_this_tour' | trans | raw }}</h2>
                 </div>
                 <img src="/assets/images/tokyo.png">
             </div>
@@ -411,9 +411,9 @@
                 <div class="col-md-3">
                     <div class="plan" data-animation="flipInY" data-animation-delay="0">
                         <header class="pricing-head">
-                            <h3>Consulting Focused Activities</h3>
+                            <h3>{{ 'global.training1' | trans | raw }}</h3>
                             <span class="price">5-15</span>
-                            <h4>Days</h4>
+                            <h4>{{ 'global.days' | trans | raw }}</h4>
                         </header>
                         <div class="pricing-body">
                             <ul>
@@ -421,16 +421,16 @@
                             </ul>
                         </div>
                         <footer class="pricing-footer">
-                            <a class="btn btn-primary" href="{{ url('app_front_service') }}#Consulting_1">learn more</a>
+                            <a class="btn btn-primary" href="{{ url('app_front_service') }}#Consulting_1">{{ 'global.learn_more' | trans | raw }}</a>
                         </footer>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="plan" data-animation="flipInY" data-animation-delay="300">
                         <header class="pricing-head">
-                            <h3>Consulting <br/>Events</h3>
+                            <h3>{{ 'global.training2' | trans | raw }}</h3>
                             <span class="price">5-45</span>
-                            <h4>Days</h4>
+                            <h4>{{ 'global.days' | trans | raw }}</h4>
                         </header>
                         <div class="pricing-body">
                             <ul>
@@ -438,16 +438,16 @@
                             </ul>
                         </div>
                         <footer class="pricing-footer">
-                            <a class="btn btn-primary" href="{{ url('app_front_service') }}#Consulting_2">learn more</a>
+                            <a class="btn btn-primary" href="{{ url('app_front_service') }}#Consulting_2">{{ 'global.learn_more' | trans | raw }}</a>
                         </footer>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="plan" data-animation="flipInY" data-animation-delay="600">
                         <header class="pricing-head">
-                            <h3>Consulting<br/>  Projects</h3>
+                            <h3>{{ 'global.training3' | trans | raw }}</h3>
                             <span class="price">30-120</span>
-                            <h4>Days</h4>
+                            <h4>{{ 'global.days' | trans | raw }}</h4>
                         </header>
                         <div class="pricing-body">
                             <ul>
@@ -455,16 +455,16 @@
                             </ul>
                         </div>
                         <footer class="pricing-footer">
-                            <a class="btn btn-primary" href="{{ url('app_front_service') }}#Consulting_3">learn more</a>
+                            <a class="btn btn-primary" href="{{ url('app_front_service') }}#Consulting_3">{{ 'global.learn_more' | trans | raw }}</a>
                         </footer>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="plan" data-animation="flipInY" data-animation-delay="900">
                         <header class="pricing-head">
-                            <h3>Consulting<br/> Transformations</h3>
+                            <h3>{{ 'global.training4' | trans | raw }}</h3>
                             <span class="price">120-365</span>
-                            <h4>Days</h4>
+                            <h4>{{ 'global.days' | trans | raw }}</h4>
                         </header>
                         <div class="pricing-body">
                             <ul>
@@ -472,7 +472,7 @@
                             </ul>
                         </div>
                         <footer class="pricing-footer">
-                            <a class="btn btn-primary" href="{{ url('app_front_service') }}#Consulting_4">learn more</a>
+                            <a class="btn btn-primary" href="{{ url('app_front_service') }}#Consulting_4">{{ 'global.learn_more' | trans | raw }}</a>
                         </footer>
                     </div>
                 </div>

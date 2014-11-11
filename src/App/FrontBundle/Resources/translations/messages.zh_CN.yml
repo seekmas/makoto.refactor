@@ -63,11 +63,11 @@ tab:
 
 bottom:
     about_us: 关于我们
-    contact_us: 联系方式( 业务咨询 )
-    facebook: <a href="https://www.facebook.com/pages/GembaChina%E6%93%80%E9%9C%B8%E4%B8%AD%E5%9B%BD/454939231312026" target="_blank">擀霸企业管理咨询(上海)有限公司</a>
+    contact_us: 擀霸企业管理咨询(上海)有限公司 <br/>联系方式( 业务咨询 )
+    facebook: <a href="https://www.facebook.com/pages/GembaChina%E6%93%80%E9%9C%B8%E4%B8%AD%E5%9B%BD/454939231312026" target="_blank">GembaChina擀霸中国</a>
     addresss: 上海市 黄浦区人民路885号22楼2206室
-    tel: 办公室电话 : +86 62482365
-    fax: 办公室传真 : +86 51797321
+    tel: 办公室电话 : <br/>+86 021 62482365
+    fax: 办公室传真 : <br/>+86 021 62482365-8666
     email_dj: <a href="mailto:mwang@makotoglobal.com">Michael.Wang</a><br/>
     email_brad: <a href="mailto:constant.pu@makotoglobal.com">Constance.Pu</a><br>
     about_us_content: <p>擀霸企业管理咨询(上海)有限公司多年来和专业团队一直在旅途中,<br/>擀霸企业管理咨询(上海)有限公司是一家专业为企业提供全球精益部署规划和实施、<br/>运营操作及服务咨询以及精益标杆之旅的专业企业管理咨询公司。<br/>擀霸公司在上海、美国、日本等地都设有分支机构，拥有来自世界各地资深的精益专家，<br/>他们拥有15年以上的精益咨询及实践经验，为全球企业精益部署及改善提供专业的规划及方案。<br/>同时，擀霸独有的资源将为企业提供精益标杆之旅，帮助企业参观日本精益标准工厂，进行精益实践交流和学习。<br/>擀霸公司将不断秉承诚实、真诚以及新人的理念，不断为企业提供更专业更有效的精益指导，<br/>帮助企业真正实现卓越运营管理及组织战略管理。</p>
@@ -109,8 +109,87 @@ service:
     other_service: 其它服务
 
 global:
-    training_workshops: 内训课
+    president: 总裁
+    training_workshops: 改善培训研讨
+    experience_in: 主要客户
+    main_business_sectors: 主营业务部门
+    unique_solutions_to_the_market_place: 市场上唯一的解决方案提供者
+    4_options_to_learn_by_doing: 从实践中学习的4个方案
+    long_text: <strong>很多改善实践在操作过程中付出了很大努力但无法成功，不是因为缺乏理论知识，而是前线工作缺乏领导力。我们认为，每5-10人的团队，需要一位负责人。</strong>
+    the_value_of_makotos_jle: Makoto精益经验交流行的价值
+    production_assembly: 生产/组装
+    retail: 零售业
+    process_construction: 工艺加工/建造
+    health_care: 医疗保健
+    service: 服务
+    finance: 财务
 
+    training1: 改善重点活动
+    training2: 改善事件
+    training3: 改善项目
+    training4: 改善革命
+    days: 天
+    learn_more: 详细
+
+    area_of_focus_on_this_tour: 旅行参观主要在这些地区
+    p1: 近距离感受精益
+    p2: 精益经验交流
+    p3: 提升精益能力
+    p4: 交流旅程心得
+
+    p5: 为卓越运营支持提供临时或过渡人员
+    p6: 日本是如何工作的——在日本成为一位成功的外籍雇员
+    p7: 一线的改善（销售及发展）
+    p8: 精益研发/精益工程/精益财务
+    p9: TWI资格认证（行业培训）
+    p10: 成为一位成功的精益领导人(现场核心人员)
+
+    a_typical: 量身定制的精益交流行（JLE）
+    d1: 第一天
+    d2: 第二天
+    d3: 第二天
+    d4: 第二天
+    d5: 第二天
+    d6: 第二天
+    d7: 第二天
+    am: 上午
+    lunch: 中午午餐
+    pm: 下午
+
+    t1: 去山口县
+    t2: 乘坐公交
+    t3: 去大阪
+    t4: 游览京都
+    t5: 去九州
+    t6: 参观汽车座椅工厂
+    t7: 参观塑料部件工厂
+    t8: 参观金属工具公司
+    t9: 乘坐公交
+    t10: 乘坐新干线去酒店
+    t11: 参观丰田公司
+    t12: 参观建造公司
+    t13: 参观板材机公司
+    t14: 行程介绍
+    t15: 讨论精益原理
+    t16: 去广岛市
+    t17: 坐车回酒店并交流讨论
+    t18: 乘坐公交
+    t19: 乘坐公交
+    t20: 去机场
+    t21: 晚餐
+    t22: 乘坐新干线回酒店
+    t23: 讨论
+    t24: 讨论交流/应用练习
+    t25: 总结
+    t26: 晚餐
+    t27: 晚餐
+    t28: 晚餐
+    t29: 晚餐
+    t30: 晚餐/坐车
+    t31: 交通工具
+    t32: 讨论交流
+    t33: 休息
+    t34: 公司参观
 
 
 
