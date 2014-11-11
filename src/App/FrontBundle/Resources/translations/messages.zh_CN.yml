@@ -13,17 +13,18 @@ heading:
     latest_news: 新闻
     contact: 联系我们
     investments: 投资
-    lesson: 课程
+    lesson: 培训课程
+
 slider:
     learing_happens_by_doing: <strong><span style="color:#57b5ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;寓教于乐</span><br/>学而思之</strong>
     transformations: <strong><span  style="color:#57b5ff;">三思而行<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>再思可矣</em></strong>
     leadership: <strong><span  style="color:#57b5ff;">身先士卒 <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>以身作则</strong>
     seeing: <strong><span  style="color:#57b5ff;">百闻</span>不如一见</strong>
     behaviors: <strong><span  style="color:#57b5ff;">握管怀铅<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>事在人为</strong>
-    we_believe_in: 我们拥有的信念
+    we_believe_in: 我们的信念
     in_dna: 擀霸的企业文化深植于我们的DNA中
-    over_26_years: 有超过26年的经验在帮助企业转变的培训中
-    welcome_to: 欢迎莅临擀霸中国
+    over_26_years: 以26年的精益经验 , 帮助企业进行转型
+    welcome_to: 欢迎莅临
     makoto: 擀霸中国
     global: 企业管理
 
@@ -36,14 +37,14 @@ front:
     kaizen_consulting_activities: 咨询活动
     investments: 投资
     services: 产品/服务
-    japan_lean_experience: 日本精益之旅
-    consulting: 咨询
-    learning: 学习
-    other_services: 其他服务
+    japan_lean_experience: 日本精益标杆之旅
+    consulting: 企业咨询
+    learning: 研讨会
+    other_services: 全球服务
     news: 新闻
     contact: 联系我们
     login: 登陆
-    lesson: 课程
+    lesson: 培训课程
     admin: 后台管理
 
 title:
@@ -103,10 +104,10 @@ countries:
 
 
 service:
-    jle: <h3><span>日本</span> 精益之旅</h3>
-    consulting: 咨询
-    learning: 学习
-    other_service: 其它服务
+    jle: <h3><span>日本</span> 精益标杆之旅</h3>
+    consulting: 企业咨询
+    learning: 研讨会
+    other_service: 全球服务
 
 global:
     president: 总裁

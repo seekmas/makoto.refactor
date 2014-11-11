@@ -79,6 +79,7 @@ class HtmlExtension extends \Twig_Extension
         $list = [
             '杨凯' => '高级顾问' ,
             '全球改善' => '____' ,
+            'kicg' => '____' ,
         ];
 
         foreach($list as $key => $value)
