@@ -16,7 +16,7 @@
                     </div>
                     <div class="icon-box-body">
                         <div class="title-accent">
-                            <h3><span>Japan</span> Lean Experience</h3>
+                            {{ 'service.jle' | trans | raw }}
                         </div>
 
                         {{ block_1.content | raw }}
@@ -59,7 +59,7 @@
         <div class="row" id="con">
             <a name="con"></a>
             <div class="title">
-                <h2 class="text-center">Consulting</h2>
+                <h2 class="text-center">{{ 'service.consulting' | trans | raw }}</h2>
             </div>
             <div id="Consulting_1" class="col-md-6">
                 <div class="icon-box squared icon-box-animated">
@@ -69,7 +69,7 @@
                     <div class="icon-box-body">
                         {% set block_3 = vector('consulting-focused-activities') %}
                         <div class="title-accent">
-                            <h3><span>Consulting</span> {{ block_3.subject }}</h3>
+                            <h3><span>{{ 'service.consulting' | trans | raw }}</span> {{ block_3.subject }}</h3>
                         </div>
                         <h2>{{ block_3.addonBlockOne }}</h2>
 
@@ -89,7 +89,7 @@
                     <div class="icon-box-body">
                         {% set block_4 = vector('consulting-events') %}
                         <div class="title-accent">
-                            <h3><span>Consulting</span> {{ block_4.subject }}</h3>
+                            <h3><span>{{ 'service.consulting' | trans | raw }}</span> {{ block_4.subject }}</h3>
                         </div>
                         <h2>{{ block_4.addonBlockOne }}</h2>
                         <p><img src="/assets/images/events.jpg"></p>
@@ -110,7 +110,7 @@
                     <div class="icon-box-body">
                         {% set block_5 = vector('consulting-projects') %}
                         <div class="title-accent">
-                            <h3><span>Consulting</span> {{ block_5.subject }}</h3>
+                            <h3><span>{{ 'service.consulting' | trans | raw }}</span> {{ block_5.subject }}</h3>
                         </div>
                         <h2>{{ block_5.addonBlockOne }}</h2>
                         <p><img src="/assets/images/projects.png"></p>
@@ -128,7 +128,7 @@
                     <div class="icon-box-body">
                         {% set block_6 = vector('consulting-transformations') %}
                         <div class="title-accent">
-                            <h3><span>Consulting</span> {{ block_6.subject }}</h3>
+                            <h3><span>{{ 'service.consulting' | trans | raw }}</span> {{ block_6.subject }}</h3>
                         </div>
                         <h2>{{ block_6.addonBlockOne }}</h2>
                         <p><img src="/assets/images/transformations.jpg"></p>
@@ -149,7 +149,7 @@
         <div class="row scala" id="lea">
             <a name="lea"></a>
             <div class="title">
-                <h2 class="text-center">Learning</h2>
+                <h2 class="text-center">{{ 'service.learning' | trans | raw }}</h2>
             </div>
             <div class="col-md-8">
                 <div class="icon-box squared icon-box-animated">
@@ -181,7 +181,7 @@
         <a name="oth"></a>
         <div class="row" id="oth">
             <div class="title">
-                <h2 class="text-center">Other Service</h2>
+                <h2 class="text-center">{{ 'service.other_service' | trans | raw }}</h2>
             </div>
             <div class="col-md-4">
                 <div class="icon-box squared icon-box-animated">

@@ -6,7 +6,7 @@
     <meta name="Keywords" content="{% block keyword %}{{ 'meta.keywords' | trans | raw }}{% endblock %}">
     <meta name="Description" content="{% block description %}{{ 'meta.description' | trans | raw }}{% endblock %}">
     <link rel="stylesheet" href="{{ asset('tpl/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('tpl/css/fonts/font-awesome/css/font-awesome.css') }}">
+    <link rel="stylesheet" href="{{ asset('font-awesome/css/font-awesome.css') }}">
     <link rel="stylesheet" href="{{ asset('tpl/vendor/owl-carousel/owl.carousel.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('tpl/vendor/owl-carousel/owl.theme.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('tpl/vendor/magnific-popup/magnific-popup.css') }}" media="screen">
@@ -210,6 +210,15 @@
                                         {{ 'bottom.email_brad' | trans | raw }}
                                     </div>
                                 </li>
+                                {% if locale() == 'zh_CN' %}
+                                <li>
+                                    <i class="fa fa-weixin"></i>
+                                    <div class="info-item">
+                                        <img class="img-thumbnail" src="{{ asset('qrcode.jpg') }}" style="width: 80%;"/>
+                                    </div>
+                                </li>
+                                {% endif %}
+
                             </ul>
                         </div>
                     </div>
@@ -227,7 +236,7 @@
                 <div class="col-sm-2 col-md-2">
                     <script type="text/javascript">
                         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-                        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4610605ad66e679a72b656b7f2082f41' type='text/javascript'%3E%3C/script%3E"));
+                        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F946ed184dd4301c40ec0f57e471fd57d' type='text/javascript'%3E%3C/script%3E"));
                     </script>
                 </div>
             </div>

@@ -201,6 +201,7 @@ class NewsfeedController extends Controller
         $entity = $this->get('newsfeed_entity');
         $year = 2013;
 
+
         $url = 'http://cn.kaizen.com/news-center/'.$year.'.html';
 
         \phpQuery::newDocumentFileHTML($url);
@@ -209,11 +210,18 @@ class NewsfeedController extends Controller
 
         foreach ($titleElement as $element) {
 
-            \phpQuery::newDocumentFileHTML($element->getAttribute('href'));
+            $href = $element->getAttribute('href');
+            if(!preg_match('/^http/' , $href))
+            {
+                $href = 'http://cn.kaizen.com/'.$href;
+            }
+
+            \phpQuery::newDocumentFileHTML($href);
 
             $title = pq('h1.csc-firstHeader');
             $title = $title->text();
 
+            preg_match('/^\[(\d+)/' , $title , $match);
             if($entity->findOneBySubject($title) )
             {
                 continue;
@@ -222,7 +230,7 @@ class NewsfeedController extends Controller
                 $content = pq('div.csc-textpic');
 
                 $news = new Newsfeed();
-                $news->setCreatedAt(new \Datetime($year.'-1-1'));
+                $news->setCreatedAt(new \Datetime($year.'-'.$match[1].'-1'));
                 $news->setSubject($title);
                 $news->setContent($content);
                 $news->setPublish(false);

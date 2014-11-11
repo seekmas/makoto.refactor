@@ -17,7 +17,8 @@ class BlockExtension extends \Twig_Extension
      */
     public function getFunctions() {
         return array(
-            'vector' => new \Twig_Function_Method($this, 'vector')
+            'vector' => new \Twig_Function_Method($this, 'vector') ,
+            'locale' => new \Twig_Function_Method($this,'locale') ,
         );
     }
 
@@ -30,6 +31,11 @@ class BlockExtension extends \Twig_Extension
         $content = $this->container->get('content_entity')->findOneByVector($vectorId);
 
         return $content;
+    }
+
+    public function locale()
+    {
+        return $this->container->getParameter('locale');
     }
 
     /**

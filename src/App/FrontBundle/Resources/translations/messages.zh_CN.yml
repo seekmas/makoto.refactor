@@ -102,9 +102,14 @@ countries:
     United_States: 美国
 
 
+service:
+    jle: <h3><span>日本</span> 精益之旅</h3>
+    consulting: 咨询
+    learning: 学习
+    other_service: 其它服务
 
-
-
+global:
+    training_workshops: 内训课
 
 
 
