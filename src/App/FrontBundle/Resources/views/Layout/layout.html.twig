@@ -59,11 +59,18 @@
             </div>
             <div class="header-top-right">
 				<span class="register">
+                    {% if locale() == 'en' %}
                         {% if is_granted('ROLE_ADMIN') %}
                             <a href="{{ url('menu.home_page') }}">{{ 'front.admin' | trans | raw }}</a>
                         {% else %}
 						    <a href="{{ url('fos_user_security_login') }}">{{ 'front.login' | trans | raw }}</a>
                         {% endif %}
+                    {% elseif locale() == 'zh_CN' %}
+                        <a href="{{ url('app_front_homepage') }}#weixin">
+                        <i class="fa fa-phone"></i>
+                        +86 021 62482365
+                        </a>
+                    {% endif %}
 				</span>
             </div>
         </div>
@@ -112,9 +119,11 @@
                             <li><a id="conBtn" href="{{ url('app_front_service') }}#con">{{ 'front.consulting' | trans | raw }}</a></li>
                             <li><a id="leaBtn" href="{{ url('app_front_service') }}#lea">{{ 'front.learning' | trans | raw }}</a></li>
                             <li><a id="othBtn" href="{{ url('app_front_service') }}#oth">{{ 'front.other_services' | trans | raw }}</a></li>
+                            {% if locale() == 'en' %}
                             <li>
                                 <a href="{{ url('app_lesson_materials') }}">{{ 'front.lesson' | trans | raw }}</a>
                             </li>
+                            {% endif %}
                         </ul>
                     </li>
 
@@ -152,6 +161,7 @@
                     <li >
                         <a href="{{ url('app_front_contact') }}">{{ 'front.contact' | trans | raw }}</a>
                     </li>
+
                 </ul>
             </nav>
             <!-- Navigation / End -->
