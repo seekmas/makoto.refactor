@@ -195,7 +195,16 @@
                     <div class="widget_text widget widget__footer">
                         <h3 class="widget-title">{{ 'bottom.about_us' | trans | raw }}</h3>
                         <div class="widget-content">
-                            {{ 'bottom.about_us_content' | trans | raw }}
+
+                            {% set bottom = vector('history_on_bottom') %}
+
+                            {% if bottom %}
+
+                                {{ bottom.content | raw }}
+
+                            {% else %}
+                                {{ 'bottom.about_us_content' | trans | raw }}
+                            {% endif %}
                             <a href="{{ url('app_front_contact') }}" class="btn btn-primary">{{ 'bottom.read_more' | trans | raw }}</a>
                         </div>
                     </div>

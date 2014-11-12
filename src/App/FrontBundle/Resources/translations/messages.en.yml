@@ -111,6 +111,9 @@ service:
     other_service: Other Service
 
 global:
+    kca: /assets/images/kca.png
+    jle: /assets/images/jle.png
+    ktw: /assets/images/ktw.png
     president: President
     training_workshops: Training Workshops
     experience_in: Experience in many fields…

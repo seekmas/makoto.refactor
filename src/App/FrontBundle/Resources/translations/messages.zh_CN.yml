@@ -110,6 +110,9 @@ service:
     other_service: 全球服务
 
 global:
+    kca: /assets/images/kca-cn.png
+    jle: /assets/images/jle-cn.png
+    ktw: /assets/images/ktw-cn.png
     president: 总裁
     training_workshops: 改善培训研讨
     experience_in: 主要客户
