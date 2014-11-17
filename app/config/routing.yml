@@ -1,3 +1,7 @@
+app_society:
+    resource: "@AppSocietyBundle/Resources/config/routing.yml"
+    prefix:   /
+
 web_back:
     resource: "@WebBackBundle/Resources/config/routing.yml"
     prefix:   /admin

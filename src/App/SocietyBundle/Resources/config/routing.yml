@@ -1,0 +1,7 @@
+weibo:
+    path:     /weibo
+    defaults: { _controller: AppSocietyBundle:Weibo:index }
+
+weibo_callback:
+    path:     /weibo_callback
+    defaults: { _controller: AppSocietyBundle:Weibo:callback }

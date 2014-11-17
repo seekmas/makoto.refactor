@@ -1,0 +1,6 @@
+services:
+    weibo.api:
+        class: App\SocietyBundle\Api\SaeTOAuthV2
+        arguments: ["1426818375", "9277a0f667a3c5f075aa791210dea027"]
+        calls:
+            - [setCallBack , ["http://makoto.local/weibo_callback"]]

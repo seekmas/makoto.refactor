@@ -1,0 +1,4 @@
+imports:
+    - { resource: api.yml }
+
+services:

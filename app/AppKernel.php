@@ -28,6 +28,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\TimeBundle\KnpTimeBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
             new Genemu\Bundle\FormBundle\GenemuFormBundle(),
+            new App\SocietyBundle\AppSocietyBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
