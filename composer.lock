@@ -753,12 +753,12 @@
             "version": "v2.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fabpot/Goutte.git",
+                "url": "https://github.com/FriendsOfPHP/Goutte.git",
                 "reference": "b12c3f7ec68d8814b50444cfe142fd0a056557f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Goutte/zipball/b12c3f7ec68d8814b50444cfe142fd0a056557f9",
+                "url": "https://api.github.com/repos/FriendsOfPHP/Goutte/zipball/b12c3f7ec68d8814b50444cfe142fd0a056557f9",
                 "reference": "b12c3f7ec68d8814b50444cfe142fd0a056557f9",
                 "shasum": ""
             },
@@ -1651,12 +1651,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hwi/HWIOAuthBundle.git",
-                "reference": "835ab5eb2f8bd783a11980e8cbab549ee01aa720"
+                "reference": "e97748b3333f03ada757b0fc8ececb1b33120b3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hwi/HWIOAuthBundle/zipball/835ab5eb2f8bd783a11980e8cbab549ee01aa720",
-                "reference": "835ab5eb2f8bd783a11980e8cbab549ee01aa720",
+                "url": "https://api.github.com/repos/hwi/HWIOAuthBundle/zipball/e97748b3333f03ada757b0fc8ececb1b33120b3d",
+                "reference": "e97748b3333f03ada757b0fc8ececb1b33120b3d",
                 "shasum": ""
             },
             "require": {
@@ -1669,12 +1669,14 @@
             },
             "require-dev": {
                 "doctrine/orm": "~2.3",
+                "symfony/property-access": "~2.5",
                 "symfony/twig-bundle": "~2.1",
                 "symfony/validator": "~2.1"
             },
             "suggest": {
                 "doctrine/doctrine-bundle": "to use Doctrine user provider",
                 "friendsofsymfony/user-bundle": "to connect FOSUB with this bundle",
+                "symfony/property-access": "to use FOSUB integration with this bundle",
                 "symfony/twig-bundle": "to use the Twig hwi_oauth_* functions"
             },
             "type": "symfony-bundle",
@@ -1755,20 +1757,20 @@
                 "yahoo",
                 "yandex"
             ],
-            "time": "2014-07-30 11:47:22"
+            "time": "2014-11-15 10:59:42"
         },
         {
             "name": "imagine/imagine",
-            "version": "v0.6.1",
+            "version": "0.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/avalanche123/Imagine.git",
-                "reference": "725279fd560faa1c7012a80b427b31d7f08f36ff"
+                "reference": "83ca8babede0e54f935ec09d55a726bf4b0a3f7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/725279fd560faa1c7012a80b427b31d7f08f36ff",
-                "reference": "725279fd560faa1c7012a80b427b31d7f08f36ff",
+                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/83ca8babede0e54f935ec09d55a726bf4b0a3f7c",
+                "reference": "83ca8babede0e54f935ec09d55a726bf4b0a3f7c",
                 "shasum": ""
             },
             "require": {
@@ -1785,7 +1787,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-develop": "0.6-dev"
+                    "dev-develop": "0.7-dev"
                 }
             },
             "autoload": {
@@ -1812,7 +1814,7 @@
                 "image manipulation",
                 "image processing"
             ],
-            "time": "2014-06-16 20:53:48"
+            "time": "2014-11-11 11:36:02"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -2902,7 +2904,7 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "Knplabs",
+                    "name": "KnpLabs",
                     "homepage": "http://knplabs.com"
                 },
                 {
@@ -3323,12 +3325,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/liip/LiipImagineBundle.git",
-                "reference": "c8b6eca46635a0d99260e5d459ae73876c930c2f"
+                "reference": "eacdae21cc9ce8e07ab64d20d5a92529ed49709d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/c8b6eca46635a0d99260e5d459ae73876c930c2f",
-                "reference": "c8b6eca46635a0d99260e5d459ae73876c930c2f",
+                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/eacdae21cc9ce8e07ab64d20d5a92529ed49709d",
+                "reference": "eacdae21cc9ce8e07ab64d20d5a92529ed49709d",
                 "shasum": ""
             },
             "require": {
@@ -3388,7 +3390,7 @@
                 "image",
                 "imagine"
             ],
-            "time": "2014-10-29 18:56:25"
+            "time": "2014-11-12 10:15:02"
         },
         {
             "name": "liip/theme-bundle",
@@ -5003,12 +5005,12 @@
             "version": "v1.16.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fabpot/Twig.git",
+                "url": "https://github.com/twigphp/Twig.git",
                 "reference": "42f758d9fe2146d1f0470604fc05ee43580873fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/42f758d9fe2146d1f0470604fc05ee43580873fc",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/42f758d9fe2146d1f0470604fc05ee43580873fc",
                 "reference": "42f758d9fe2146d1f0470604fc05ee43580873fc",
                 "shasum": ""
             },

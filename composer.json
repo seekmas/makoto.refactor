@@ -51,7 +51,8 @@
         "genemu/form-bundle": "2.2.*",
         "cboden/ratchet": "0.3.*",
         "fabpot/goutte": "~2.0",
-        "electrolinux/phpquery": "dev-master"
+        "electrolinux/phpquery": "dev-master",
+        "knplabs/knp-gaufrette-bundle": "*@dev"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
