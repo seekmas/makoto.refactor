@@ -2,7 +2,7 @@ meta:
     title: Makoto Global Offical Website
     keywords: Makoto , Lean , Consult , Management , Japan Lean Experience
     description: Makoto Global Offical Website
-
+    favicon: makoto.ico
 image:
     logo: assets/images/logo.png
     dna: assets/images/dna.png
