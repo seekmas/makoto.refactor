@@ -23,9 +23,9 @@
                 </div>
             </div>
             <div class="col-md-9">
-
+                {% if locale() == 'zh_CN' %}
                 <wb:share-button appkey="2isBLN" addition="number" type="button" default_text="我找到了一个很有意思的新闻,你们也来看看吧" ralateUid="2298078305"></wb:share-button>
-
+                {% endif %}
                 {{ newsfeed.content | keywords | raw }}
 
             </div>
