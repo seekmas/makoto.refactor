@@ -301,11 +301,12 @@
                     {{ 'bottom.copy' | trans | raw }}
                 </div>
                 <div class="col-sm-2 col-md-2">
+                    {% if locale() == 'zh_CN' %}
                     <script type="text/javascript">
                         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
                         document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F946ed184dd4301c40ec0f57e471fd57d' type='text/javascript'%3E%3C/script%3E"));
                     </script>
-
+                    {% endif %}
                 </div>
             </div>
         </div>
