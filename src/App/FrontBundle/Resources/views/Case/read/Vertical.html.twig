@@ -1,0 +1,42 @@
+<section class="page-content">
+    <div class="container">
+
+        <div class="title-accent">
+            <h2>{{ case.subject }}</h2>
+        </div>
+
+        <wb:share-button appkey="2isBLN" addition="number" type="button" default_text="我找到了一个很有意思的案例,你们也来看看吧" ralateUid="2298078305"></wb:share-button>
+
+        <figure class="alignleft">
+            关键字: {{ case.keywords | striptags  }}
+        </figure>
+
+        <hr/>
+
+        {{ case.content | raw }}
+
+        <hr/>
+
+        <div class="col-md-12"><h2>{{ case.category }} - 相关案例</h2></div>
+
+        {% for c in case.category.cases if c.id != case.id %}
+            <div class="col-md-4">
+                <div class="icon-box circled">
+                    <a href="">
+                        <div class="icon">
+                            <i class="fa fa-leaf"></i>
+                            <i class="fa fa-leaf bg-icon"></i>
+                        </div>
+                        <div class="icon-box-body">
+                            <h4>{{ c.subject }}</h4>
+
+                            {{ c.content | striptags | truncate(100) }}
+
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+</section>

@@ -10,3 +10,7 @@ services:
     lesson_paginator:
         class: Web\BackBundle\Paginator\PaginatorFactory
         arguments: [@service_container , 'lesson_entity']
+
+    case_paginator:
+        class: Web\BackBundle\Paginator\PaginatorFactory
+        arguments: [@service_container , 'case_entity']

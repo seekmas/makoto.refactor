@@ -14,7 +14,7 @@ heading:
     contact: CONTACT
     investments: Investments
     lesson: Lessons
-
+    case: Case
 slider:
     learing_happens_by_doing: <strong><em>Learning&nbsp;&nbsp;<span style="color:#57b5ff;">Happens <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;by Doing</span></em></strong>
     transformations: <strong><em>Transformations&nbsp;&nbsp;<span  style="color:#57b5ff;">Require <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reflections</span></em></strong>
@@ -46,7 +46,7 @@ front:
     contact: Contact
     lesson: Lessons
     login: Login
-
+    case: Case
 title:
     what_does_makoto_mean: <span>What</span> does Makoto Mean?
     the_meaning_of_makoto: <span>The</span> Meaning of Makoto

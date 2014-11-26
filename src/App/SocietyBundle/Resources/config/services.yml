@@ -2,3 +2,6 @@ imports:
     - { resource: api.yml }
 
 services:
+    society_login:
+        class: App\SocietyBundle\UserManager\LoginManager
+        arguments: [@fos_user.security.login_manager , %fos_user.firewall_name% , @service_container]

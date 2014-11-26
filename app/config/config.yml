@@ -169,3 +169,13 @@ liip_imagine:
             filters:
                 thumbnail: { size: [600, 300], mode: outbound } # Transforms 50x40 to 32x32, while cropping the width
 
+knp_gaufrette:
+    adapters:
+        server:
+            safe_local:
+                directory: ../tmp
+                create:     true
+    filesystems:
+        app:
+            adapter:    server
+            alias:      server_filesystem

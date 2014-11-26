@@ -5,3 +5,12 @@ weibo:
 weibo_callback:
     path:     /weibo_callback
     defaults: { _controller: AppSocietyBundle:Weibo:callback }
+
+sina_fans:
+    path: /sina
+    defaults: { _controller: AppSocietyBundle:Weibo:sina }
+
+
+log:
+    path: /log
+    defaults: { _controller: AppSocietyBundle:Weibo:save }

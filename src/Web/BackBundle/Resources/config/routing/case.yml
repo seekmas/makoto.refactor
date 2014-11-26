@@ -1,0 +1,19 @@
+menu.create_case:
+    path:     /create_case
+    defaults: { _controller: WebBackBundle:Cases:index }
+
+link.edit_case:
+    path:     /{id}/edit_case
+    defaults: { _controller: WebBackBundle:Cases:index }
+
+menu.case_category:
+    path: /case_category
+    defaults: { _controller: WebBackBundle:Cases:category }
+
+menu.case_load_data:
+    path: /load_case_layout
+    defaults: { _controller: WebBackBundle:Cases:loadData }
+
+menu.case_list:
+    path: /case_list
+    defaults: { _controller: WebBackBundle:Cases:list }

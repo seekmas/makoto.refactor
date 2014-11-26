@@ -1,9 +1,5 @@
-{% extends "AppSocietyBundle::layouts.html.twig" %}
 
-{% block heading %}{% endblock %}
-
-{% block body %}
-
+    {{ ld(user_message) }}
 
     <div class="container">
 
@@ -11,27 +7,26 @@
             <a href="{{ url }}">Login Weibo</a>
         </div>
 
-        {% if ms['statuses'] is defined %}
-        {% for message in ms['statuses'] %}
-        <div class="row">
+        {#{% if ms['statuses'] is defined %}#}
+        {#{% for message in ms['statuses'] %}#}
+        {#<div class="row">#}
 
-            <div class="col-md-4">
-                <strong><img src="{{ message['user'].profile_image_url }}" />{{ message['user'].name }} :</strong>
-            </div>
+            {#<div class="col-md-4">#}
+                {#<strong><img src="{{ message['user'].profile_image_url }}" />{{ message['user'].name }} :</strong>#}
+            {#</div>#}
 
-            <div class="col-md-8">
-               {% if message['original_pic'] is defined and message['original_pic'] is not null %}
+            {#<div class="col-md-8">#}
+               {#{% if message['original_pic'] is defined and message['original_pic'] is not null %}#}
 
-                   <img src="{{ message['original_pic'] }}" style="width: 150px;" />
+                   {#<img src="{{ message['original_pic'] }}" style="width: 150px;" />#}
 
-               {% endif %}
-               {{ message['text'] }}
-            </div>
-            <hr/>
-        </div>
-        {% endfor %}
-        {% endif %}
+               {#{% endif %}#}
+               {#{{ message['text'] }}#}
+            {#</div>#}
+            {#<hr/>#}
+        {#</div>#}
+        {#{% endfor %}#}
+        {#{% endif %}#}
 
 
     </div>
-{% endblock %}

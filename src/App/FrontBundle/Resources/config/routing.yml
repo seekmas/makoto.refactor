@@ -33,3 +33,11 @@ app_news_post:
 app_lesson_materials:
     path: /lesson_materials
     defaults: { _controller: AppFrontBundle:Lesson:index }
+
+app_case:
+    path: /case
+    defaults: { _controller: AppFrontBundle:Case:index }
+
+app_case_read:
+    path: /{id}/case
+    defaults: { _controller: AppFrontBundle:Case:read }

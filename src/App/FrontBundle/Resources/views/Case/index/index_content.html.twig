@@ -1,0 +1,102 @@
+<section class="page-content">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-8 col-md-offset-1 col-md-push-3">
+            {% for category in categories %}
+            <div class="content col-md-6">
+
+                <div class="title-accent">
+                    <h3 style="background: #3498DB;color:#fff;padding: 10px;"><i class="fa fa-flag"></i> {{ category.name }}</h3>
+                </div>
+
+                <p style="font-size: 14px;color:#9b9b9b;padding-left: 10px;">
+                    {{ category.keywords | striptags }}
+                </p>
+
+                <div class="list">
+                    <ul>
+                        {% for key , case in category.cases if key < 10 %}
+                            <li><a href="{{ url('app_case_read' , {'id':case.id}) }}">{{ case.subject }} </a> <i class="fa fa-thumbs-o-up"></i>
+                                {{ case.click }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+            </div>
+            {% endfor %}
+            </div>
+
+            <aside class="sidebar col-md-3 col-md-pull-9">
+
+                <hr class="visible-sm visible-xs lg">
+
+                <!-- Widget :: Categories -->
+                <div class="widget_categories widget widget__sidebar">
+                    <h3 class="widget-title">行业</h3>
+                    <div class="widget-content">
+                        <ul>
+                            {% for category in categories %}
+
+                                <li>{{ category.name }}</li>
+
+                            {% endfor %}
+
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- /Widget :: Categories -->
+
+
+                <!-- Widget :: Latest Posts -->
+                <div class="latest-posts-widget widget widget__sidebar">
+                    <h3 class="widget-title">最新的案例</h3>
+
+                    <div class="widget-content">
+                        <ul class="latest-posts-list">
+                            {% for case in latest %}
+                            <li>
+                                <figure class="thumbnail"><a href="#"><img src="images/samples/post-img-sm1.jpg" alt=""></a></figure>
+                                <span class="date">{{ case.createdAt | date('Y-m-d') }}</span>
+                                <h5 class="title"><a href="{{ url('app_case_read' , {'id' : case.id}) }}">{{ case.subject }}</a></h5>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <!-- /Widget :: Latest Posts -->
+
+                <!-- Widget :: Tabbed -->
+                <div class="tabbed-widget widget widget__sidebar">
+                    <div class="widget-content">
+                        <div class="tabs">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#tab-1" data-toggle="tab">热门</a></li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="tab-1">
+                                    <ul class="latest-posts-list">
+
+                                        {% for case in cases %}
+                                        <li>
+                                            <span class="date">{{ case.createdAt | date('Y-m-d') }}</span>
+                                            <h5 class="title"><a href="{{ url('app_case_read' , {'id' : case.id}) }}">{{ case.subject }}</a></h5>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Widget :: Tabbed -->
+            </aside>
+        </div>
+
+    </div>
+</section>

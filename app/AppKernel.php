@@ -24,6 +24,7 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Knp\Bundle\GaufretteBundle\KnpGaufretteBundle(),
             new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
             new Knp\Bundle\TimeBundle\KnpTimeBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),

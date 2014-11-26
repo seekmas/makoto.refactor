@@ -1,0 +1,35 @@
+{% extends "AppFrontBundle:Layout:layout.html.twig" %}
+
+
+
+{% block title %}{{ case.subject }} - {{ parent() }}{% endblock %}
+
+{% block keywords %}{{ case.keywords | striptags }}{% endblock %}
+
+{% block description %}{{ case.content | striptags | truncate(100) }}{% endblock %}
+
+{% block heading_title %}
+    {{ 'heading.case' | trans | raw }}
+{% endblock %}
+
+{% block body %}
+
+
+    {% if case.layout == 'Horizontal' %}
+
+        {% include "AppFrontBundle:Case:read/Horizontal.html.twig" %}
+
+    {% elseif case.layout == 'Vertical' %}
+
+        {% include "AppFrontBundle:Case:read/Vertical.html.twig" %}
+
+    {% else %}
+
+        {% include "AppFrontBundle:Case:read/LeftToRight.html.twig" %}
+
+    {% endif %}
+
+
+
+
+{% endblock %}

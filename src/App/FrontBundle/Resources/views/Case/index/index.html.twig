@@ -1,0 +1,13 @@
+{% extends "AppFrontBundle:Layout:layout.html.twig" %}
+
+{% block title %}案例 - {{ parent() }}{% endblock %}
+
+{% block heading_title %}
+    {{ 'heading.case' | trans | raw }}
+{% endblock %}
+
+{% block body %}
+
+    {% include "AppFrontBundle:Case:index/index_content.html.twig" %}
+
+{% endblock %}

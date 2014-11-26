@@ -1,0 +1,69 @@
+<section class="page-content">
+<div class="container">
+<div class="row">
+    <div class="col-md-8">
+        <div class="tabs">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab-1" data-toggle="tab">案例介绍</a></li>
+                <li class=""><a href="#tab-2" data-toggle="tab">微博讨论</a></li>
+                <li><a href="#tab-3" data-toggle="tab">留言</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="tab-1">
+                    <h2>{{ case.subject }}</h2>
+                    关键字: {{ case.keywords | striptags }}
+                    <hr/>
+
+                    <wb:share-button appkey="2isBLN" addition="number" type="button" default_text="我找到了一个很有意思的案例,你们也来看看吧" ralateUid="2298078305"></wb:share-button>
+                    <br/>
+                    {{ case.content | raw }}
+
+                </div>
+                <div class="tab-pane fade" id="tab-2">
+                    <wb:topic column="n" border="n" width="560" height="1190" tags="%E6%93%80%E9%9C%B8%E7%B2%BE%E7%9B%8A%E5%92%A8%E8%AF%A2" language="zh_cn" version="base" appkey="2isBLN" refer="y" footbar="y" url="%23" filter="n" ></wb:topic>
+                </div>
+
+                <div class="tab-pane fade" id="tab-3">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <hr class="visible-sm visible-xs lg">
+        <div class="call-to-action">
+        <h2>{{ case.category }} - 相关案例</h2>
+
+            <div class="list">
+                <ul>
+                    {% for c in case.category.cases if c.id != case.id %}
+
+                        <div class="icon-box circled">
+                            <a href="{{ url('app_case_read' , {'id':c.id}) }}">
+
+                                <div class="icon-box-body">
+                                    <h4>{{ c.subject }}</h4>
+
+                                    {{ c.content | striptags | truncate(100) }}
+
+                                </div>
+                            </a>
+                        </div>
+
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+</div>
+
+
+<div class="spacer"></div>
+
+
+
+</div>
+</section>

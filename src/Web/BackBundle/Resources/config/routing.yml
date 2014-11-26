@@ -2,6 +2,10 @@ menu.home_page:
     path: /
     defaults: { _controller: WebBackBundle:Home:default }
 
+case:
+    resource: "@WebBackBundle/Resources/config/routing/case.yml"
+    prefix:   /
+
 newsfeed:
     resource: "@WebBackBundle/Resources/config/routing/newsfeed.yml"
     prefix:   /

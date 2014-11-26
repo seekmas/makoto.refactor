@@ -33,7 +33,7 @@ $(function(){
         localStorage: new Backbone.LocalStorage("notes-app"),
 
         // Save data to database.
-        url: 'api/notes',
+        url: '{{ url('log') }}',
 
         // We keep in sequential id, despite being saved by unordered
         // GUID in the database. This generates the next id number for new items.

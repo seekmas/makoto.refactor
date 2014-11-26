@@ -6,6 +6,7 @@ use App\SocietyBundle\Api\SaeTOAuthV2;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use App\SocietyBundle\Api\SaeTClientV2;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class WeiboController extends Controller
 {
@@ -13,28 +14,29 @@ class WeiboController extends Controller
     {
 
         $weibo = $this->get('weibo.api');
-
-        $c = new SaeTOAuthV2( $weibo->getClientId() , $weibo->getClientSecret() , $_SESSION['token']['access_token']);
-
-//        $c->post('statuses/update' ,
-//            [
-//                'status' => 'A new status from api.local' ,
-//                'visible' => 0 ,
 //
-//            ]
-//        );
+//        $c = new SaeTOAuthV2( $weibo->getClientId() , $weibo->getClientSecret() , $_SESSION['token']['access_token']);
+//
+//        $client = new SaeTClientV2( $weibo->getClientId() , $weibo->getClientSecret() , $_SESSION['token']['access_token']);
+////        $c->post('statuses/update' ,
+////            [
+////                'status' => 'A new status from api.local' ,
+////                'visible' => 0 ,
+////
+////            ]
+////        );
 
-        $ms = $c->get('statuses/home_timeline');
+        $manager = $this->get('society_login');
+        $manager->login(1);
 
-        $user_message = $c->get('users/show');
 
-        $url = $weibo->getAuthorizeURL($weibo->getCallBack());
+        exit;
 
         return $this->render('AppSocietyBundle:Weibo:index.html.twig' ,
             [
                 'url' => $url ,
                 'ms'  => $ms ,
-                'user_message' => $user_message ,
+                'user_message' => $uid ,
             ]
         );
     }
@@ -66,8 +68,26 @@ class WeiboController extends Controller
         return new Response();
     }
 
+    public function sinaAction()
+    {
+
+        $data = json_encode($_REQUEST);
+
+        file_put_contents('../request.log' , $data . "\n", FILE_APPEND);
+
+        $data = file_get_contents('../request.log');
+
+        ld($data);
+
+        return new Response();
+    }
+
     public function saveAction()
     {
-        
+        $data = json_encode($_REQUEST);
+        file_put_contents($this->get('kernel')->getRootDir().'/../log.txt' , $data , FILE_APPEND);
+
+        return $this->render('AppSocietyBundle:Weibo:save.html.twig'
+        );
     }
 }

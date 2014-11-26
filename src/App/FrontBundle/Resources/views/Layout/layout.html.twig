@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:wb="http://open.weibo.com/wb">
 <head>
     <meta charset="UTF-8" />
     <title>{% block title %}{{ 'meta.title' | trans | raw }}{% endblock %}</title>
     <meta name="Keywords" content="{% block keyword %}{{ 'meta.keywords' | trans | raw }}{% endblock %}">
     <meta name="Description" content="{% block description %}{{ 'meta.description' | trans | raw }}{% endblock %}">
+
     <link rel="stylesheet" href="{{ asset('tpl/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('font-awesome/css/font-awesome.css') }}">
     <link rel="stylesheet" href="{{ asset('tpl/vendor/owl-carousel/owl.carousel.css') }}" media="screen">
@@ -19,6 +20,8 @@
     <link rel="stylesheet" href="{{ asset('tpl/css/skins/blue.css') }}">
     <!-- Makoto CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/makoto.css') }}">
+
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
     <!-- Head Libs -->
     <script src="{{ asset('tpl/vendor/modernizr.js') }}"></script>
     <!--[if lt IE 9]>
@@ -157,6 +160,9 @@
                         </ul>
                     </li>
 
+                    <li >
+                        <a href="{{ url('app_case') }}">{{ 'front.case' | trans | raw }}</a>
+                    </li>
 
                     <li >
                         <a href="{{ url('app_front_contact') }}">{{ 'front.contact' | trans | raw }}</a>

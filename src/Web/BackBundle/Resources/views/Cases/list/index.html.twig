@@ -1,0 +1,55 @@
+{% extends "WebBackBundle:Layout:layouts.html.twig" %}
+
+{% block bigTitle %}Add/Edit Case{% endblock %}
+{% block bigDescription %}Edit Content of WebSite ( Whole Pages except for news ){% endblock %}
+{% block subName %}<a href="">Edit News</a>{% endblock %}
+{% block icon %}fa fa-pencil{% endblock %}
+
+{% block body %}
+
+
+    <div class="block">
+    <!-- Messages List Title -->
+    <div class="block-title">
+        <div class="block-options pull-right">
+            <a data-original-title="Settings" href="javascript:void(0)" class="btn btn-alt btn-sm btn-default" data-toggle="tooltip" title=""><i class="fa fa-cog"></i></a>
+        </div>
+    </div>
+    <!-- END Messages List Title -->
+
+    <!-- Messages List Content -->
+    <div class="table-responsive">
+    <table class="table table-hover table-vcenter">
+    <thead>
+    <tr>
+        <td>Subject</td>
+        <td>Created At</td>
+
+        <td>Actions</td>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Use the first row as a prototype for your column widths -->
+    {% for case in cases %}
+    <tr>
+        <td>
+            <span class="label label-info">{{ case.category }}</span>
+            <a href="{{ url('link.edit_case' , {'id' : case.id}) }}"><strong>{{ case.subject }}</strong></a>
+            <span class="text-muted"></span>
+        </td>
+
+        <td class="text-right"><em></em></td>
+        <td><a href="#">Remove</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+
+
+
+
+
+    </div>
+    <!-- END Messages List Content -->
+    </div>
+{% endblock %}

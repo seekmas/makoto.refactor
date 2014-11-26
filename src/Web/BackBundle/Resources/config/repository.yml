@@ -1,4 +1,10 @@
 services:
+    user_entity:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Web\BackBundle\Entity\User ]
+
     content_entity:
         class: Doctrine\Common\Persistence\ObjectRepository
         factory_service: doctrine
@@ -46,3 +52,21 @@ services:
         factory_service: doctrine
         factory_method: getRepository
         arguments: [ Web\BackBundle\Entity\History ]
+
+    case_entity:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Web\BackBundle\Entity\Cases ]
+
+    case_category_entity:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Web\BackBundle\Entity\CaseCategory ]
+
+    case_layout_entity:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Web\BackBundle\Entity\CaseLayout ]
