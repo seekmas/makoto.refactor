@@ -148,7 +148,7 @@
                         </div>
                         <div class="icon-box-body">
                             <a href="{{ url('app_news_post' , {'id':post.id}) }}"><h4>{{ post.subject }}</h4></a>
-                            <a class="scala" href="{{ url('app_news_post' , {'id':post.id}) }}">{{ post.content | striptags | truncate(200) | raw }}</a>
+                            <a class="scala" href="{{ url('app_news_post' , {'id':post.id}) }}">{{ post.content | striptags | truncate(120) | raw }}</a>
                         </div>
                     </div>
                     {% endfor %}

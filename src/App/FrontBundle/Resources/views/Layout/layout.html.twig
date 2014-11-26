@@ -196,7 +196,7 @@
     <div class="footer-widgets">
         <div class="container">
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-6">
                     <!-- Widget :: Text Widget -->
                     <div class="widget_text widget widget__footer">
                         <h3 class="widget-title">{{ 'bottom.about_us' | trans | raw }}</h3>
@@ -243,26 +243,34 @@
                                         {{ 'bottom.email_brad' | trans | raw }}
                                     </div>
                                 </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /Widget :: Contacts Info -->
+                    </div>
 
+
+                <div class="col-md-3">
+                    <div class="contacts-widget widget widget__footer">
+                        <div class="widget-content">
+                            <ul class="contacts-info-list">
                                 {% if locale() == 'zh_CN' %}
-                                <li>
-                                    <i class="fa fa-weibo"></i>
-                                    <div class="info-item">
-                                        <a href="http://weibo.com/kicg">擀霸中国微博</a>
-                                    </div>
-                                </li>
+                                    <li>
+                                        <i class="fa fa-weibo"></i>
+                                        <div class="info-item">
+                                            <a href="http://weibo.com/kicg">擀霸中国微博</a>
+                                        </div>
+                                    </li>
 
-                                <li>
-                                    <a name="weixin"></a>
-                                    <i id="weixin" class="fa fa-weixin"></i>
-                                    <div class="info-item">
-                                        <a id="pop">擀霸中国微信公众号</a>
-                                        <img class="img-thumbnail" src="{{ asset('qrcode.jpg') }}" style="width: 80%;"/>
-                                    </div>
-                                </li>
-
+                                    <li>
+                                        <a name="weixin"></a>
+                                        <i id="weixin" class="fa fa-weixin"></i>
+                                        <div class="info-item">
+                                            <a id="pop">擀霸中国微信公众号</a>
+                                            <img class="img-thumbnail" src="{{ asset('qrcode.jpg') }}" style="width: 80%;"/>
+                                        </div>
+                                    </li>
                                 {% endif %}
-
                                 <li>
                                     <i class="fa fa-facebook"></i>
                                     <div class="info-item">
@@ -274,11 +282,9 @@
                                     <i class="fa fa-twitter"></i>
                                     <a href="https://twitter.com/GembaChina">@GembaChina</a>
                                 </li>
-
                             </ul>
                         </div>
                     </div>
-                    <!-- /Widget :: Contacts Info -->
                 </div>
             </div>
         </div>
@@ -287,7 +293,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-10 col-md-10">
-                    Copyright &copy; 2014  <a href="{{ url('app_front_homepage') }}">Makoto Global</a> &nbsp;| &nbsp;All Rights Reserved.
+
+                    {{ 'bottom.copy' | trans | raw }}
                 </div>
                 <div class="col-sm-2 col-md-2">
                     <script type="text/javascript">

@@ -14,7 +14,7 @@ class DefaultController extends Controller
         $newsfeed = $this->get('newsfeed_paginator')
                          ->where(['publish' => true])
                          ->orderBy('createdAt' , 'desc')
-                         ->getPaginator(6);
+                         ->getPaginator(3);
 
         return $this->render('AppFrontBundle:Default:index/index.html.twig' ,
             [
