@@ -48,18 +48,16 @@
 
     <div class="header-top">
         <div class="container">
-
+            {% if locale() == 'zh_CN' %}
             <div class="header-top-left">
 
-                <ul >
-
+                <ul>
                     <li><a href="http://weibo.com/kicg"><i class="fa fa-weibo"></i> 擀霸精益咨询</a></li>
-
                     <li><a href="{{ url('app_front_homepage') }}#weixin"><i class="fa fa-weixin"></i> 擀霸中国</a></li>
-
                 </ul>
 
             </div>
+            {% endif %}
             <div class="header-top-right">
 				<span class="register">
                     {% if locale() == 'en' %}
@@ -132,6 +130,7 @@
 
                     <li >
                         <a href="{{ url('app_news') }}">{{ 'front.news' | trans | raw }}</a>
+                        {% if locale() == 'zh_CN' %}
                         <ul>
 
                             <li>
@@ -158,6 +157,7 @@
                                 <a href="{{ url('app_news_by_year' , {'year':2009}) }}">2009</a>
                             </li>
                         </ul>
+                        {% endif %}
                     </li>
 
                     {% if false %}
@@ -254,6 +254,7 @@
 
                 <div class="col-md-3">
                     <div class="contacts-widget widget widget__footer">
+                        <h3 class="widget-title">{{ 'bottom.society' | trans | raw }}</h3>
                         <div class="widget-content">
                             <ul class="contacts-info-list">
                                 {% if locale() == 'zh_CN' %}
@@ -272,6 +273,10 @@
                                             <img class="img-thumbnail" src="{{ asset('qrcode.jpg') }}" style="width: 80%;"/>
                                         </div>
                                     </li>
+                                    <li>
+                                        <i class="fa fa-twitter"></i>
+                                        <a href="https://twitter.com/GembaChina">@GembaChina</a>
+                                    </li>
                                 {% endif %}
                                 <li>
                                     <i class="fa fa-facebook"></i>
@@ -280,10 +285,7 @@
                                     </div>
                                 </li>
 
-                                <li>
-                                    <i class="fa fa-twitter"></i>
-                                    <a href="https://twitter.com/GembaChina">@GembaChina</a>
-                                </li>
+
                             </ul>
                         </div>
                     </div>
