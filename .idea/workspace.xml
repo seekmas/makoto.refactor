@@ -24,28 +24,7 @@
     <favorites_list name="makoto.local" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="slide.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/slide.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.583333" vertical-offset="5209" max-vertical-offset="7530">
-              <caret line="361" column="63" selection-start-line="361" selection-start-column="63" selection-end-line="361" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="messages.zh_CN.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/App/FrontBundle/Resources/translations/messages.zh_CN.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7372881" vertical-offset="0" max-vertical-offset="3255">
-              <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -106,9 +85,9 @@
         <option value="$PROJECT_DIR$/web/tpl/css/theme.css" />
         <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Layout/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/views/News/post/index_content.html.twig" />
-        <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/translations/messages.en.yml" />
         <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/slide.html.twig" />
         <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/translations/messages.zh_CN.yml" />
+        <option value="$PROJECT_DIR$/src/App/FrontBundle/Resources/translations/messages.en.yml" />
       </list>
     </option>
   </component>
@@ -423,7 +402,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="721" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -433,7 +412,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2980614" sideWeight="0.87152034" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23828755" sideWeight="0.87152034" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12847966" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -813,24 +792,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontBundle/Resources/translations/messages.en.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7372881" vertical-offset="0" max-vertical-offset="3075">
-          <caret line="29" column="22" selection-start-line="29" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/slide.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.583333" vertical-offset="5209" max-vertical-offset="7530">
-          <caret line="361" column="63" selection-start-line="361" selection-start-column="63" selection-end-line="361" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.7627119" vertical-offset="705" max-vertical-offset="3075">
+          <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/FrontBundle/Resources/translations/messages.zh_CN.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7372881" vertical-offset="0" max-vertical-offset="3255">
-          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.7118644" vertical-offset="510" max-vertical-offset="3255">
+          <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/FrontBundle/Resources/views/Default/slide.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36395758" vertical-offset="5209" max-vertical-offset="7530">
+          <caret line="361" column="63" selection-start-line="361" selection-start-column="63" selection-end-line="361" selection-end-column="63" />
           <folding />
         </state>
       </provider>
