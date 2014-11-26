@@ -27,6 +27,7 @@ slider:
     welcome_to: Welcome to
     makoto: Makoto
     global: Global
+    time: /assets/images/time.png
 
 front:
     admin: Administrator Management
