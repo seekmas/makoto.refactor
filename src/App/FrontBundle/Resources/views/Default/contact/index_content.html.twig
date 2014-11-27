@@ -32,7 +32,13 @@
 </div>
 
 <ul class="team-list row">
-    {% for member in teams %}
+    {% for key , member in teams %}
+
+        {% if (key+1)%5 == 0 %}
+
+        </ul><ul class="team-list row">
+
+        {% endif %}
     <li class="team-item col-md-3">
         {% if member.attachment %}
         <figure class="alignnone">
